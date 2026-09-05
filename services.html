@@ -1,0 +1,2956 @@
+```html
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Given The King - Professional Creative Services">
+
+<title>Services | Given The King</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background-slider{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+    overflow:hidden;
+}
+
+.bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    animation:backgroundChange 24s infinite;
+}
+
+.bg:nth-child(1){
+    background-image:
+    linear-gradient(
+        rgba(5,8,22,.78),
+        rgba(5,8,22,.94)
+    ),
+    url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=2000&q=85");
+    animation-delay:0s;
+}
+
+.bg:nth-child(2){
+    background-image:
+    linear-gradient(
+        rgba(5,8,22,.78),
+        rgba(5,8,22,.94)
+    ),
+    url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=85");
+    animation-delay:6s;
+}
+
+.bg:nth-child(3){
+    background-image:
+    linear-gradient(
+        rgba(5,8,22,.78),
+        rgba(5,8,22,.94)
+    ),
+    url("https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=2000&q=85");
+    animation-delay:12s;
+}
+
+.bg:nth-child(4){
+    background-image:
+    linear-gradient(
+        rgba(5,8,22,.78),
+        rgba(5,8,22,.94)
+    ),
+    url("https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=2000&q=85");
+    animation-delay:18s;
+}
+
+@keyframes backgroundChange{
+
+    0%{
+        opacity:0;
+        transform:scale(1);
+    }
+
+    8%{
+        opacity:1;
+    }
+
+    25%{
+        opacity:1;
+        transform:scale(1.07);
+    }
+
+    33%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1);
+    }
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:82px;
+    padding:0 4%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#101a3a;
+    border-bottom:2px solid #38bdf8;
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+    width:220px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:white;
+    flex-shrink:0;
+}
+
+.logo-icon{
+    font-size:38px;
+    color:#facc15;
+    text-shadow:
+    0 0 20px
+    rgba(250,204,21,.5);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    font-size:15px;
+    letter-spacing:2px;
+    font-weight:900;
+}
+
+.logo-text small{
+    margin-top:3px;
+    font-size:7px;
+    letter-spacing:3px;
+    color:#38bdf8;
+}
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex:1;
+}
+
+.nav-menu a{
+    position:relative;
+    color:#e2e8f0;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    padding:10px 0;
+    transition:.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+    color:#38bdf8;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:#38bdf8;
+    transition:.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after{
+    width:100%;
+}
+
+
+/* =====================================================
+   NAV ACTIONS
+===================================================== */
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box{
+    height:36px;
+    display:flex;
+    align-items:center;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(56,189,248,.5);
+    border-radius:20px;
+    padding-left:12px;
+    transition:.3s;
+}
+
+.search-box:focus-within{
+    border-color:#38bdf8;
+    box-shadow:
+    0 0 15px
+    rgba(56,189,248,.2);
+}
+
+.search-box input{
+    width:105px;
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:9px;
+}
+
+.search-box input::placeholder{
+    color:#94a3b8;
+}
+
+.search-box button{
+    width:30px;
+    height:30px;
+    margin-right:2px;
+    border:none;
+    border-radius:50%;
+    background:#38bdf8;
+    color:#101a3a;
+    cursor:pointer;
+    font-size:12px;
+}
+
+
+/* =====================================================
+   ACCOUNT
+===================================================== */
+
+.account-btn{
+    padding:9px 11px;
+    border-radius:5px;
+    border:1px solid rgba(56,189,248,.5);
+    background:transparent;
+    color:white;
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:.6px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.account-btn:hover{
+    background:#38bdf8;
+    color:#101a3a;
+    transform:translateY(-2px);
+}
+
+.create-btn{
+    background:#facc15;
+    color:#101a3a;
+    border-color:#facc15;
+}
+
+.create-btn:hover{
+    background:#fde047;
+    color:#101a3a;
+}
+
+.logout-btn{
+    display:none;
+    background:#dc2626;
+    border-color:#dc2626;
+    color:white;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+.lang-select{
+    margin-left:5px;
+    background:#172554;
+    color:white;
+    border:1px solid #facc15;
+    padding:8px 9px;
+    border-radius:6px;
+    font-size:9px;
+    font-weight:900;
+    cursor:pointer;
+    outline:none;
+}
+
+.lang-select option{
+    background:#101a3a;
+    color:white;
+}
+
+
+/* =====================================================
+   MOBILE BUTTON
+===================================================== */
+
+.menu-toggle{
+    display:none;
+    border:none;
+    background:none;
+    color:#38bdf8;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   SEARCH RESULT
+===================================================== */
+
+.search-result{
+    position:fixed;
+    top:92px;
+    right:4%;
+    width:280px;
+    display:none;
+    padding:18px;
+    border-radius:10px;
+    background:#11121c;
+    border:1px solid rgba(56,189,248,.4);
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.6);
+    z-index:2000;
+}
+
+.search-result.show{
+    display:block;
+}
+
+.search-result h3{
+    color:#38bdf8;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.search-result p{
+    color:#cbd5e1;
+    font-size:10px;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+    padding-top:82px;
+    min-height:100vh;
+}
+
+
+/* =====================================================
+   PAGE LAYOUT
+===================================================== */
+
+.page-layout{
+    max-width:1500px;
+    margin:auto;
+    padding:40px 4% 60px;
+    display:grid;
+    grid-template-columns:290px 1fr;
+    gap:35px;
+}
+
+
+/* =====================================================
+   LEFT SIDEBAR
+===================================================== */
+
+.sidebar-left{
+    align-self:start;
+    position:sticky;
+    top:105px;
+    background:#092c25;
+    border:2px solid #22c55e;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:
+    0 20px 60px
+    rgba(0,0,0,.45);
+    height:max-content;
+}
+
+.sidebar-title{
+    text-align:center;
+    padding:20px 10px;
+    color:white;
+    background:#064e3b;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:3px;
+    border-bottom:1px solid #22c55e;
+}
+
+.sidebar-left ul{
+    list-style:none;
+}
+
+.sidebar-left li a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 18px;
+    color:#bbf7d0;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:700;
+    border-bottom:
+    1px solid
+    rgba(34,197,94,.12);
+    transition:.3s;
+}
+
+.sidebar-left li a span:first-child{
+    width:22px;
+    color:#22c55e;
+    font-size:15px;
+    text-align:center;
+}
+
+.sidebar-left li a:hover,
+.sidebar-left li a.active{
+    background:#166534;
+    color:white;
+    padding-left:25px;
+    border-left:5px solid #facc15;
+}
+
+
+/* =====================================================
+   SERVICES CONTENT
+===================================================== */
+
+.services-content{
+    width:100%;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.page-header{
+    text-align:center;
+    padding:65px 25px 55px;
+    border-radius:20px;
+    background:#29164f;
+    border:2px solid #a855f7;
+    margin-bottom:30px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.35);
+}
+
+.page-header::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#7c3aed;
+    opacity:.12;
+    border-radius:50%;
+    top:-270px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.page-header .small-title{
+    position:relative;
+    color:#facc15;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:6px;
+    margin-bottom:17px;
+}
+
+.page-header h1{
+    position:relative;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(45px,6vw,72px);
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.page-header h1 span{
+    color:#facc15;
+    text-shadow:
+    0 0 30px
+    rgba(250,204,21,.25);
+}
+
+.page-header p{
+    position:relative;
+    max-width:700px;
+    margin:auto;
+    color:#ddd6fe;
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   SERVICES GRID
+===================================================== */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr);
+    gap:20px;
+}
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+.service-card{
+    position:relative;
+    padding:30px 25px;
+    min-height:285px;
+    border-radius:16px;
+    background:#111827;
+    border:1px solid rgba(56,189,248,.15);
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.3);
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    right:-45px;
+    top:-45px;
+    border-radius:50%;
+    background:
+    rgba(168,85,247,.12);
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#38bdf8;
+    box-shadow:
+    0 25px 60px
+    rgba(56,189,248,.15);
+}
+
+.service-card:hover::before{
+    transform:scale(2);
+}
+
+.service-icon{
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:#172554;
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.service-card h2{
+    position:relative;
+    font-family:'Playfair Display',serif;
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    position:relative;
+    color:#cbd5e1;
+    font-size:10px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.service-card ul{
+    position:relative;
+    list-style:none;
+}
+
+.service-card li{
+    color:#dbeafe;
+    font-size:9px;
+    margin-bottom:9px;
+}
+
+.service-card li::before{
+    content:"✓";
+    color:#22c55e;
+    font-weight:900;
+    margin-right:8px;
+}
+
+
+/* =====================================================
+   FEATURED
+===================================================== */
+
+.featured-service{
+    grid-column:span 2;
+    min-height:300px;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(124,58,237,.20),
+        #111827
+    );
+    border-color:
+    rgba(168,85,247,.45);
+}
+
+.featured-service .service-icon{
+    background:
+    rgba(245,158,11,.12);
+    border-color:#facc15;
+    color:#facc15;
+}
+
+.featured-service h2{
+    font-size:29px;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process-section{
+    margin-top:30px;
+    padding:40px 30px;
+    border-radius:18px;
+    background:#101a3a;
+    border:2px solid rgba(56,189,248,.18);
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.3);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:32px;
+}
+
+.section-title small{
+    display:block;
+    color:#facc15;
+    font-size:10px;
+    letter-spacing:5px;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(4,1fr);
+    gap:15px;
+}
+
+.process{
+    text-align:center;
+    padding:20px 10px;
+}
+
+.process-number{
+    width:52px;
+    height:52px;
+    margin:0 auto 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:2px solid #38bdf8;
+    color:#facc15;
+    font-size:13px;
+    font-weight:900;
+    box-shadow:
+    0 0 20px
+    rgba(56,189,248,.12);
+}
+
+.process h3{
+    color:white;
+    font-size:11px;
+    margin-bottom:8px;
+}
+
+.process p{
+    color:#94a3b8;
+    font-size:8px;
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    margin-top:25px;
+    padding:50px 30px;
+    text-align:center;
+    border-radius:18px;
+    background:#29164f;
+    border:2px solid #a855f7;
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.35);
+}
+
+.cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#ddd6fe;
+    font-size:11px;
+    margin-bottom:23px;
+}
+
+.cta-button{
+    display:inline-block;
+    padding:14px 27px;
+    border-radius:7px;
+    background:#facc15;
+    color:#101a3a;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.cta-button:hover{
+    transform:translateY(-4px);
+    background:#fde047;
+    box-shadow:
+    0 12px 30px
+    rgba(250,204,21,.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:45px 5% 25px;
+    background:#111111;
+    border-top:3px solid #facc15;
+    text-align:center;
+    color:#94a3b8;
+}
+
+.footer-name{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    color:#facc15;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.footer-name span{
+    color:#ffffff;
+}
+
+.footer-description{
+    color:#38bdf8;
+    font-size:9px;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-bottom:22px;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#facc15;
+}
+
+.footer-socials{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.footer-socials a{
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #facc15;
+    border-radius:50%;
+    color:#facc15;
+    text-decoration:none;
+    font-weight:800;
+    transition:.3s;
+}
+
+.footer-socials a:hover{
+    background:#facc15;
+    color:#111111;
+    transform:translateY(-3px);
+}
+
+.copyright{
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#64748b;
+    font-size:9px;
+}
+
+.copyright strong{
+    color:#facc15;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1200px){
+
+    .nav-menu{
+        gap:10px;
+    }
+
+    .nav-menu a{
+        font-size:8px;
+    }
+
+    .search-box input{
+        width:70px;
+    }
+
+    .page-layout{
+        grid-template-columns:250px 1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .featured-service{
+        grid-column:span 2;
+    }
+
+    .process-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    .navbar{
+        min-height:75px;
+        padding:0 5%;
+    }
+
+    .logo{
+        width:auto;
+    }
+
+    .logo-icon{
+        font-size:32px;
+    }
+
+    .logo-text strong{
+        font-size:13px;
+    }
+
+    .logo-text small{
+        font-size:6px;
+    }
+
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+        margin-right:10px;
+    }
+
+    .nav-menu{
+        position:absolute;
+        left:0;
+        top:75px;
+        width:100%;
+        padding:20px;
+        display:none;
+        flex-direction:column;
+        gap:5px;
+        background:#101a3a;
+        border-bottom:
+        2px solid #38bdf8;
+    }
+
+    .nav-menu.show{
+        display:flex;
+    }
+
+    .nav-menu a{
+        width:100%;
+        padding:13px;
+        text-align:center;
+        font-size:11px;
+    }
+
+    .nav-actions{
+        display:none;
+    }
+
+    main{
+        padding-top:75px;
+    }
+
+    .page-layout{
+        display:flex;
+        flex-direction:column;
+        padding:35px 5% 45px;
+    }
+
+    .sidebar-left{
+        position:static;
+        width:100%;
+    }
+
+    .page-header{
+        padding:50px 20px;
+    }
+
+    .page-header h1{
+        font-size:48px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-service{
+        grid-column:span 1;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .logo-text strong{
+        font-size:11px;
+    }
+
+    .logo-text small{
+        letter-spacing:2px;
+        font-size:5px;
+    }
+
+    .logo-icon{
+        font-size:28px;
+    }
+
+    .page-header{
+        padding:40px 15px;
+    }
+
+    .page-header h1{
+        font-size:39px;
+    }
+
+    .page-header p{
+        font-size:10px;
+    }
+
+    .service-card{
+        padding:27px 20px;
+    }
+
+    .featured-service h2{
+        font-size:25px;
+    }
+
+    .process-section{
+        padding:30px 15px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        padding:40px 20px;
+    }
+
+    .cta h2{
+        font-size:27px;
+    }
+
+    .footer-links{
+        gap:15px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-slider">
+
+    <div class="bg"></div>
+    <div class="bg"></div>
+    <div class="bg"></div>
+    <div class="bg"></div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+
+<a href="index.html" class="logo">
+
+    <span class="logo-icon">♛</span>
+
+    <span class="logo-text">
+
+        <strong>GIVEN THE KING</strong>
+
+        <small>PERSONAL CREATIVE</small>
+
+    </span>
+
+</a>
+
+
+<button
+class="menu-toggle"
+id="menuToggle">
+
+    ☰
+
+</button>
+
+
+<nav
+class="nav-menu"
+id="navMenu">
+
+    <a href="index.html">
+        HOME
+    </a>
+
+    <a href="about.html">
+        ABOUT
+    </a>
+
+    <a href="services.html"
+       class="active">
+        SERVICES
+    </a>
+
+    <!-- ADVERTISEMENT LINK -->
+    <a href="advertising.html">
+        ADVERTISEMENT
+    </a>
+
+    <a href="portfolio.html">
+        PORTFOLIO
+    </a>
+
+    <a href="videos.html">
+        VIDEOS
+    </a>
+
+    <a href="contact.html">
+        CONTACT
+    </a>
+
+</nav>
+
+
+<div class="nav-actions">
+
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search...">
+
+        <button
+        id="searchButton">
+
+            🔍
+
+        </button>
+
+    </div>
+
+
+    <button
+    class="account-btn"
+    id="loginButton">
+
+        LOGIN
+
+    </button>
+
+
+    <button
+    class="account-btn create-btn"
+    id="createButton">
+
+        CREATE ACCOUNT
+
+    </button>
+
+
+    <button
+    class="account-btn logout-btn"
+    id="logoutButton">
+
+        LUNGA
+
+    </button>
+
+
+    <select
+    class="lang-select"
+    id="languageSelect">
+
+        <option value="sw">
+            SW
+        </option>
+
+        <option value="en">
+            EN
+        </option>
+
+    </select>
+
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH RESULT
+===================================================== -->
+
+<div
+class="search-result"
+id="searchResult">
+
+    <h3 id="searchTitle">
+        SEARCH
+    </h3>
+
+    <p id="searchMessage">
+        Andika kitu unachotafuta...
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<div class="page-layout">
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar-left">
+
+
+<div class="sidebar-title"
+id="sidebarTitle">
+    MENU
+</div>
+
+
+<ul>
+
+
+<li>
+
+<a href="index.html">
+
+<span>⌂</span>
+
+<span data-sw="HOME"
+data-en="HOME">
+HOME
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="about.html">
+
+<span>♙</span>
+
+<span data-sw="ABOUT ME"
+data-en="ABOUT ME">
+ABOUT ME
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html"
+class="active">
+
+<span>✦</span>
+
+<span data-sw="MY SERVICES"
+data-en="MY SERVICES">
+MY SERVICES
+</span>
+
+</a>
+
+</li>
+
+
+<!-- ADVERTISEMENT -->
+<li>
+
+<a href="advertising.html">
+
+<span>📢</span>
+
+<span data-sw="ADVERTISEMENT"
+data-en="ADVERTISEMENT">
+ADVERTISEMENT
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="portfolio.html">
+
+<span>▣</span>
+
+<span data-sw="PORTFOLIO"
+data-en="PORTFOLIO">
+PORTFOLIO
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="videos.html">
+
+<span>▶</span>
+
+<span data-sw="MY VIDEOS"
+data-en="MY VIDEOS">
+MY VIDEOS
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="gallery.html">
+
+<span>▧</span>
+
+<span data-sw="GALLERY"
+data-en="GALLERY">
+GALLERY
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="blog.html">
+
+<span>✎</span>
+
+<span data-sw="MY BLOG"
+data-en="MY BLOG">
+MY BLOG
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="skills.html">
+
+<span>★</span>
+
+<span data-sw="MY SKILLS"
+data-en="MY SKILLS">
+MY SKILLS
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎥</span>
+
+<span data-sw="VIDEO PRODUCTION"
+data-en="VIDEO PRODUCTION">
+VIDEO PRODUCTION
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>✂</span>
+
+<span data-sw="VIDEO EDITING"
+data-en="VIDEO EDITING">
+VIDEO EDITING
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎨</span>
+
+<span data-sw="BRANDING & DESIGN"
+data-en="BRANDING & DESIGN">
+BRANDING & DESIGN
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>💻</span>
+
+<span data-sw="COMPUTER TRAINING"
+data-en="COMPUTER TRAINING">
+COMPUTER TRAINING
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>📐</span>
+
+<span data-sw="MATHEMATICS TEACHING"
+data-en="MATHEMATICS TEACHING">
+MATHEMATICS TEACHING
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌐</span>
+
+<span data-sw="NETWORKING & HARDWARE"
+data-en="NETWORKING & HARDWARE">
+NETWORKING & HARDWARE
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🔧</span>
+
+<span data-sw="COMPUTER REPAIR"
+data-en="COMPUTER REPAIR">
+COMPUTER REPAIR
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>📑</span>
+
+<span data-sw="STATIONERY SERVICES"
+data-en="STATIONERY SERVICES">
+STATIONERY SERVICES
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🖨</span>
+
+<span data-sw="PRINTING & LAMINATION"
+data-en="PRINTING & LAMINATION">
+PRINTING & LAMINATION
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌍</span>
+
+<span data-sw="PHOTOCOPY & INTERNET"
+data-en="PHOTOCOPY & INTERNET">
+PHOTOCOPY & INTERNET
+</span>
+
+</a>
+
+</li>
+
+
+</ul>
+
+</aside>
+
+
+<!-- =====================================================
+     SERVICES CONTENT
+===================================================== -->
+
+<section class="services-content">
+
+
+<div class="page-header">
+
+<div
+class="small-title"
+id="smallTitle">
+    WHAT I DO
+</div>
+
+
+<h1 id="pageTitle">
+    MY <span>SERVICES</span>
+</h1>
+
+
+<p id="pageDescription">
+    Karibu kwenye huduma zangu za ubunifu.
+    Ninatoa huduma zinazohusiana na Video Production,
+    Editing, Photography, Graphic Design,
+    Web Development,computer mentenance na Digital Creativity.
+</p>
+
+</div>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<div class="services-grid">
+
+
+<!-- VIDEO PRODUCTION -->
+
+<div class="service-card featured-service">
+
+<div class="service-icon">
+    🎬
+</div>
+
+<h2 id="service1Title">
+    Video Production
+</h2>
+
+<p id="service1Desc">
+    Natengeneza video zenye ubora,
+    creativity na story inayovutia
+    kuanzia shooting mpaka final production.
+</p>
+
+<ul>
+
+<li>Music Videos</li>
+<li>Wedding Videos</li>
+<li>Event Coverage</li>
+<li>Short Films</li>
+<li>Promotional Videos</li>
+
+</ul>
+
+</div>
+
+
+<!-- VIDEO EDITING -->
+
+<div class="service-card">
+
+<div class="service-icon">
+    ✂️
+</div>
+
+<h2 id="service2Title">
+    Video Editing
+</h2>
+
+<p id="service2Desc">
+    Editing ya professional kwa kutumia
+    creativity, transitions, effects,
+    sound design na cinematic color.
+</p>
+
+<ul>
+
+<li>Cinematic Editing</li>
+<li>Color Grading</li>
+<li>Transitions</li>
+<li>Sound Editing</li>
+<li>Motion Effects</li>
+
+</ul>
+
+</div>
+
+
+<!-- PHOTOGRAPHY -->
+
+<div class="service-card">
+
+<div class="service-icon">
+    📸
+</div>
+
+<h2 id="service3Title">
+    Photography
+</h2>
+
+<p id="service3Desc">
+    Photography kwa matukio mbalimbali
+    kwa kutumia composition, lighting
+    na creative visual storytelling.
+</p>
+
+<ul>
+
+<li>Portrait Photography</li>
+<li>Wedding Photography</li>
+<li>Event Photography</li>
+<li>Creative Photography</li>
+<li>Outdoor Photography</li>
+
+</ul>
+
+</div>
+
+
+<!-- GRAPHIC DESIGN -->
+
+<div class="service-card">
+
+<div class="service-icon">
+    🎨
+</div>
+
+<h2 id="service4Title">
+    Graphic Design
+</h2>
+
+<p id="service4Desc">
+    Design za kuvutia kwa matumizi
+    ya social media, branding na
+    promotional materials.
+</p>
+
+<ul>
+
+<li>Posters</li>
+<li>Flyers</li>
+<li>Social Media Designs</li>
+<li>Logos</li>
+<li>Event Designs</li>
+
+</ul>
+
+</div>
+
+
+<!-- WEB DEVELOPMENT -->
+
+<div class="service-card">
+
+<div class="service-icon">
+    💻
+</div>
+
+<h2 id="service5Title">
+    Web Development
+</h2>
+
+<p id="service5Desc">
+    Kutengeneza websites zenye
+    modern design, responsive layout
+    na user-friendly interface.
+</p>
+
+<ul>
+
+<li>Personal Websites</li>
+<li>Portfolio Websites</li>
+<li>Business Websites</li>
+<li>Landing Pages</li>
+<li>HTML / CSS / JavaScript</li>
+
+</ul>
+
+</div>
+
+
+<!-- DIGITAL CREATIVITY -->
+
+<div class="service-card">
+
+<div class="service-icon">
+    ✨
+</div>
+
+<h2 id="service6Title">
+    Digital Creativity
+</h2>
+
+<p id="service6Desc">
+    Mawazo na solutions za digital
+    zinazosaidia kufanya content yako
+    ionekane professional zaidi.
+</p>
+
+<ul>
+
+<li>Content Creation</li>
+<li>Social Media Content</li>
+<li>Creative Concepts</li>
+<li>Digital Branding</li>
+<li>Creative Consultation</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="process-section">
+
+<div class="section-title">
+
+<small id="processSmall">
+    HOW I WORK
+</small>
+
+<h2 id="processTitle">
+    My Creative Process
+</h2>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process">
+
+<div class="process-number">
+    01
+</div>
+
+<h3 id="ideaTitle">
+    IDEA
+</h3>
+
+<p id="ideaDesc">
+    Tunazungumza kuhusu idea,
+    project na kile unachotaka.
+</p>
+
+</div>
+
+
+<div class="process">
+
+<div class="process-number">
+    02
+</div>
+
+<h3 id="planningTitle">
+    PLANNING
+</h3>
+
+<p id="planningDesc">
+    Tunapanga concept, location,
+    equipment na production.
+</p>
+
+</div>
+
+
+<div class="process">
+
+<div class="process-number">
+    03
+</div>
+
+<h3 id="creationTitle">
+    CREATION
+</h3>
+
+<p id="creationDesc">
+    Production inaanza na
+    creativity pamoja na quality.
+</p>
+
+</div>
+
+
+<div class="process">
+
+<div class="process-number">
+    04
+</div>
+
+<h3 id="deliveryTitle">
+    DELIVERY
+</h3>
+
+<p id="deliveryDesc">
+    Final project inakamilishwa
+    na kuwasilishwa kwa client.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<div class="cta">
+
+<h2 id="ctaTitle">
+    Let's Create Something Amazing
+</h2>
+
+<p id="ctaDescription">
+    Una project au idea unayotaka
+    kuifanya kuwa reality?
+</p>
+
+<a
+href="contact.html"
+class="cta-button"
+id="ctaButton">
+    CONTACT ME →
+</a>
+
+</div>
+
+
+</section>
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="footer-name">
+    ♛ GIVEN <span>THE KING</span>
+</div>
+
+
+<div class="footer-description"
+id="footerDescription">
+    PERSONAL CREATIVE WEBSITE
+</div>
+
+
+<div class="footer-links">
+
+<a href="index.html">HOME</a>
+
+<a href="about.html">ABOUT</a>
+
+<a href="services.html">SERVICES</a>
+
+<a href="advertising.html">ADVERTISEMENT</a>
+
+<a href="portfolio.html">PORTFOLIO</a>
+
+<a href="videos.html">VIDEOS</a>
+
+<a href="gallery.html">GALLERY</a>
+
+<a href="blog.html">BLOG</a>
+
+<a href="contact.html">CONTACT</a>
+
+</div>
+
+
+<div class="footer-socials">
+
+<a
+href="https://www.facebook.com/"
+target="_blank">
+    f
+</a>
+
+<a
+href="https://www.instagram.com/"
+target="_blank">
+    ◎
+</a>
+
+<a
+href="https://www.youtube.com/"
+target="_blank">
+    ▶
+</a>
+
+<a
+href="https://wa.me/255753389563"
+target="_blank">
+    ◔
+</a>
+
+</div>
+
+
+<div class="copyright">
+
+    © <span id="year"></span>
+
+    <strong>Given The King</strong>
+
+    — <span id="rightsText">
+    All Rights Reserved.
+    </span>
+
+</div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navMenu =
+document.getElementById("navMenu");
+
+menuToggle.addEventListener(
+"click",
+function(){
+
+    navMenu.classList.toggle("show");
+
+});
+
+
+document
+.querySelectorAll(".nav-menu a")
+.forEach(function(link){
+
+    link.addEventListener(
+    "click",
+    function(){
+
+        navMenu.classList.remove("show");
+
+    });
+
+});
+
+
+/* =====================================================
+   ACCOUNT SYSTEM
+===================================================== */
+
+function updateAccountButtons(){
+
+    const loggedIn =
+    localStorage.getItem(
+        "givenKingLoggedIn"
+    );
+
+    const loginButton =
+    document.getElementById(
+        "loginButton"
+    );
+
+    const createButton =
+    document.getElementById(
+        "createButton"
+    );
+
+    const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+    if(loggedIn === "true"){
+
+        loginButton.style.display =
+        "none";
+
+        createButton.style.display =
+        "none";
+
+        logoutButton.style.display =
+        "block";
+
+    }
+
+    else{
+
+        loginButton.style.display =
+        "block";
+
+        createButton.style.display =
+        "block";
+
+        logoutButton.style.display =
+        "none";
+
+    }
+
+}
+
+updateAccountButtons();
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+document
+.getElementById("logoutButton")
+.addEventListener(
+"click",
+function(){
+
+    localStorage.removeItem(
+        "givenKingLoggedIn"
+    );
+
+    alert(
+        "Umetoka kwenye account."
+    );
+
+    updateAccountButtons();
+
+});
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+document
+.getElementById("loginButton")
+.addEventListener(
+"click",
+function(){
+
+    const email =
+    prompt("Ingiza email yako:");
+
+    if(!email){
+        return;
+    }
+
+    const password =
+    prompt("Ingiza password yako:");
+
+    if(!password){
+        return;
+    }
+
+    const savedUser =
+    localStorage.getItem(
+        "givenKingUser"
+    );
+
+    if(!savedUser){
+
+        alert(
+            "Tafadhali fungua account kwanza."
+        );
+
+        return;
+
+    }
+
+    const user =
+    JSON.parse(savedUser);
+
+    if(
+        email === user.email &&
+        password === user.password
+    ){
+
+        localStorage.setItem(
+            "givenKingLoggedIn",
+            "true"
+        );
+
+        alert(
+            "Karibu " + user.name + "!"
+        );
+
+        updateAccountButtons();
+
+    }
+
+    else{
+
+        alert(
+            "Email au password sio sahihi."
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   CREATE ACCOUNT
+===================================================== */
+
+document
+.getElementById("createButton")
+.addEventListener(
+"click",
+function(){
+
+    const name =
+    prompt("Ingiza jina lako:");
+
+    if(!name){
+        return;
+    }
+
+    const email =
+    prompt("Ingiza email yako:");
+
+    if(!email){
+        return;
+    }
+
+    const password =
+    prompt("Tengeneza password:");
+
+    if(!password){
+        return;
+    }
+
+    const user = {
+
+        name:name,
+        email:email,
+        password:password
+
+    };
+
+    localStorage.setItem(
+        "givenKingUser",
+        JSON.stringify(user)
+    );
+
+    alert(
+        "Account imeundwa vizuri! Sasa unaweza LOGIN."
+    );
+
+});
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+const searchInput =
+document.getElementById(
+    "searchInput"
+);
+
+const searchButton =
+document.getElementById(
+    "searchButton"
+);
+
+const searchResult =
+document.getElementById(
+    "searchResult"
+);
+
+const searchMessage =
+document.getElementById(
+    "searchMessage"
+);
+
+
+function searchWebsite(){
+
+    const query =
+    searchInput.value
+    .trim()
+    .toLowerCase();
+
+
+    if(query === ""){
+
+        searchMessage.innerText =
+        "Andika kitu unachotafuta...";
+
+        searchResult.classList.add(
+            "show"
+        );
+
+        return;
+
+    }
+
+
+    /* =================================================
+       WEBSITE PAGES
+    ================================================= */
+
+    const pages = {
+
+        home:"index.html",
+
+        about:"about.html",
+
+        services:"services.html",
+
+        advertisement:"advertising.html",
+
+        advertising:"advertising.html",
+
+        ads:"advertising.html",
+
+        tangazo:"advertising.html",
+
+        portfolio:"portfolio.html",
+
+        videos:"videos.html",
+
+        gallery:"gallery.html",
+
+        blog:"blog.html",
+
+        skills:"skills.html",
+
+        contact:"contact.html"
+
+    };
+
+
+    if(pages[query]){
+
+        searchMessage.innerText =
+        "Tumepata: " + query;
+
+
+        searchResult.classList.add(
+            "show"
+        );
+
+
+        setTimeout(
+        function(){
+
+            window.location.href =
+            pages[query];
+
+        },
+        700
+        );
+
+    }
+
+    else{
+
+        searchMessage.innerText =
+        "Hakuna ukurasa unaolingana na: "
+        + query;
+
+
+        searchResult.classList.add(
+            "show"
+        );
+
+    }
+
+}
+
+
+searchButton.addEventListener(
+"click",
+searchWebsite
+);
+
+
+searchInput.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Enter"){
+
+        searchWebsite();
+
+    }
+
+});
+
+
+/* =====================================================
+   CLOSE SEARCH
+===================================================== */
+
+document.addEventListener(
+"click",
+function(event){
+
+    if(
+        !event.target.closest(".search-box") &&
+        !event.target.closest(".search-result")
+    ){
+
+        searchResult.classList.remove(
+            "show"
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
+
+const translations = {
+
+sw:{
+
+    sidebarTitle:"MENU",
+
+    smallTitle:"NINACHOFANYA",
+
+    pageTitle:'HUDUMA <span>ZANGU</span>',
+
+    pageDescription:
+    "Karibu kwenye huduma zangu za ubunifu. Ninatoa huduma zinazohusiana na Video Production, Editing, Photography, Graphic Design, Web Development na Digital Creativity.",
+
+    service1Title:"Video Production",
+
+    service1Desc:
+    "Natengeneza video zenye ubora, creativity na story inayovutia kuanzia shooting mpaka final production.",
+
+    service2Title:"Video Editing",
+
+    service2Desc:
+    "Editing ya professional kwa kutumia creativity, transitions, effects, sound design na cinematic color.",
+
+    service3Title:"Photography",
+
+    service3Desc:
+    "Photography kwa matukio mbalimbali kwa kutumia composition, lighting na creative visual storytelling.",
+
+    service4Title:"Graphic Design",
+
+    service4Desc:
+    "Design za kuvutia kwa matumizi ya social media, branding na promotional materials.",
+
+    service5Title:"Web Development",
+
+    service5Desc:
+    "Kutengeneza websites zenye modern design, responsive layout na user-friendly interface.",
+
+    service6Title:"Digital Creativity",
+
+    service6Desc:
+    "Mawazo na solutions za digital zinazosaidia kufanya content yako ionekane professional zaidi.",
+
+    processSmall:"JINSI NAVYOFANYA KAZI",
+
+    processTitle:"Mchakato Wangu wa Ubunifu",
+
+    ideaTitle:"WAZO",
+
+    ideaDesc:
+    "Tunazungumza kuhusu idea, project na kile unachotaka.",
+
+    planningTitle:"MIPANGO",
+
+    planningDesc:
+    "Tunapanga concept, location, equipment na production.",
+
+    creationTitle:"UBUNIFU",
+
+    creationDesc:
+    "Production inaanza na creativity pamoja na quality.",
+
+    deliveryTitle:"UWASILISHAJI",
+
+    deliveryDesc:
+    "Final project inakamilishwa na kuwasilishwa kwa client.",
+
+    ctaTitle:"Tuunde Kitu cha Ajabu",
+
+    ctaDescription:
+    "Una project au idea unayotaka kuifanya kuwa reality?",
+
+    ctaButton:"WASILIANA NAMI →",
+
+    footerDescription:"PERSONAL CREATIVE WEBSITE",
+
+    rights:"Haki Zote Zimehifadhiwa.",
+
+    search:"TAFUTA",
+
+    searchPlaceholder:"Andika kitu unachotafuta..."
+
+},
+
+en:{
+
+    sidebarTitle:"MENU",
+
+    smallTitle:"WHAT I DO",
+
+    pageTitle:'MY <span>SERVICES</span>',
+
+    pageDescription:
+    "Welcome to my creative services. I provide services related to Video Production, Editing, Photography, Graphic Design, Web Development and Digital Creativity.",
+
+    service1Title:"Video Production",
+
+    service1Desc:
+    "I create high-quality videos with creativity and engaging storytelling from shooting to final production.",
+
+    service2Title:"Video Editing",
+
+    service2Desc:
+    "Professional editing using creativity, transitions, effects, sound design and cinematic color.",
+
+    service3Title:"Photography",
+
+    service3Desc:
+    "Photography for different occasions using composition, lighting and creative visual storytelling.",
+
+    service4Title:"Graphic Design",
+
+    service4Desc:
+    "Creative designs for social media, branding and promotional materials.",
+
+    service5Title:"Web Development",
+
+    service5Desc:
+    "Creating modern, responsive and user-friendly websites.",
+
+    service6Title:"Digital Creativity",
+
+    service6Desc:
+    "Digital ideas and solutions that help make your content look more professional.",
+
+    processSmall:"HOW I WORK",
+
+    processTitle:"My Creative Process",
+
+    ideaTitle:"IDEA",
+
+    ideaDesc:
+    "We discuss your idea, project and what you want to achieve.",
+
+    planningTitle:"PLANNING",
+
+    planningDesc:
+    "We plan the concept, location, equipment and production.",
+
+    creationTitle:"CREATION",
+
+    creationDesc:
+    "Production begins with creativity and quality.",
+
+    deliveryTitle:"DELIVERY",
+
+    deliveryDesc:
+    "The final project is completed and delivered to the client.",
+
+    ctaTitle:"Let's Create Something Amazing",
+
+    ctaDescription:
+    "Do you have a project or idea you want to turn into reality?",
+
+    ctaButton:"CONTACT ME →",
+
+    footerDescription:"PERSONAL CREATIVE WEBSITE",
+
+    rights:"All Rights Reserved.",
+
+    search:"SEARCH",
+
+    searchPlaceholder:"Type what you are looking for..."
+
+}
+
+};
+
+
+/* =====================================================
+   CHANGE LANGUAGE
+===================================================== */
+
+function changeLanguage(lang){
+
+    const d =
+    translations[lang];
+
+    document.documentElement.lang =
+    lang;
+
+
+    document.getElementById(
+        "sidebarTitle"
+    ).innerText =
+    d.sidebarTitle;
+
+
+    document.getElementById(
+        "smallTitle"
+    ).innerText =
+    d.smallTitle;
+
+
+    document.getElementById(
+        "pageTitle"
+    ).innerHTML =
+    d.pageTitle;
+
+
+    document.getElementById(
+        "pageDescription"
+    ).innerText =
+    d.pageDescription;
+
+
+    document.getElementById(
+        "service1Title"
+    ).innerText =
+    d.service1Title;
+
+
+    document.getElementById(
+        "service1Desc"
+    ).innerText =
+    d.service1Desc;
+
+
+    document.getElementById(
+        "service2Title"
+    ).innerText =
+    d.service2Title;
+
+
+    document.getElementById(
+        "service2Desc"
+    ).innerText =
+    d.service2Desc;
+
+
+    document.getElementById(
+        "service3Title"
+    ).innerText =
+    d.service3Title;
+
+
+    document.getElementById(
+        "service3Desc"
+    ).innerText =
+    d.service3Desc;
+
+
+    document.getElementById(
+        "service4Title"
+    ).innerText =
+    d.service4Title;
+
+
+    document.getElementById(
+        "service4Desc"
+    ).innerText =
+    d.service4Desc;
+
+
+    document.getElementById(
+        "service5Title"
+    ).innerText =
+    d.service5Title;
+
+
+    document.getElementById(
+        "service5Desc"
+    ).innerText =
+    d.service5Desc;
+
+
+    document.getElementById(
+        "service6Title"
+    ).innerText =
+    d.service6Title;
+
+
+    document.getElementById(
+        "service6Desc"
+    ).innerText =
+    d.service6Desc;
+
+
+    document.getElementById(
+        "processSmall"
+    ).innerText =
+    d.processSmall;
+
+
+    document.getElementById(
+        "processTitle"
+    ).innerText =
+    d.processTitle;
+
+
+    document.getElementById(
+        "ideaTitle"
+    ).innerText =
+    d.ideaTitle;
+
+
+    document.getElementById(
+        "ideaDesc"
+    ).innerText =
+    d.ideaDesc;
+
+
+    document.getElementById(
+        "planningTitle"
+    ).innerText =
+    d.planningTitle;
+
+
+    document.getElementById(
+        "planningDesc"
+    ).innerText =
+    d.planningDesc;
+
+
+    document.getElementById(
+        "creationTitle"
+    ).innerText =
+    d.creationTitle;
+
+
+    document.getElementById(
+        "creationDesc"
+    ).innerText =
+    d.creationDesc;
+
+
+    document.getElementById(
+        "deliveryTitle"
+    ).innerText =
+    d.deliveryTitle;
+
+
+    document.getElementById(
+        "deliveryDesc"
+    ).innerText =
+    d.deliveryDesc;
+
+
+    document.getElementById(
+        "ctaTitle"
+    ).innerText =
+    d.ctaTitle;
+
+
+    document.getElementById(
+        "ctaDescription"
+    ).innerText =
+    d.ctaDescription;
+
+
+    document.getElementById(
+        "ctaButton"
+    ).innerText =
+    d.ctaButton;
+
+
+    document.getElementById(
+        "footerDescription"
+    ).innerText =
+    d.footerDescription;
+
+
+    document.getElementById(
+        "rightsText"
+    ).innerText =
+    d.rights;
+
+
+    document.getElementById(
+        "searchTitle"
+    ).innerText =
+    d.search;
+
+
+    searchInput.placeholder =
+    d.searchPlaceholder;
+
+
+    /* SIDEBAR */
+
+    document
+    .querySelectorAll(
+        "[data-sw][data-en]"
+    )
+    .forEach(function(element){
+
+        element.innerText =
+        element.getAttribute(
+            "data-" + lang
+        );
+
+    });
+
+
+    localStorage.setItem(
+        "givenKingLanguage",
+        lang
+    );
+
+}
+
+
+/* =====================================================
+   LANGUAGE SELECT
+===================================================== */
+
+const languageSelect =
+document.getElementById(
+    "languageSelect"
+);
+
+
+languageSelect.addEventListener(
+"change",
+function(){
+
+    changeLanguage(
+        this.value
+    );
+
+});
+
+
+/* =====================================================
+   LOAD SAVED LANGUAGE
+===================================================== */
+
+const savedLanguage =
+localStorage.getItem(
+    "givenKingLanguage"
+);
+
+
+if(savedLanguage){
+
+    languageSelect.value =
+    savedLanguage;
+
+    changeLanguage(
+        savedLanguage
+    );
+
+}
+
+else{
+
+    changeLanguage("sw");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Portfolio | Given The King Video Production & ICT Services">
+
+<title>Portfolio | Given The King</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    padding:0 5%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#101a3a;
+
+    border-bottom:2px solid #38bdf8;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+
+    z-index:1000;
+}
+
+
+/* BRAND */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    min-width:220px;
+}
+
+.brand-crown{
+
+    font-size:42px;
+
+    color:#facc15;
+
+    text-shadow:0 0 15px rgba(250,204,21,.5);
+}
+
+.brand strong{
+
+    display:block;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+}
+
+.brand small{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:#38bdf8;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.nav-links a{
+
+    color:#e2e8f0;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#38bdf8;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-9px;
+
+    width:0;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.socials{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.socials a{
+
+    width:34px;
+
+    height:34px;
+
+    border:1px solid #38bdf8;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.socials a:hover{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+.lang-select{
+
+    margin-left:8px;
+
+    background:#172554;
+
+    color:white;
+
+    border:1px solid #facc15;
+
+    padding:7px 10px;
+
+    border-radius:6px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    outline:none;
+}
+
+.lang-select option{
+
+    background:#101a3a;
+
+    color:white;
+}
+
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#38bdf8;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.page-hero{
+
+    margin-top:82px;
+
+    padding:75px 6% 65px;
+
+    text-align:center;
+
+    background:#29164f;
+
+    border-bottom:2px solid #a855f7;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.page-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:#7c3aed;
+
+    opacity:.12;
+
+    border-radius:50%;
+
+    top:-250px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.eyebrow{
+
+    color:#facc15;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+    position:relative;
+}
+
+.page-hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(40px,6vw,68px);
+
+    color:white;
+
+    margin-bottom:15px;
+
+    position:relative;
+}
+
+.page-hero h1 span{
+
+    color:#facc15;
+}
+
+.page-hero p:last-child{
+
+    color:#ddd6fe;
+
+    font-size:15px;
+
+    position:relative;
+
+    line-height:1.8;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container{
+
+    max-width:1350px;
+
+    width:100%;
+
+    margin:0 auto;
+
+    padding:60px 5% 80px;
+
+    display:grid;
+
+    grid-template-columns:290px 1fr;
+
+    gap:40px;
+
+    background:#050816;
+}
+
+
+/* =========================================
+   LEFT SIDEBAR
+========================================= */
+
+.sidebar-left{
+
+    background:#092c25;
+
+    border:2px solid #22c55e;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+    position:sticky;
+
+    top:105px;
+
+    height:max-content;
+}
+
+.sidebar-title{
+
+    text-align:center;
+
+    padding:24px 15px;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    color:white;
+
+    background:#064e3b;
+
+    border-bottom:1px solid #22c55e;
+
+    font-weight:800;
+}
+
+.sidebar-left ul{
+
+    list-style:none;
+}
+
+.sidebar-left li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 22px;
+
+    color:#bbf7d0;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    border-bottom:1px solid rgba(34,197,94,.12);
+
+    transition:.3s;
+}
+
+.sidebar-left li a span{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:17px;
+}
+
+.sidebar-left li a:hover,
+.sidebar-left li a.active{
+
+    background:#166534;
+
+    color:white;
+
+    padding-left:30px;
+
+    border-left:5px solid #facc15;
+}
+
+
+/* =========================================
+   PORTFOLIO CONTENT
+========================================= */
+
+.portfolio-content{
+
+    background:#21170d;
+
+    border:2px solid #f59e0b;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.portfolio-content .eyebrow{
+
+    color:#f59e0b;
+
+    letter-spacing:4px;
+}
+
+.portfolio-content h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.portfolio-content h2 span{
+
+    color:#facc15;
+}
+
+.portfolio-description{
+
+    color:#d6d3d1;
+
+    line-height:1.8;
+
+    font-size:14px;
+
+    margin-bottom:35px;
+}
+
+
+/* =========================================
+   CATEGORY FILTER
+========================================= */
+
+.portfolio-filter{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:35px;
+}
+
+.filter-btn{
+
+    padding:11px 18px;
+
+    border-radius:8px;
+
+    border:1px solid #38bdf8;
+
+    background:#172554;
+
+    color:#dbeafe;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   PORTFOLIO GRID
+========================================= */
+
+.portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+
+/* =========================================
+   PORTFOLIO CARD
+========================================= */
+
+.portfolio-card{
+
+    background:#2d1f10;
+
+    border:1px solid rgba(245,158,11,.35);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    position:relative;
+}
+
+.portfolio-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#facc15;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.45);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.portfolio-image{
+
+    height:230px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#172554;
+}
+
+.portfolio-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.portfolio-card:hover .portfolio-image img{
+
+    transform:scale(1.08);
+}
+
+
+/* =========================================
+   IMAGE PLACEHOLDER
+========================================= */
+
+.image-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    background:linear-gradient(
+        135deg,
+        #172554,
+        #29164f
+    );
+
+    color:#38bdf8;
+
+    font-size:45px;
+}
+
+.image-placeholder small{
+
+    font-size:11px;
+
+    color:#cbd5e1;
+
+    margin-top:8px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.portfolio-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(5,8,22,.78);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.portfolio-card:hover .portfolio-overlay{
+
+    opacity:1;
+}
+
+.view-btn{
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    background:#facc15;
+
+    color:#111827;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.view-btn:hover{
+
+    background:white;
+
+    transform:scale(1.05);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.portfolio-info{
+
+    padding:22px;
+}
+
+.portfolio-info h3{
+
+    color:#facc15;
+
+    font-size:16px;
+
+    margin-bottom:9px;
+}
+
+.portfolio-info p{
+
+    color:#d6d3d1;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:14px;
+}
+
+.category{
+
+    display:inline-block;
+
+    padding:6px 10px;
+
+    background:#172554;
+
+    border:1px solid #2563eb;
+
+    color:#93c5fd;
+
+    border-radius:6px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================
+   FEATURED PROJECT
+========================================= */
+
+.featured-project{
+
+    margin-top:35px;
+
+    padding:28px;
+
+    background:#172554;
+
+    border:2px solid #2563eb;
+
+    border-radius:15px;
+}
+
+.featured-project h3{
+
+    color:#facc15;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:12px;
+}
+
+.featured-project p{
+
+    color:#dbeafe;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+.featured-button{
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.featured-button:hover{
+
+    background:#facc15;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    background:#111111;
+
+    border-top:3px solid #facc15;
+
+    padding:45px 6%;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    margin-top:0;
+}
+
+footer .footer-brand{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    color:#facc15;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+footer .footer-sub{
+
+    color:#38bdf8;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-bottom:20px;
+}
+
+.footer-links a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#facc15;
+}
+
+footer p{
+
+    font-size:12px;
+
+    color:#64748b;
+
+    margin-top:12px;
+}
+
+footer strong{
+
+    color:#facc15;
+}
+
+
+/* =========================================
+   RESPONSIVE 1200px
+========================================= */
+
+@media(max-width:1200px){
+
+    .nav-links{
+
+        gap:13px;
+    }
+
+    .nav-links a{
+
+        font-size:10px;
+    }
+
+    .socials a{
+
+        width:30px;
+
+        height:30px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE 1100px
+========================================= */
+
+@media(max-width:1100px){
+
+    .socials{
+
+        display:none;
+    }
+
+    .nav-links{
+
+        gap:16px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE 900px
+========================================= */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        height:75px;
+
+        padding:0 5%;
+    }
+
+    .brand{
+
+        min-width:auto;
+    }
+
+    .brand strong{
+
+        font-size:14px;
+    }
+
+    .brand small{
+
+        font-size:8px;
+    }
+
+    .brand-crown{
+
+        font-size:35px;
+    }
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:#101a3a;
+
+        flex-direction:column;
+
+        padding:20px;
+
+        border-bottom:2px solid #38bdf8;
+    }
+
+    .nav-links.show{
+
+        display:flex;
+    }
+
+    .nav-links a{
+
+        padding:12px;
+
+        text-align:center;
+
+        font-size:12px;
+    }
+
+    .main-container{
+
+        grid-template-columns:1fr;
+
+        padding:40px 5%;
+    }
+
+    .sidebar-left{
+
+        position:static;
+
+        width:100%;
+    }
+
+    .portfolio-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE 600px
+========================================= */
+
+@media(max-width:600px){
+
+    .page-hero{
+
+        padding:55px 5% 45px;
+    }
+
+    .page-hero h1{
+
+        font-size:42px;
+    }
+
+    .portfolio-content{
+
+        padding:25px 20px;
+    }
+
+    .portfolio-content h2{
+
+        font-size:30px;
+    }
+
+    .portfolio-filter{
+
+        flex-direction:column;
+    }
+
+    .filter-btn{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+    .portfolio-image{
+
+        height:210px;
+    }
+
+    .featured-project{
+
+        padding:22px;
+    }
+
+    .footer-links{
+
+        gap:15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+
+<a href="index.html" class="brand">
+
+<span class="brand-crown">♛</span>
+
+<span>
+
+<strong>GIVEN THE KING</strong>
+
+<small>VIDEO PRODUCTION & ICT</small>
+
+</span>
+
+</a>
+
+
+<button class="menu-toggle"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+
+<nav class="nav-links" id="navLinks">
+
+
+<a href="index.html">
+HOME
+</a>
+
+
+<a href="about.html">
+ABOUT
+</a>
+
+
+<a href="services.html">
+SERVICES
+</a>
+
+
+<a href="portfolio.html"
+class="active">
+PORTFOLIO
+</a>
+
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+
+<!-- ADVERTISEMENT LINK -->
+
+<a href="advertising.html">
+ADVERTISEMENT
+</a>
+
+
+<a href="contact.html">
+CONTACT
+</a>
+
+
+</nav>
+
+
+<div class="socials">
+
+
+<a href="https://www.facebook.com/"
+target="_blank">
+f
+</a>
+
+
+<a href="https://www.instagram.com/"
+target="_blank">
+◎
+</a>
+
+
+<a href="https://www.youtube.com/"
+target="_blank">
+▶
+</a>
+
+
+<!-- LANGUAGE SELECTOR -->
+
+<select class="lang-select"
+onchange="changeLanguage(this.value)"
+aria-label="Choose language">
+
+<option value="sw">
+SW
+</option>
+
+<option value="en">
+EN
+</option>
+
+</select>
+
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="page-hero">
+
+
+<p class="eyebrow"
+id="hero-eyebrow">
+
+PORTFOLIO
+
+</p>
+
+
+<h1 id="hero-title">
+
+MY <span>WORK</span>
+
+</h1>
+
+
+<p id="hero-desc">
+
+Karibu kwenye portfolio yangu.
+Hapa unaweza kuona baadhi ya kazi nilizofanya
+katika Video Production, Editing, Design na ICT.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main-container">
+
+
+
+<!-- =========================================
+     LEFT SIDEBAR
+========================================= -->
+
+<aside class="sidebar-left">
+
+
+<div class="sidebar-title">
+
+MENU
+
+</div>
+
+
+<ul>
+
+
+<li>
+
+<a href="index.html">
+
+<span>⌂</span>
+
+HOME
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="about.html">
+
+<span>♙</span>
+
+ABOUT ME
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>✦</span>
+
+MY SERVICES
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="portfolio.html"
+class="active">
+
+<span>▣</span>
+
+PORTFOLIO
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="videos.html">
+
+<span>▶</span>
+
+MY VIDEOS
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="gallery.html">
+
+<span>▧</span>
+
+GALLERY
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="blog.html">
+
+<span>✎</span>
+
+MY BLOG
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="skills.html">
+
+<span>★</span>
+
+MY SKILLS
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="advertising.html">
+
+<span>📢</span>
+
+ADVERTISEMENT
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎥</span>
+
+VIDEO PRODUCTION
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>✂</span>
+
+VIDEO EDITING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎨</span>
+
+BRANDING & DESIGN
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>💻</span>
+
+COMPUTER TRAINING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>📐</span>
+
+MATHEMATICS TEACHING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌐</span>
+
+NETWORKING & HARDWARE
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🔧</span>
+
+COMPUTER REPAIR
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>📑</span>
+
+STATIONERY SERVICES
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🖨</span>
+
+PRINTING & LAMINATION
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌍</span>
+
+PHOTOCOPY & INTERNET
+
+</a>
+
+</li>
+
+
+</ul>
+
+</aside>
+
+
+
+<!-- =========================================
+     PORTFOLIO CONTENT
+========================================= -->
+
+<section class="portfolio-content">
+
+
+<p class="eyebrow">
+
+MY PORTFOLIO
+
+</p>
+
+
+<h2 id="portfolio-title">
+
+CREATIVE <span>WORKS</span>
+
+</h2>
+
+
+<p class="portfolio-description"
+id="portfolio-description">
+
+Hizi ni baadhi ya kazi zangu katika Video Production,
+Photography, Video Editing, Graphic Design, Branding
+na ICT. Portfolio hii inaonyesha ubunifu,
+ujuzi na uzoefu wangu katika kazi mbalimbali.
+
+</p>
+
+
+
+<!-- =========================================
+     FILTER
+========================================= -->
+
+<div class="portfolio-filter">
+
+
+<button class="filter-btn active"
+onclick="filterProjects('all',this)">
+
+ALL
+
+</button>
+
+
+<button class="filter-btn"
+onclick="filterProjects('video',this)">
+
+VIDEO PRODUCTION
+
+</button>
+
+
+<button class="filter-btn"
+onclick="filterProjects('editing',this)">
+
+VIDEO EDITING
+
+</button>
+
+
+<button class="filter-btn"
+onclick="filterProjects('design',this)">
+
+DESIGN
+
+</button>
+
+
+<button class="filter-btn"
+onclick="filterProjects('ict',this)">
+
+ICT
+
+</button>
+
+</div>
+
+
+
+<!-- =========================================
+     PORTFOLIO GRID
+========================================= -->
+
+<div class="portfolio-grid"
+id="portfolioGrid">
+
+
+
+<!-- PROJECT 1 -->
+
+<article class="portfolio-card"
+data-category="video">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+🎥
+
+<small>
+VIDEO PRODUCTION
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="videos.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Music Video Production
+
+</h3>
+
+
+<p>
+
+Production ya music video yenye
+cinematic shots, creative camera angles
+na professional storytelling.
+
+</p>
+
+
+<span class="category">
+
+VIDEO PRODUCTION
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 2 -->
+
+<article class="portfolio-card"
+data-category="editing">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+✂️
+
+<small>
+VIDEO EDITING
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="videos.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Professional Video Editing
+
+</h3>
+
+
+<p>
+
+Video editing, color correction,
+transitions, effects, sound design
+na cinematic finishing.
+
+</p>
+
+
+<span class="category">
+
+VIDEO EDITING
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 3 -->
+
+<article class="portfolio-card"
+data-category="design">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+🎨
+
+<small>
+GRAPHIC DESIGN
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="gallery.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Graphic Design
+
+</h3>
+
+
+<p>
+
+Poster, flyer, social media graphics,
+advertisements na creative visual designs.
+
+</p>
+
+
+<span class="category">
+
+DESIGN
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 4 -->
+
+<article class="portfolio-card"
+data-category="design">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+👑
+
+<small>
+BRANDING
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="services.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Branding & Identity
+
+</h3>
+
+
+<p>
+
+Logo design, brand identity,
+business graphics na promotional materials.
+
+</p>
+
+
+<span class="category">
+
+BRANDING
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 5 -->
+
+<article class="portfolio-card"
+data-category="ict">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+💻
+
+<small>
+ICT SERVICES
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="services.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Website Development
+
+</h3>
+
+
+<p>
+
+Website design na development
+kwa kutumia HTML, CSS na JavaScript
+kwa projects mbalimbali.
+
+</p>
+
+
+<span class="category">
+
+ICT
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 6 -->
+
+<article class="portfolio-card"
+data-category="video">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+📸
+
+<small>
+PHOTOGRAPHY
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="gallery.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Photography
+
+</h3>
+
+
+<p>
+
+Creative photography kwa events,
+music, portraits, lifestyle na
+special occasions.
+
+</p>
+
+
+<span class="category">
+
+PHOTOGRAPHY
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 7 -->
+
+<article class="portfolio-card"
+data-category="ict">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+🖨️
+
+<small>
+PRINTING
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="services.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Printing & Design
+
+</h3>
+
+
+<p>
+
+Printing, photocopy, lamination,
+posters, cards, documents na
+creative materials.
+
+</p>
+
+
+<span class="category">
+
+PRINTING
+
+</span>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 8 -->
+
+<article class="portfolio-card"
+data-category="ict">
+
+
+<div class="portfolio-image">
+
+
+<div class="image-placeholder">
+
+🔧
+
+<small>
+COMPUTER SERVICES
+</small>
+
+</div>
+
+
+<div class="portfolio-overlay">
+
+<a href="services.html"
+class="view-btn">
+
+VIEW PROJECT
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-info">
+
+<h3>
+
+Computer & ICT Services
+
+</h3>
+
+
+<p>
+
+Computer repair, software installation,
+networking, hardware support na
+computer training.
+
+</p>
+
+
+<span class="category">
+
+ICT SERVICES
+
+</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+
+<!-- =========================================
+     FEATURED PROJECT
+========================================= -->
+
+<div class="featured-project">
+
+
+<h3>
+
+LET'S CREATE SOMETHING AMAZING
+
+</h3>
+
+
+<p>
+
+Una project ya video, photography,
+graphic design, website au ICT?
+Nipo tayari kushirikiana nawe kutengeneza
+kazi yenye ubora na creativity ya kipekee.
+
+</p>
+
+
+<a href="contact.html"
+class="featured-button">
+
+CONTACT ME
+
+</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+<div class="footer-brand">
+
+♛ GIVEN THE KING
+
+</div>
+
+
+<div class="footer-sub">
+
+VIDEO PRODUCTION & ICT
+
+</div>
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+HOME
+</a>
+
+
+<a href="about.html">
+ABOUT
+</a>
+
+
+<a href="services.html">
+SERVICES
+</a>
+
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+
+<a href="advertising.html">
+ADVERTISEMENT
+</a>
+
+
+<a href="contact.html">
+CONTACT
+</a>
+
+
+</div>
+
+
+<p>
+
+© <span id="year"></span>
+
+<strong>Given The King</strong>.
+
+All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMenu(){
+
+const nav =
+document.getElementById("navLinks");
+
+nav.classList.toggle("show");
+
+}
+
+
+
+/* =========================================
+   PORTFOLIO FILTER
+========================================= */
+
+function filterProjects(category,button){
+
+const cards =
+document.querySelectorAll(".portfolio-card");
+
+const buttons =
+document.querySelectorAll(".filter-btn");
+
+
+buttons.forEach(btn => {
+
+btn.classList.remove("active");
+
+});
+
+
+button.classList.add("active");
+
+
+cards.forEach(card => {
+
+if(category === "all"){
+
+card.style.display = "block";
+
+}
+
+else{
+
+if(card.dataset.category === category){
+
+card.style.display = "block";
+
+}
+
+else{
+
+card.style.display = "none";
+
+}
+
+}
+
+});
+
+}
+
+
+
+/* =========================================
+   LANGUAGE SYSTEM
+========================================= */
+
+const dictionary = {
+
+sw:{
+
+heroEyebrow:
+"PORTFOLIO",
+
+heroTitle:
+'KAZI <span>ZANGU</span>',
+
+heroDesc:
+"Karibu kwenye portfolio yangu. Hapa unaweza kuona baadhi ya kazi nilizofanya katika Video Production, Editing, Design na ICT.",
+
+portfolioTitle:
+'KAZI <span>ZA KUBUNI</span>',
+
+portfolioDescription:
+"Hizi ni baadhi ya kazi zangu katika Video Production, Photography, Video Editing, Graphic Design, Branding na ICT. Portfolio hii inaonyesha ubunifu, ujuzi na uzoefu wangu katika kazi mbalimbali."
+
+},
+
+
+en:{
+
+heroEyebrow:
+"PORTFOLIO",
+
+heroTitle:
+'MY <span>WORK</span>',
+
+heroDesc:
+"Welcome to my portfolio. Here you can see some of my work in Video Production, Editing, Design and ICT.",
+
+portfolioTitle:
+'CREATIVE <span>WORKS</span>',
+
+portfolioDescription:
+"These are some of my works in Video Production, Photography, Video Editing, Graphic Design, Branding and ICT. This portfolio represents my creativity, skills and experience."
+
+}
+
+};
+
+
+
+/* =========================================
+   CHANGE LANGUAGE
+========================================= */
+
+function changeLanguage(lang){
+
+const d =
+dictionary[lang];
+
+
+document.getElementById("hero-eyebrow")
+.innerText =
+d.heroEyebrow;
+
+
+document.getElementById("hero-title")
+.innerHTML =
+d.heroTitle;
+
+
+document.getElementById("hero-desc")
+.innerText =
+d.heroDesc;
+
+
+document.getElementById("portfolio-title")
+.innerHTML =
+d.portfolioTitle;
+
+
+document.getElementById("portfolio-description")
+.innerText =
+d.portfolioDescription;
+
+}
+
+
+
+/* =========================================
+   CLOSE MOBILE MENU
+========================================= */
+
+document.querySelectorAll(
+".nav-links a"
+).forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+document
+.getElementById("navLinks")
+.classList.remove("show");
+
+});
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2687 @@
+```html
+<!DOCTYPE html>
+
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="About Given The King - Personal Creative Website">
+
+<title>About | Given The King</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    padding:0 5%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#101a3a;
+
+    border-bottom:2px solid #38bdf8;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+
+    z-index:1000;
+}
+
+
+/* BRAND */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    min-width:220px;
+}
+
+.brand-crown{
+
+    font-size:42px;
+
+    color:#facc15;
+
+    text-shadow:
+    0 0 15px
+    rgba(250,204,21,.5);
+}
+
+.brand strong{
+
+    display:block;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+}
+
+.brand small{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:#38bdf8;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.nav-links a{
+
+    color:#e2e8f0;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#38bdf8;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-9px;
+
+    width:0;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+}
+
+
+/* SOCIALS */
+
+.socials{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+}
+
+.socials a{
+
+    width:34px;
+
+    height:34px;
+
+    border:1px solid #38bdf8;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.socials a:hover{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    transform:translateY(-3px);
+}
+
+
+/* LANGUAGE */
+
+.lang-select{
+
+    margin-left:8px;
+
+    background:#172554;
+
+    color:white;
+
+    border:1px solid #facc15;
+
+    padding:7px 10px;
+
+    border-radius:6px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    outline:none;
+}
+
+
+/* MOBILE */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#38bdf8;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero{
+
+    margin-top:82px;
+
+    padding:75px 6% 65px;
+
+    text-align:center;
+
+    background:#29164f;
+
+    border-bottom:2px solid #a855f7;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.page-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:#7c3aed;
+
+    opacity:.12;
+
+    border-radius:50%;
+
+    top:-250px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.eyebrow{
+
+    color:#facc15;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+    position:relative;
+}
+
+.page-hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(40px,6vw,68px);
+
+    color:white;
+
+    margin-bottom:15px;
+
+    position:relative;
+}
+
+.page-hero h1 span{
+
+    color:#facc15;
+}
+
+.page-hero p:last-child{
+
+    color:#ddd6fe;
+
+    font-size:15px;
+
+    position:relative;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.main-container{
+
+    max-width:1350px;
+
+    width:100%;
+
+    margin:0 auto;
+
+    padding:60px 5% 80px;
+
+    display:grid;
+
+    grid-template-columns:290px 1fr;
+
+    gap:40px;
+
+    background:#050816;
+}
+
+
+/* =========================================
+   LEFT SIDEBAR
+========================================= */
+
+.sidebar-left{
+
+    background:#092c25;
+
+    border:2px solid #22c55e;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.4);
+
+    position:sticky;
+
+    top:105px;
+
+    height:max-content;
+}
+
+.sidebar-title{
+
+    text-align:center;
+
+    padding:24px 15px;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    color:white;
+
+    background:#064e3b;
+
+    border-bottom:1px solid #22c55e;
+}
+
+.sidebar-left ul{
+
+    list-style:none;
+}
+
+.sidebar-left li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 22px;
+
+    color:#bbf7d0;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    border-bottom:
+    1px solid
+    rgba(34,197,94,.12);
+
+    transition:.3s;
+}
+
+.sidebar-left li a span{
+
+    width:25px;
+
+    text-align:center;
+
+    font-size:16px;
+}
+
+.sidebar-left li a:hover,
+.sidebar-left li a.active{
+
+    background:#166534;
+
+    color:white;
+
+    padding-left:30px;
+
+    border-left:5px solid #facc15;
+}
+
+
+/* =========================================
+   ABOUT CONTENT
+========================================= */
+
+.about-content{
+
+    background:#21170d;
+
+    border:2px solid #f59e0b;
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.45);
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.about-content .eyebrow{
+
+    color:#f59e0b;
+
+    letter-spacing:4px;
+}
+
+.about-content h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:38px;
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.about-content h2 span{
+
+    color:#facc15;
+}
+
+.about-description{
+
+    color:#d6d3d1;
+
+    line-height:1.9;
+
+    font-size:14px;
+
+    margin-bottom:35px;
+}
+
+
+/* =========================================
+   PROFILE SECTION
+========================================= */
+
+.profile-section{
+
+    display:grid;
+
+    grid-template-columns:230px 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+}
+
+.profile-card{
+
+    background:#2d1f10;
+
+    border:1px solid
+    rgba(245,158,11,.35);
+
+    border-radius:15px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:300px;
+
+    transition:.3s;
+}
+
+.profile-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#facc15;
+}
+
+.profile-icon{
+
+    width:135px;
+
+    height:135px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:65px;
+
+    color:#facc15;
+
+    background:#172554;
+
+    border:3px solid #38bdf8;
+
+    box-shadow:
+    0 0 30px
+    rgba(56,189,248,.2);
+
+    margin-bottom:20px;
+}
+
+.profile-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.profile-card h3 span{
+
+    color:#facc15;
+}
+
+.profile-card p{
+
+    color:#38bdf8;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================
+   WHO I AM
+========================================= */
+
+.who-card{
+
+    background:#172554;
+
+    border:2px solid #2563eb;
+
+    border-radius:15px;
+
+    padding:30px;
+}
+
+.who-card h3{
+
+    color:#facc15;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+.who-card h3 span{
+
+    color:#38bdf8;
+}
+
+.who-card p{
+
+    color:#dbeafe;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+}
+
+
+/* =========================================
+   INFO CARDS
+========================================= */
+
+.info-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    border-left:4px solid #facc15;
+
+    padding-left:14px;
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+}
+
+.info-card{
+
+    background:#2d1f10;
+
+    border:1px solid
+    rgba(245,158,11,.35);
+
+    border-radius:14px;
+
+    padding:25px;
+
+    transition:.3s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#facc15;
+
+    box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.35);
+}
+
+.info-icon{
+
+    font-size:32px;
+
+    margin-bottom:13px;
+}
+
+.info-card h3{
+
+    color:#facc15;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+}
+
+.info-card p{
+
+    color:#d6d3d1;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-section{
+
+    background:#172554;
+
+    border:2px solid #2563eb;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-bottom:35px;
+}
+
+.skills-section h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+}
+
+.skills-section h2 span{
+
+    color:#facc15;
+}
+
+.skill{
+
+    margin-bottom:20px;
+}
+
+.skill-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+}
+
+.skill-top span{
+
+    color:#dbeafe;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.skill-top strong{
+
+    color:#facc15;
+
+    font-size:11px;
+}
+
+.skill-bar{
+
+    height:8px;
+
+    background:#0f172a;
+
+    border-radius:10px;
+
+    overflow:hidden;
+}
+
+.skill-fill{
+
+    height:100%;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8
+    );
+}
+
+
+/* =========================================
+   MISSION / VISION
+========================================= */
+
+.mission-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+    border-left:4px solid #facc15;
+
+    padding-left:14px;
+}
+
+.mission-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin-bottom:35px;
+}
+
+.mission-card{
+
+    background:#092c25;
+
+    border:2px solid #22c55e;
+
+    border-radius:15px;
+
+    padding:28px;
+
+    transition:.3s;
+}
+
+.mission-card:hover{
+
+    transform:translateY(-5px);
+
+    background:#064e3b;
+}
+
+.mission-card h3{
+
+    color:#facc15;
+
+    font-size:16px;
+
+    margin-bottom:13px;
+
+    letter-spacing:1px;
+}
+
+.mission-card p{
+
+    color:#bbf7d0;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta{
+
+    text-align:center;
+
+    background:#29164f;
+
+    border:2px solid #a855f7;
+
+    border-radius:16px;
+
+    padding:35px 25px;
+}
+
+.cta h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:32px;
+
+    margin-bottom:12px;
+}
+
+.cta h2 span{
+
+    color:#facc15;
+}
+
+.cta p{
+
+    color:#ddd6fe;
+
+    font-size:13px;
+
+    margin-bottom:20px;
+}
+
+.cta a{
+
+    display:inline-block;
+
+    padding:13px 24px;
+
+    background:#facc15;
+
+    color:#111827;
+
+    border-radius:7px;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.cta a:hover{
+
+    background:#38bdf8;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    background:#111111;
+
+    border-top:3px solid #facc15;
+
+    padding:45px 6%;
+
+    text-align:center;
+
+    color:#94a3b8;
+}
+
+footer .footer-brand{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    color:#facc15;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+footer .footer-sub{
+
+    color:#38bdf8;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-bottom:20px;
+}
+
+.footer-links a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#facc15;
+}
+
+.footer-payment{
+
+    display:inline-block;
+
+    margin:5px 0 20px;
+
+    padding:11px 20px;
+
+    border:1px solid #facc15;
+
+    border-radius:20px;
+
+    color:#facc15;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.footer-payment:hover{
+
+    background:#facc15;
+
+    color:#111111;
+}
+
+.footer-socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+}
+
+.footer-socials a{
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid #38bdf8;
+
+    border-radius:50%;
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.footer-socials a:hover{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    transform:translateY(-3px);
+}
+
+footer p{
+
+    font-size:12px;
+
+    color:#64748b;
+
+    margin-top:12px;
+}
+
+footer strong{
+
+    color:#facc15;
+}
+
+
+/* =========================================
+   RESPONSIVE 1100
+========================================= */
+
+@media(max-width:1100px){
+
+    .nav-links{
+
+        gap:15px;
+    }
+
+    .socials{
+
+        display:none;
+    }
+
+    .main-container{
+
+        grid-template-columns:250px 1fr;
+
+        gap:25px;
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE 900
+========================================= */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        height:75px;
+
+        padding:0 5%;
+    }
+
+    .brand strong{
+
+        font-size:14px;
+    }
+
+    .brand small{
+
+        font-size:8px;
+    }
+
+    .brand-crown{
+
+        font-size:35px;
+    }
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:#101a3a;
+
+        flex-direction:column;
+
+        padding:20px;
+
+        border-bottom:2px solid #38bdf8;
+
+        gap:5px;
+    }
+
+    .nav-links.show{
+
+        display:flex;
+    }
+
+    .nav-links a{
+
+        padding:12px;
+
+        text-align:center;
+
+        width:100%;
+    }
+
+    .main-container{
+
+        grid-template-columns:1fr;
+
+        padding:40px 5% 60px;
+    }
+
+    .sidebar-left{
+
+        position:static;
+
+        width:100%;
+    }
+
+    .profile-section{
+
+        grid-template-columns:1fr;
+    }
+
+    .profile-card{
+
+        min-height:250px;
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE 600
+========================================= */
+
+@media(max-width:600px){
+
+    .page-hero{
+
+        padding:55px 5% 45px;
+    }
+
+    .page-hero h1{
+
+        font-size:42px;
+    }
+
+    .about-content{
+
+        padding:25px 20px;
+    }
+
+    .about-content h2{
+
+        font-size:30px;
+    }
+
+    .who-card{
+
+        padding:22px;
+    }
+
+    .skills-section{
+
+        padding:22px;
+    }
+
+    .cta{
+
+        padding:30px 18px;
+    }
+
+    .cta h2{
+
+        font-size:27px;
+    }
+
+    .footer-links{
+
+        gap:15px;
+    }
+
+    .footer-links a{
+
+        font-size:10px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE 400
+========================================= */
+
+@media(max-width:400px){
+
+    .brand strong{
+
+        font-size:12px;
+    }
+
+    .brand small{
+
+        font-size:7px;
+    }
+
+    .page-hero h1{
+
+        font-size:38px;
+    }
+
+    .sidebar-left li a{
+
+        font-size:11px;
+
+        padding:13px 16px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+<a href="index.html"
+class="brand">
+
+<span class="brand-crown">
+♛
+</span>
+
+<span>
+
+<strong>
+GIVEN THE KING
+</strong>
+
+<small>
+VIDEO PRODUCTION & ICT
+</small>
+
+</span>
+
+</a>
+
+
+<button
+class="menu-toggle"
+id="menuToggle">
+
+☰
+
+</button>
+
+
+<nav
+class="nav-links"
+id="navLinks">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="about.html"
+class="active">
+ABOUT
+</a>
+
+<a href="services.html">
+SERVICES
+</a>
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+<a href="contact.html">
+CONTACT
+</a>
+
+</nav>
+
+
+<div class="socials">
+
+<a href="https://www.facebook.com/"
+target="_blank">
+
+f
+
+</a>
+
+<a href="https://www.instagram.com/"
+target="_blank">
+
+◎
+
+</a>
+
+<a href="https://www.youtube.com/"
+target="_blank">
+
+▶
+
+</a>
+
+
+<select
+class="lang-select"
+id="languageSelect"
+onchange="changeLanguage(this.value)">
+
+<option value="sw">
+SW
+</option>
+
+<option value="en">
+EN
+</option>
+
+</select>
+
+</div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="page-hero">
+
+<p class="eyebrow"
+id="heroEyebrow">
+
+KUHUSU MIMI
+
+</p>
+
+<h1 id="heroTitle">
+
+ABOUT <span>ME</span>
+
+</h1>
+
+<p id="heroDescription">
+
+Karibu kwenye ukurasa wa Given The King.
+Fahamu zaidi kuhusu mimi, ubunifu wangu,
+ujuzi wangu na safari yangu katika
+Video Production, ICT na Technology.
+
+</p>
+
+</section>
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main-container">
+
+
+<!-- =========================================
+     LEFT SIDEBAR
+========================================= -->
+
+<aside class="sidebar-left">
+
+
+<div class="sidebar-title"
+id="sidebarTitle">
+
+MENU
+
+</div>
+
+
+<ul>
+
+
+<li>
+
+<a href="index.html">
+
+<span>⌂</span>
+
+HOME
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="about.html"
+class="active">
+
+<span>♙</span>
+
+ABOUT ME
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>✦</span>
+
+MY SERVICES
+
+</a>
+
+</li>
+
+
+<!-- =====================================
+     ADVERTISING ADDED HERE
+===================================== -->
+
+<li>
+
+<a href="advertising.html">
+
+<span>📢</span>
+
+ADVERTISING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="portfolio.html">
+
+<span>▣</span>
+
+PORTFOLIO
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="videos.html">
+
+<span>▶</span>
+
+MY VIDEOS
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="gallery.html">
+
+<span>▧</span>
+
+GALLERY
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="blog.html">
+
+<span>✎</span>
+
+MY BLOG
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="skills.html">
+
+<span>★</span>
+
+MY SKILLS
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎥</span>
+
+VIDEO PRODUCTION
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>✂</span>
+
+VIDEO EDITING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🎨</span>
+
+BRANDING & DESIGN
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>💻</span>
+
+COMPUTER TRAINING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>📐</span>
+
+MATHEMATICS TEACHING
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌐</span>
+
+NETWORKING & HARDWARE
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🔧</span>
+
+COMPUTER REPAIR
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="stationery.html">
+
+<span>📑</span>
+
+STATIONERY SERVICES
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🖨</span>
+
+PRINTING & LAMINATION
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="services.html">
+
+<span>🌍</span>
+
+PHOTOCOPY & INTERNET
+
+</a>
+
+</li>
+
+
+</ul>
+
+</aside>
+
+
+<!-- =========================================
+     ABOUT CONTENT
+========================================= -->
+
+<section class="about-content">
+
+
+<p class="eyebrow"
+id="aboutEyebrow">
+
+ABOUT ME
+
+</p>
+
+
+<h2 id="aboutTitle">
+
+I AM <span>GIVEN MWAKIMONGA.</span>
+
+</h2>
+
+
+<p class="about-description"
+id="aboutDescription">
+
+Mimi ni creative mwenye passion katika
+Video Production, Video Editing,
+Photography, Graphic Design,computer maintenance, na Technology.
+Ninaamini kwamba creativity na technology
+vinaweza kugeuza idea rahisi kuwa kitu
+cha kipekee na chenye impact.
+
+</p>
+
+
+<!-- =========================================
+     PROFILE
+========================================= -->
+
+<div class="profile-section">
+
+
+<div class="profile-card">
+
+
+<div class="profile-icon">
+
+♛
+
+</div>
+
+
+<h3>
+
+GIVEN <span>THE KING</span>
+
+</h3>
+
+
+<p>
+
+VIDEO • CREATIVE • TECHNOLOGY
+
+</p>
+
+
+</div>
+
+
+<div class="who-card">
+
+
+<h3>
+
+WHO <span>AM I?</span>
+
+</h3>
+
+
+<p>
+
+Mimi ni Given The King, creative mwenye
+interest kubwa katika Video Production,
+Photography, Video Editing, Graphic Design
+na ICT.
+
+</p>
+
+
+<p>
+
+Ninapenda kutumia creativity, camera,
+editing na technology kuleta ideas kwenye
+maisha na kutengeneza visual content
+inayoweza kukumbukwa.
+
+</p>
+
+
+<p>
+
+Pia nina interest katika Web Development,
+Computer Training, Networking, Hardware
+na digital technology kwa ujumla.
+
+</p>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================================
+     WHAT I DO
+========================================= -->
+
+<h2 class="info-title"
+id="whatTitle">
+
+WHAT I DO
+
+</h2>
+
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<div class="info-icon">
+🎬
+</div>
+
+<h3>
+VIDEO PRODUCTION
+</h3>
+
+<p>
+
+Kutengeneza video zenye quality,
+creativity na storytelling inayovutia
+watazamaji.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+📷
+</div>
+
+<h3>
+PHOTOGRAPHY
+</h3>
+
+<p>
+
+Kupiga picha zinazobeba emotion,
+memories na story ya tukio.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+✂
+</div>
+
+<h3>
+VIDEO EDITING
+</h3>
+
+<p>
+
+Editing ya video kwa kutumia creativity,
+effects, transitions, music na
+storytelling.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+🎨
+</div>
+
+<h3>
+GRAPHIC DESIGN
+</h3>
+
+<p>
+
+Kutengeneza posters, logos, branding
+na digital graphics zenye muonekano
+wa kuvutia.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+💻
+</div>
+
+<h3>
+ICT & TECHNOLOGY
+</h3>
+
+<p>
+
+Computer services, web development,
+training, networking na technology
+support.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-icon">
+🖨
+</div>
+
+<h3>
+PRINTING SERVICES
+</h3>
+
+<p>
+
+Printing, photocopy, lamination,
+stationery na huduma mbalimbali
+za digital documents.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================
+     SKILLS
+========================================= -->
+
+<div class="skills-section">
+
+
+<h2>
+
+MY <span>SKILLS</span>
+
+</h2>
+
+
+<div class="skill">
+
+<div class="skill-top">
+
+<span>
+Video Production
+</span>
+
+<strong>
+90%
+</strong>
+
+</div>
+
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-top">
+
+<span>
+Video Editing
+</span>
+
+<strong>
+88%
+</strong>
+
+</div>
+
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:88%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-top">
+
+<span>
+Photography
+</span>
+
+<strong>
+82%
+</strong>
+
+</div>
+
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:82%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-top">
+
+<span>
+Graphic Design
+</span>
+
+<strong>
+78%
+</strong>
+
+</div>
+
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:78%">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-top">
+
+<span>
+Web Development
+</span>
+
+<strong>
+75%
+</strong>
+
+</div>
+
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:75%">
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================
+     MISSION / VISION
+========================================= -->
+
+<h2 class="mission-title"
+id="missionTitle">
+
+MISSION & VISION
+
+</h2>
+
+
+<div class="mission-grid">
+
+
+<div class="mission-card">
+
+<h3>
+
+🎯 MY MISSION
+
+</h3>
+
+<p>
+
+Kutumia creativity na technology
+kutengeneza visual content yenye quality,
+originality na impact kwa watu wanaohitaji
+huduma za digital creativity.
+
+</p>
+
+</div>
+
+
+<div class="mission-card">
+
+<h3>
+
+🚀 MY VISION
+
+</h3>
+
+<p>
+
+Kujenga brand ya creative inayotambulika
+kwa ubora katika video production,
+photography, editing, design na
+technology.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<div class="cta">
+
+
+<h2>
+
+LET'S CREATE <span>SOMETHING GREAT</span>
+
+</h2>
+
+
+<p>
+
+Una project, event au idea unayotaka
+kuifanya iwe reality?
+
+</p>
+
+
+<a href="contact.html"
+id="contactButton">
+
+CONTACT ME →
+
+</a>
+
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+<div class="footer-brand">
+
+♛ GIVEN THE KING
+
+</div>
+
+
+<div class="footer-sub">
+
+VIDEO PRODUCTION & ICT
+
+</div>
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+HOME
+</a>
+
+
+<a href="about.html">
+ABOUT
+</a>
+
+
+<a href="services.html">
+SERVICES
+</a>
+
+
+<a href="advertising.html">
+ADVERTISING
+</a>
+
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+
+<a href="gallery.html">
+GALLERY
+</a>
+
+
+<a href="blog.html">
+BLOG
+</a>
+
+
+<a href="skills.html">
+SKILLS
+</a>
+
+
+<a href="stationery.html">
+STATIONERY
+</a>
+
+
+</div>
+
+
+<a href="payment.html"
+class="footer-payment">
+
+💳 MY PAYMENTS
+
+</a>
+
+
+<div class="footer-socials">
+
+
+<a href="https://www.facebook.com/"
+target="_blank">
+
+f
+
+</a>
+
+
+<a href="https://www.instagram.com/"
+target="_blank">
+
+◎
+
+</a>
+
+
+<a href="https://www.youtube.com/"
+target="_blank">
+
+▶
+
+</a>
+
+
+<a href="https://wa.me/255753389563"
+target="_blank">
+
+◔
+
+</a>
+
+
+</div>
+
+
+<p>
+
+© <span id="year"></span>
+
+<strong>
+Given The King
+</strong>
+
+— All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* MOBILE MENU */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuToggle.addEventListener(
+"click",
+function(){
+
+navLinks.classList.toggle("show");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+navLinks.classList.remove("show");
+
+});
+
+});
+
+
+
+/* =========================================
+   LANGUAGE SYSTEM
+========================================= */
+
+const dictionary = {
+
+sw:{
+
+heroEyebrow:
+"KUHUSU MIMI",
+
+heroTitle:
+'ABOUT <span>ME</span>',
+
+heroDescription:
+"Karibu kwenye ukurasa wa Given The King. Fahamu zaidi kuhusu mimi, ubunifu wangu, ujuzi wangu na safari yangu katika Video Production, ICT na Technology.",
+
+aboutEyebrow:
+"ABOUT ME",
+
+aboutTitle:
+'I AM <span>GIVEN THE KING.</span>',
+
+aboutDescription:
+"Mimi ni creative mwenye passion katika Video Production, Video Editing, Photography, Graphic Design na Technology. Ninaamini kwamba creativity na technology vinaweza kugeuza idea rahisi kuwa kitu cha kipekee na chenye impact.",
+
+whatTitle:
+"WHAT I DO",
+
+missionTitle:
+"MISSION & VISION",
+
+contactButton:
+"CONTACT ME →"
+
+},
+
+
+en:{
+
+heroEyebrow:
+"ABOUT ME",
+
+heroTitle:
+'ABOUT <span>ME</span>',
+
+heroDescription:
+"Welcome to Given The King. Learn more about me, my creativity, my skills and my journey in Video Production, ICT and Technology.",
+
+aboutEyebrow:
+"ABOUT ME",
+
+aboutTitle:
+'I AM <span>GIVEN THE KING.</span>',
+
+aboutDescription:
+"I am a creative professional passionate about Video Production, Video Editing, Photography, Graphic Design and Technology. I believe creativity and technology can turn simple ideas into unique and impactful experiences.",
+
+whatTitle:
+"WHAT I DO",
+
+missionTitle:
+"MISSION & VISION",
+
+contactButton:
+"CONTACT ME →"
+
+}
+
+};
+
+
+
+function changeLanguage(lang){
+
+const d =
+dictionary[lang];
+
+
+document.getElementById(
+"heroEyebrow"
+).innerText =
+d.heroEyebrow;
+
+
+document.getElementById(
+"heroTitle"
+).innerHTML =
+d.heroTitle;
+
+
+document.getElementById(
+"heroDescription"
+).innerText =
+d.heroDescription;
+
+
+document.getElementById(
+"aboutEyebrow"
+).innerText =
+d.aboutEyebrow;
+
+
+document.getElementById(
+"aboutTitle"
+).innerHTML =
+d.aboutTitle;
+
+
+document.getElementById(
+"aboutDescription"
+).innerText =
+d.aboutDescription;
+
+
+document.getElementById(
+"whatTitle"
+).innerText =
+d.whatTitle;
+
+
+document.getElementById(
+"missionTitle"
+).innerText =
+d.missionTitle;
+
+
+document.getElementById(
+"contactButton"
+).innerText =
+d.contactButton;
+
+}
+
+
+
+/* =========================================
+   KEEP LANGUAGE AFTER REFRESH
+========================================= */
+
+const savedLanguage =
+localStorage.getItem(
+"givenKingLanguage"
+);
+
+
+if(savedLanguage){
+
+document.getElementById(
+"languageSelect"
+).value =
+savedLanguage;
+
+changeLanguage(
+savedLanguage
+);
+
+}
+
+
+document.getElementById(
+"languageSelect"
+).addEventListener(
+"change",
+function(){
+
+localStorage.setItem(
+"givenKingLanguage",
+this.value
+);
+
+changeLanguage(
+this.value
+);
+
+});
+
+</script>
+
+</body>
+
+</html>

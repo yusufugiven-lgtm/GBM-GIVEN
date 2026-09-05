@@ -1,0 +1,3718 @@
+```html
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Given The King - Personal Creative Gallery">
+
+<title>Gallery | Given The King</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    background:
+
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(37,99,235,.35),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(14,165,233,.25),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #082f49,
+        #020617
+    );
+
+    animation:bgMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    min-height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 4%;
+
+    background:rgba(2,6,23,.94);
+
+    border-bottom:
+    1px solid
+    rgba(59,130,246,.4);
+
+    backdrop-filter:blur(18px);
+
+    z-index:1000;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+
+    width:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:white;
+}
+
+.logo-icon{
+
+    font-size:36px;
+
+    color:#38bdf8;
+
+    text-shadow:
+    0 0 20px
+    rgba(56,189,248,.6);
+}
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.logo-text strong{
+
+    font-size:15px;
+
+    letter-spacing:2px;
+}
+
+.logo-text small{
+
+    margin-top:3px;
+
+    font-size:7px;
+
+    letter-spacing:3px;
+
+    color:#38bdf8;
+}
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+.nav-menu{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:22px;
+}
+
+.nav-menu a{
+
+    position:relative;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    padding:10px 0;
+
+    transition:.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+
+    color:#38bdf8;
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after{
+
+    width:100%;
+}
+
+
+/* =====================================================
+   NAV ACTIONS
+===================================================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+
+/* =====================================================
+   LANGUAGE SELECTOR
+===================================================== */
+
+.lang-select{
+
+    height:36px;
+
+    padding:0 10px;
+
+    background:#0f172a;
+
+    color:#38bdf8;
+
+    border:
+    1px solid
+    rgba(56,189,248,.5);
+
+    border-radius:6px;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.lang-select:hover{
+
+    background:#0284c7;
+
+    color:white;
+
+    border-color:#38bdf8;
+
+    transform:translateY(-2px);
+}
+
+.lang-select option{
+
+    background:#0f172a;
+
+    color:white;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box{
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:12px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.4);
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.05);
+}
+
+.search-box input{
+
+    width:100px;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:9px;
+}
+
+.search-box input::placeholder{
+
+    color:#64748b;
+}
+
+.search-box button{
+
+    width:30px;
+
+    height:30px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0ea5e9;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   ACCOUNT BUTTONS
+===================================================== */
+
+.account-btn{
+
+    padding:9px 11px;
+
+    border-radius:5px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.5);
+
+    background:transparent;
+
+    color:white;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.account-btn:hover{
+
+    background:#0ea5e9;
+
+    transform:translateY(-2px);
+}
+
+.create-btn{
+
+    background:#0ea5e9;
+}
+
+.logout-btn{
+
+    display:none;
+
+    background:#dc2626;
+
+    border-color:#dc2626;
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#38bdf8;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+
+    padding-top:75px;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.home-layout{
+
+    max-width:1500px;
+
+    min-height:calc(100vh - 75px);
+
+    margin:auto;
+
+    padding:25px 4% 50px;
+
+    display:grid;
+
+    grid-template-columns:230px 1fr;
+
+    gap:25px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar-left{
+
+    align-self:start;
+
+    position:sticky;
+
+    top:100px;
+
+    background:
+    rgba(3,20,50,.9);
+
+    border:
+    1px solid
+    rgba(14,165,233,.35);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 20px 60px
+    rgba(0,0,0,.4);
+}
+
+.sidebar-title{
+
+    padding:18px;
+
+    text-align:center;
+
+    color:#38bdf8;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    border-bottom:
+    1px solid
+    rgba(56,189,248,.2);
+}
+
+.sidebar-left ul{
+
+    list-style:none;
+}
+
+.sidebar-left li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    color:#dbeafe;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.sidebar-left li a span{
+
+    width:22px;
+
+    color:#38bdf8;
+
+    font-size:15px;
+
+    text-align:center;
+}
+
+.sidebar-left li a:hover,
+.sidebar-left li a.active{
+
+    color:#38bdf8;
+
+    background:
+    rgba(14,165,233,.1);
+
+    padding-left:25px;
+
+    border-left:
+    3px solid #38bdf8;
+}
+
+
+/* =====================================================
+   GALLERY CONTENT
+===================================================== */
+
+.gallery-content{
+
+    width:100%;
+
+    padding:10px 0;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.page-header small{
+
+    color:#38bdf8;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+}
+
+.page-header h1{
+
+    font-family:
+    'Playfair Display',serif;
+
+    font-size:
+    clamp(45px,6vw,75px);
+
+    line-height:1;
+
+    margin-top:10px;
+}
+
+.page-header h1 span{
+
+    color:#38bdf8;
+
+    text-shadow:
+    0 0 30px
+    rgba(56,189,248,.3);
+}
+
+.page-header p{
+
+    max-width:700px;
+
+    margin:18px auto;
+
+    color:#94a3b8;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   MEDIA TABS
+===================================================== */
+
+.media-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+}
+
+.media-tab{
+
+    padding:11px 20px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.3);
+
+    background:
+    rgba(15,23,42,.8);
+
+    color:#cbd5e1;
+
+    border-radius:5px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.media-tab:hover,
+.media-tab.active{
+
+    background:#0ea5e9;
+
+    color:white;
+
+    border-color:#38bdf8;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   UPLOAD INFO
+===================================================== */
+
+.upload-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 20px;
+
+    margin-bottom:25px;
+
+    background:
+    rgba(15,23,42,.8);
+
+    border:
+    1px solid
+    rgba(56,189,248,.2);
+
+    border-radius:10px;
+}
+
+.upload-info-text h3{
+
+    color:#38bdf8;
+
+    font-size:14px;
+
+    margin-bottom:5px;
+}
+
+.upload-info-text p{
+
+    color:#94a3b8;
+
+    font-size:9px;
+
+    line-height:1.6;
+}
+
+.upload-button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0284c7,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    transition:.3s;
+}
+
+.upload-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(14,165,233,.3);
+}
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.gallery-filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:25px;
+}
+
+.filter-btn{
+
+    padding:8px 15px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.25);
+
+    background:
+    rgba(2,6,23,.7);
+
+    color:#94a3b8;
+
+    border-radius:20px;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+
+    background:#0284c7;
+
+    color:white;
+
+    border-color:#38bdf8;
+}
+
+
+/* =====================================================
+   PHOTO GALLERY
+===================================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.gallery-card{
+
+    position:relative;
+
+    height:270px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.18);
+
+    background:#111827;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.6);
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.08);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.gallery-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:20px;
+
+    background:
+    linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.9)
+    );
+}
+
+.gallery-overlay h3{
+
+    font-family:
+    'Playfair Display',serif;
+
+    font-size:20px;
+
+    margin-bottom:5px;
+}
+
+.gallery-overlay p{
+
+    color:#7dd3fc;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+}
+
+.category{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    padding:7px 10px;
+
+    background:
+    rgba(2,132,199,.9);
+
+    border-radius:4px;
+
+    color:white;
+
+    font-size:7px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   MEDIA SECTION
+===================================================== */
+
+.media-section{
+
+    display:none;
+
+    margin-top:25px;
+}
+
+.media-section.show{
+
+    display:block;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+}
+
+.section-title span{
+
+    width:40px;
+
+    height:2px;
+
+    background:#38bdf8;
+}
+
+.section-title h2{
+
+    font-family:
+    'Playfair Display',serif;
+
+    font-size:28px;
+}
+
+.section-title h2 strong{
+
+    color:#38bdf8;
+}
+
+
+/* =====================================================
+   VIDEO GRID
+===================================================== */
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.video-card{
+
+    overflow:hidden;
+
+    border:
+    1px solid
+    rgba(56,189,248,.2);
+
+    border-radius:12px;
+
+    background:
+    rgba(15,23,42,.9);
+
+    transition:.3s;
+}
+
+.video-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.5);
+}
+
+.video-card video{
+
+    width:100%;
+
+    height:260px;
+
+    display:block;
+
+    background:#000;
+}
+
+.video-info{
+
+    padding:15px 18px;
+}
+
+.video-info h3{
+
+    color:#38bdf8;
+
+    font-size:14px;
+
+    margin-bottom:6px;
+}
+
+.video-info p{
+
+    color:#94a3b8;
+
+    font-size:9px;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   AUDIO
+===================================================== */
+
+.audio-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+}
+
+.audio-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    border:
+    1px solid
+    rgba(56,189,248,.2);
+
+    border-radius:10px;
+
+    background:
+    rgba(15,23,42,.9);
+
+    transition:.3s;
+}
+
+.audio-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#38bdf8;
+}
+
+.audio-icon{
+
+    width:55px;
+
+    height:55px;
+
+    min-width:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0284c7,
+        #38bdf8
+    );
+
+    font-size:23px;
+}
+
+.audio-info{
+
+    width:100%;
+}
+
+.audio-info h3{
+
+    color:white;
+
+    font-size:13px;
+
+    margin-bottom:8px;
+}
+
+.audio-info p{
+
+    color:#64748b;
+
+    font-size:8px;
+
+    margin-bottom:10px;
+}
+
+.audio-info audio{
+
+    width:100%;
+
+    height:35px;
+}
+
+
+/* =====================================================
+   GALLERY INFO
+===================================================== */
+
+.gallery-info{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    background:
+    rgba(15,23,42,.75);
+
+    border:
+    1px solid
+    rgba(56,189,248,.2);
+}
+
+.gallery-info h2{
+
+    font-family:
+    'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:8px;
+}
+
+.gallery-info h2 span{
+
+    color:#38bdf8;
+}
+
+.gallery-info p{
+
+    color:#94a3b8;
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   IMAGE MODAL
+===================================================== */
+
+.image-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    background:
+    rgba(0,0,0,.92);
+
+    z-index:5000;
+}
+
+.image-modal.show{
+
+    display:flex;
+}
+
+.image-modal img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:10px;
+
+    border:
+    2px solid
+    rgba(56,189,248,.5);
+
+    box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.8);
+}
+
+.close-image{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0ea5e9;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    margin-top:30px;
+
+    padding:
+    35px 5% 22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #020617
+    );
+
+    border-top:
+    1px solid
+    rgba(56,189,248,.35);
+
+    text-align:center;
+}
+
+.footer-name{
+
+    font-size:17px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+}
+
+.footer-name span{
+
+    color:#38bdf8;
+}
+
+.footer-description{
+
+    color:#38bdf8;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    margin-top:7px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin:20px 0;
+}
+
+.footer-links a{
+
+    color:#94a3b8;
+
+    text-decoration:none;
+
+    font-size:9px;
+
+    font-weight:700;
+}
+
+.footer-links a:hover{
+
+    color:#38bdf8;
+}
+
+.footer-socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+}
+
+.footer-socials a{
+
+    width:33px;
+
+    height:33px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:
+    1px solid
+    rgba(56,189,248,.4);
+
+    border-radius:50%;
+
+    color:#38bdf8;
+
+    text-decoration:none;
+}
+
+.footer-socials a:hover{
+
+    background:#38bdf8;
+
+    color:#020617;
+}
+
+.copyright{
+
+    padding-top:15px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.07);
+
+    color:#64748b;
+
+    font-size:8px;
+}
+
+.copyright strong{
+
+    color:white;
+}
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+#photoInput,
+#videoInput,
+#audioInput{
+
+    display:none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:1150px){
+
+    .nav-menu{
+
+        gap:12px;
+    }
+
+    .nav-menu a{
+
+        font-size:9px;
+    }
+
+    .search-box input{
+
+        width:70px;
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    .navbar{
+
+        min-height:70px;
+
+        padding:0 5%;
+    }
+
+    .logo{
+
+        width:auto;
+    }
+
+    .logo-text strong{
+
+        font-size:12px;
+    }
+
+    .logo-icon{
+
+        font-size:30px;
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        margin-left:auto;
+    }
+
+    .nav-menu{
+
+        position:absolute;
+
+        top:70px;
+
+        left:0;
+
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+
+        padding:20px;
+
+        background:#020617;
+
+        border-bottom:
+        1px solid
+        rgba(56,189,248,.3);
+    }
+
+    .nav-menu.show{
+
+        display:flex;
+    }
+
+    .nav-actions{
+
+        display:none;
+    }
+
+    .home-layout{
+
+        display:flex;
+
+        flex-direction:column;
+
+        padding:
+        90px 5% 40px;
+    }
+
+    .sidebar-left{
+
+        position:static;
+
+        width:100%;
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .upload-info{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .video-grid,
+    .audio-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .gallery-card{
+
+        height:280px;
+    }
+
+    .page-header h1{
+
+        font-size:48px;
+    }
+
+    .media-tab{
+
+        padding:9px 13px;
+    }
+
+    .upload-button{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+}
+
+
+/* =====================================================
+   LANGUAGE FADE
+===================================================== */
+
+.language-changing{
+
+    animation:languageFade .25s ease;
+}
+
+@keyframes languageFade{
+
+    from{
+        opacity:.3;
+        transform:translateY(4px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="background"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+
+<a href="index.html" class="logo">
+
+<span class="logo-icon">♛</span>
+
+<span class="logo-text">
+
+<strong>GIVEN THE KING</strong>
+
+<small>PERSONAL CREATIVE</small>
+
+</span>
+
+</a>
+
+
+<button
+class="menu-toggle"
+id="menuToggle">
+
+☰
+
+</button>
+
+
+<nav
+class="nav-menu"
+id="navMenu">
+
+<a href="index.html">
+<span data-lang="home">HOME</span>
+</a>
+
+<a href="about.html">
+<span data-lang="about">ABOUT</span>
+</a>
+
+<a href="services.html">
+<span data-lang="services">SERVICES</span>
+</a>
+
+<a href="portfolio.html">
+<span data-lang="portfolio">PORTFOLIO</span>
+</a>
+
+<a href="videos.html">
+<span data-lang="videos">VIDEOS</span>
+</a>
+
+<a href="contact.html">
+<span data-lang="contact">CONTACT</span>
+</a>
+
+<a href="advertise.html">
+<span data-lang="advertise">ADVERTISE</span>
+</a>
+
+</nav>
+
+
+<div class="nav-actions">
+
+
+<select
+class="lang-select"
+id="languageSelect"
+onchange="changeLanguage(this.value)">
+
+<option value="sw">🇹🇿 SW</option>
+
+<option value="en">🇬🇧 EN</option>
+
+</select>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search...">
+
+<button
+id="searchButton">
+
+🔍
+
+</button>
+
+</div>
+
+
+<button
+class="account-btn"
+id="loginButton">
+
+LOGIN
+
+</button>
+
+
+<button
+class="account-btn create-btn"
+id="createButton">
+
+CREATE ACCOUNT
+
+</button>
+
+
+<button
+class="account-btn logout-btn"
+id="logoutButton">
+
+LUNGA
+
+</button>
+
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<div class="home-layout">
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar-left">
+
+
+<div class="sidebar-title"
+data-lang="menu">
+
+MENU
+
+</div>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+
+<span>⌂</span>
+
+<span data-lang="home">HOME</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="about.html">
+
+<span>♙</span>
+
+<span data-lang="aboutMe">ABOUT ME</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>✦</span>
+
+<span data-lang="myServices">MY SERVICES</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="portfolio.html">
+
+<span>▣</span>
+
+<span data-lang="portfolio">PORTFOLIO</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="videos.html">
+
+<span>▶</span>
+
+<span data-lang="myVideos">MY VIDEOS</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="gallery.html"
+class="active">
+
+<span>▧</span>
+
+<span data-lang="gallery">GALLERY</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="blog.html">
+
+<span>✎</span>
+
+<span data-lang="myBlog">MY BLOG</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="advertise.html">
+
+<span>📢</span>
+
+<span data-lang="advertisement">ADVERTISEMENT</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="skills.html">
+
+<span>★</span>
+
+<span data-lang="mySkills">MY SKILLS</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🎥</span>
+
+<span data-lang="videoProduction">
+VIDEO PRODUCTION
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>✂</span>
+
+<span data-lang="videoEditing">
+VIDEO EDITING
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🎨</span>
+
+<span data-lang="branding">
+BRANDING & DESIGN
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>💻</span>
+
+<span data-lang="computerTraining">
+COMPUTER TRAINING
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>📐</span>
+
+<span data-lang="mathematics">
+MATHEMATICS TEACHING
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🌐</span>
+
+<span data-lang="networking">
+NETWORKING & HARDWARE
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🔧</span>
+
+<span data-lang="computerRepair">
+COMPUTER REPAIR
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>📑</span>
+
+<span data-lang="stationery">
+STATIONERY SERVICES
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🖨</span>
+
+<span data-lang="printing">
+PRINTING & LAMINATION
+</span>
+
+</a>
+</li>
+
+
+<li>
+<a href="services.html">
+
+<span>🌍</span>
+
+<span data-lang="photocopy">
+PHOTOCOPY & INTERNET
+</span>
+
+</a>
+</li>
+
+
+</ul>
+
+</aside>
+
+
+<!-- =====================================================
+     GALLERY CONTENT
+===================================================== -->
+
+<section class="gallery-content">
+
+
+<div class="page-header">
+
+<small data-lang="personalMedia">
+MY PERSONAL MEDIA
+</small>
+
+<h1>
+
+<span data-lang="my">
+MY
+</span>
+
+<span data-lang="gallery">
+GALLERY
+</span>
+
+</h1>
+
+<p data-lang="galleryDescription">
+
+Karibu kwenye sehemu yangu ya media.
+Hapa naweka picha, video na audio
+kutoka kwenye kazi zangu za creative,
+video production, photography na music.
+
+</p>
+
+</div>
+
+
+<!-- =====================================================
+     MEDIA TABS
+===================================================== -->
+
+<div class="media-tabs">
+
+
+<button
+class="media-tab active"
+data-section="photos">
+
+🖼️ <span data-lang="photos">PHOTOS</span>
+
+</button>
+
+
+<button
+class="media-tab"
+data-section="videos">
+
+🎬 <span data-lang="videosTab">VIDEOS</span>
+
+</button>
+
+
+<button
+class="media-tab"
+data-section="audio">
+
+🎵 <span data-lang="audio">AUDIO</span>
+
+</button>
+
+
+</div>
+
+
+<!-- =====================================================
+     PHOTO SECTION
+===================================================== -->
+
+<div
+class="media-section show"
+id="photos">
+
+
+<div class="upload-info">
+
+<div class="upload-info-text">
+
+<h3 data-lang="myPhotos">
+
+🖼️ MY PHOTOS
+
+</h3>
+
+<p data-lang="photosDescription">
+
+Weka picha zako za photography,
+events, projects na creative moments.
+
+</p>
+
+</div>
+
+
+<label
+for="photoInput"
+class="upload-button">
+
+＋ <span data-lang="addPhotos">
+ADD PHOTOS
+</span>
+
+</label>
+
+<input
+type="file"
+id="photoInput"
+accept="image/*"
+multiple>
+
+</div>
+
+
+<div class="gallery-filters">
+
+
+<button
+class="filter-btn active"
+data-filter="all"
+data-lang="all">
+
+ALL
+
+</button>
+
+
+<button
+class="filter-btn"
+data-filter="photography"
+data-lang="photography">
+
+PHOTOGRAPHY
+
+</button>
+
+
+<button
+class="filter-btn"
+data-filter="creative"
+data-lang="creative">
+
+CREATIVE
+
+</button>
+
+
+<button
+class="filter-btn"
+data-filter="lifestyle"
+data-lang="lifestyle">
+
+LIFESTYLE
+
+</button>
+
+
+</div>
+
+
+<div
+class="gallery-grid"
+id="galleryGrid">
+
+
+<div
+class="gallery-card"
+data-category="photography">
+
+<img
+src="kp stationery.png"
+alt="Camera Moments">
+
+<span class="category"
+data-lang="photography">
+
+PHOTOGRAPHY
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Camera Moments
+</h3>
+
+<p>
+PROFESSIONAL PHOTOGRAPHY
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="gallery-card"
+data-category="creative">
+
+<img
+src="mainte.png"
+alt="Creative Design">
+
+<span class="category"
+data-lang="creative">
+
+CREATIVE
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Creative Design
+</h3>
+
+<p>
+DIGITAL CREATIVITY
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="gallery-card"
+data-category="photography">
+
+<img
+src="MWALIKO.png"
+alt="Portrait Photography">
+
+<span class="category"
+data-lang="photography">
+
+PHOTOGRAPHY
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Portrait Session
+</h3>
+
+<p>
+PORTRAIT PHOTOGRAPHY
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="gallery-card"
+data-category="lifestyle">
+
+<img
+src="tttttttttt conv 0.png"
+alt="Lifestyle">
+
+<span class="category"
+data-lang="lifestyle">
+
+LIFESTYLE
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Life Moments
+</h3>
+
+<p>
+LIFESTYLE
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="gallery-card"
+data-category="creative">
+
+<img
+src="my work.png"
+alt="Creative Work">
+
+<span class="category"
+data-lang="creative">
+
+CREATIVE
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Creative Work
+</h3>
+
+<p>
+DIGITAL PROJECT
+</p>
+
+</div>
+
+</div>
+
+
+<div
+class="gallery-card"
+data-category="photography">
+
+<img
+src="20251210_125211.png"
+alt="Creative Portrait">
+
+<span class="category"
+data-lang="photography">
+
+PHOTOGRAPHY
+
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+Creative Portrait
+</h3>
+
+<p>
+VISUAL STORY
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     VIDEO SECTION
+===================================================== -->
+
+<div
+class="media-section"
+id="videos">
+
+
+<div class="upload-info">
+
+<div class="upload-info-text">
+
+<h3 data-lang="myVideosTitle">
+
+🎬 MY VIDEOS
+
+</h3>
+
+<p data-lang="videosDescription">
+
+Weka video zako za Video Production,
+Music Videos, Events na Projects.
+
+</p>
+
+</div>
+
+
+<label
+for="videoInput"
+class="upload-button">
+
+＋ <span data-lang="addVideos">
+ADD VIDEOS
+</span>
+
+</label>
+
+<input
+type="file"
+id="videoInput"
+accept="video/*"
+multiple>
+
+</div>
+
+
+<div
+class="video-grid"
+id="videoGrid">
+
+
+<div class="video-card">
+
+<video
+controls
+poster="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85">
+
+<source
+src="STUDENTS CONTENT_1.mp4"
+type="video/mp4">
+
+Your browser does not support video.
+
+</video>
+
+<div class="video-info">
+
+<h3>
+My Video Production
+</h3>
+
+<p data-lang="videoInfo">
+
+Weka video yako hapa kupitia
+button ya ADD VIDEOS.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     AUDIO SECTION
+===================================================== -->
+
+<div
+class="media-section"
+id="audio">
+
+
+<div class="upload-info">
+
+<div class="upload-info-text">
+
+<h3 data-lang="myAudio">
+
+🎵 MY AUDIO
+
+</h3>
+
+<p data-lang="audioDescription">
+
+Weka nyimbo, voice recordings
+na audio productions zako.
+
+</p>
+
+</div>
+
+
+<label
+for="audioInput"
+class="upload-button">
+
+＋ <span data-lang="addAudio">
+ADD AUDIO
+</span>
+
+</label>
+
+<input
+type="file"
+id="audioInput"
+accept="audio/*"
+multiple>
+
+</div>
+
+
+<div
+class="audio-grid"
+id="audioGrid">
+
+
+<div class="audio-card">
+
+<div class="audio-icon">
+🎵
+</div>
+
+<div class="audio-info">
+
+<h3>
+My Audio Production
+</h3>
+
+<p>
+Audio / Music
+</p>
+
+<audio controls>
+
+<source
+src="Mungu ni Mkuu(1).mp3"
+type="audio/mpeg">
+
+Your browser does not support audio.
+
+</audio>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     INFO
+===================================================== -->
+
+<div class="gallery-info">
+
+<h2>
+
+<span data-lang="myCreative">
+MY CREATIVE
+</span>
+
+<span>
+WORLD
+</span>
+
+</h2>
+
+<p data-lang="creativeDescription">
+
+Gallery hii ni sehemu ya kuhifadhi na
+kuonyesha kazi zangu za photography,
+video production, video editing, music,
+audio production na creative projects.
+
+</p>
+
+</div>
+
+
+</section>
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     IMAGE MODAL
+===================================================== -->
+
+<div
+class="image-modal"
+id="imageModal">
+
+
+<button
+class="close-image"
+id="closeImage">
+
+×
+
+</button>
+
+
+<img
+id="modalImage"
+src="Black Gold Playful New Year Greeting Instagram Post.png"
+alt="Gallery Image">
+
+
+</div>
+<div
+class="image-modal"
+id="imageModal">
+
+
+<button
+class="close-image"
+id="closeImage">
+
+×
+
+</button>
+
+
+<img
+id="modalImage"
+src="ChatGPT Image Jul 22, 2026, 09_36_26 AM.png"
+alt="Gallery Image">
+
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="footer-name">
+
+♛ GIVEN <span>THE KING</span>
+
+</div>
+
+
+<div class="footer-description">
+
+PERSONAL CREATIVE WEBSITE
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="services.html">
+SERVICES
+</a>
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+<a href="gallery.html">
+GALLERY
+</a>
+
+<a href="blog.html">
+BLOG
+</a>
+
+<a href="advertise.html">
+ADVERTISE
+</a>
+
+</div>
+
+
+<div class="footer-socials">
+
+<a
+href="https://www.facebook.com/"
+target="_blank">
+f
+</a>
+
+<a
+href="https://www.instagram.com/"
+target="_blank">
+◎
+</a>
+
+<a
+href="https://www.youtube.com/"
+target="_blank">
+▶
+</a>
+
+<a
+href="https://wa.me/255753389563"
+target="_blank">
+◔
+</a>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+
+<strong>
+Given The King
+</strong>
+
+— All Rights Reserved.
+
+</div>
+
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navMenu =
+document.getElementById("navMenu");
+
+
+menuToggle.addEventListener(
+"click",
+function(){
+
+navMenu.classList.toggle("show");
+
+});
+
+
+document
+.querySelectorAll(".nav-menu a")
+.forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+navMenu.classList.remove("show");
+
+});
+
+});
+
+
+/* =====================================================
+   MEDIA TABS
+===================================================== */
+
+const mediaTabs =
+document.querySelectorAll(".media-tab");
+
+const mediaSections =
+document.querySelectorAll(".media-section");
+
+
+mediaTabs.forEach(function(tab){
+
+tab.addEventListener(
+"click",
+function(){
+
+mediaTabs.forEach(function(t){
+
+t.classList.remove("active");
+
+});
+
+mediaSections.forEach(function(section){
+
+section.classList.remove("show");
+
+});
+
+
+tab.classList.add("active");
+
+
+const sectionId =
+tab.getAttribute("data-section");
+
+
+document
+.getElementById(sectionId)
+.classList.add("show");
+
+});
+
+});
+
+
+/* =====================================================
+   PHOTO FILTER
+===================================================== */
+
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+
+filterButtons.forEach(function(button){
+
+button.addEventListener(
+"click",
+function(){
+
+filterButtons.forEach(function(btn){
+
+btn.classList.remove("active");
+
+});
+
+button.classList.add("active");
+
+
+const filter =
+button.getAttribute("data-filter");
+
+
+document
+.querySelectorAll(".gallery-card")
+.forEach(function(card){
+
+const category =
+card.getAttribute("data-category");
+
+
+if(
+filter === "all" ||
+category === filter
+){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+});
+
+
+/* =====================================================
+   IMAGE LIGHTBOX
+===================================================== */
+
+const imageModal =
+document.getElementById("imageModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+const closeImage =
+document.getElementById("closeImage");
+
+
+function activateImageCards(){
+
+document
+.querySelectorAll(".gallery-card")
+.forEach(function(card){
+
+card.onclick=function(){
+
+const image =
+card.querySelector("img");
+
+if(!image){
+
+return;
+
+}
+
+modalImage.src =
+image.src;
+
+modalImage.alt =
+image.alt;
+
+imageModal.classList.add("show");
+
+};
+
+});
+
+}
+
+
+activateImageCards();
+
+
+closeImage.onclick=function(){
+
+imageModal.classList.remove("show");
+
+};
+
+
+imageModal.onclick=function(event){
+
+if(event.target === imageModal){
+
+imageModal.classList.remove("show");
+
+}
+
+};
+
+
+/* =====================================================
+   ADD PHOTOS
+===================================================== */
+
+const photoInput =
+document.getElementById("photoInput");
+
+const galleryGrid =
+document.getElementById("galleryGrid");
+
+
+photoInput.addEventListener(
+"change",
+function(){
+
+const files =
+Array.from(this.files);
+
+
+files.forEach(function(file){
+
+const reader =
+new FileReader();
+
+
+reader.onload=function(event){
+
+const card =
+document.createElement("div");
+
+card.className =
+"gallery-card";
+
+card.setAttribute(
+"data-category",
+"creative"
+);
+
+
+card.innerHTML=`
+
+<img
+src="${event.target.result}"
+alt="${file.name}">
+
+<span class="category">
+MY PHOTO
+</span>
+
+<div class="gallery-overlay">
+
+<h3>
+${file.name}
+</h3>
+
+<p>
+MY CREATIVE PHOTO
+</p>
+
+</div>
+
+`;
+
+
+galleryGrid.appendChild(card);
+
+activateImageCards();
+
+};
+
+
+reader.readAsDataURL(file);
+
+});
+
+
+this.value="";
+
+});
+
+
+/* =====================================================
+   ADD VIDEOS
+===================================================== */
+
+const videoInput =
+document.getElementById("videoInput");
+
+const videoGrid =
+document.getElementById("videoGrid");
+
+
+videoInput.addEventListener(
+"change",
+function(){
+
+const files =
+Array.from(this.files);
+
+
+files.forEach(function(file){
+
+const videoURL =
+URL.createObjectURL(file);
+
+
+const card =
+document.createElement("div");
+
+card.className =
+"video-card";
+
+
+card.innerHTML=`
+
+<video
+controls>
+
+<source
+src="${videoURL}"
+type="${file.type}">
+
+Your browser does not support video.
+
+</video>
+
+<div class="video-info">
+
+<h3>
+${file.name}
+</h3>
+
+<p>
+MY VIDEO PRODUCTION
+</p>
+
+</div>
+
+`;
+
+
+videoGrid.appendChild(card);
+
+});
+
+
+this.value="";
+
+});
+
+
+/* =====================================================
+   ADD AUDIO
+===================================================== */
+
+const audioInput =
+document.getElementById("audioInput");
+
+const audioGrid =
+document.getElementById("audioGrid");
+
+
+audioInput.addEventListener(
+"change",
+function(){
+
+const files =
+Array.from(this.files);
+
+
+files.forEach(function(file){
+
+const audioURL =
+URL.createObjectURL(file);
+
+
+const card =
+document.createElement("div");
+
+card.className =
+"audio-card";
+
+
+card.innerHTML=`
+
+<div class="audio-icon">
+🎵
+</div>
+
+<div class="audio-info">
+
+<h3>
+${file.name}
+</h3>
+
+<p>
+MY AUDIO PRODUCTION
+</p>
+
+<audio
+controls>
+
+<source
+src="${audioURL}"
+type="${file.type}">
+
+Your browser does not support audio.
+
+</audio>
+
+</div>
+
+`;
+
+
+audioGrid.appendChild(card);
+
+});
+
+
+this.value="";
+
+});
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+const searchInput =
+document.getElementById("searchInput");
+
+const searchButton =
+document.getElementById("searchButton");
+
+
+function searchWebsite(){
+
+const query =
+searchInput.value
+.trim()
+.toLowerCase();
+
+
+const pages={
+
+home:"index.html",
+
+about:"about.html",
+
+services:"services.html",
+
+portfolio:"portfolio.html",
+
+videos:"videos.html",
+
+gallery:"gallery.html",
+
+blog:"blog.html",
+
+skills:"skills.html",
+
+contact:"contact.html",
+
+advertise:"advertise.html",
+
+advertisement:"advertise.html"
+
+};
+
+
+if(query === ""){
+
+alert(
+"Andika kitu unachotafuta."
+);
+
+return;
+
+}
+
+
+if(pages[query]){
+
+window.location.href =
+pages[query];
+
+}
+
+else{
+
+alert(
+"Hakuna ukurasa unaolingana na: "
++query
+);
+
+}
+
+}
+
+
+searchButton.addEventListener(
+"click",
+searchWebsite
+);
+
+
+searchInput.addEventListener(
+"keydown",
+function(event){
+
+if(event.key === "Enter"){
+
+searchWebsite();
+
+}
+
+});
+
+
+/* =====================================================
+   ACCOUNT SYSTEM
+===================================================== */
+
+const loginButton =
+document.getElementById("loginButton");
+
+const createButton =
+document.getElementById("createButton");
+
+const logoutButton =
+document.getElementById("logoutButton");
+
+
+function updateAccountButtons(){
+
+const loggedIn =
+localStorage.getItem(
+"givenKingLoggedIn"
+);
+
+
+if(loggedIn === "true"){
+
+loginButton.style.display="none";
+
+createButton.style.display="none";
+
+logoutButton.style.display="block";
+
+}
+
+else{
+
+loginButton.style.display="block";
+
+createButton.style.display="block";
+
+logoutButton.style.display="none";
+
+}
+
+}
+
+
+loginButton.addEventListener(
+"click",
+function(){
+
+window.location.href =
+"index.html#login";
+
+});
+
+
+createButton.addEventListener(
+"click",
+function(){
+
+window.location.href =
+"index.html#create";
+
+});
+
+
+logoutButton.addEventListener(
+"click",
+function(){
+
+localStorage.removeItem(
+"givenKingLoggedIn"
+);
+
+alert(
+"Umetoka kwenye account."
+);
+
+updateAccountButtons();
+
+});
+
+
+updateAccountButtons();
+
+
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
+
+const dictionary = {
+
+sw:{
+
+home:"HOME",
+about:"ABOUT",
+services:"SERVICES",
+portfolio:"PORTFOLIO",
+videos:"VIDEOS",
+contact:"CONTACT",
+advertise:"ADVERTISE",
+
+menu:"MENU",
+
+aboutMe:"ABOUT ME",
+myServices:"MY SERVICES",
+myVideos:"MY VIDEOS",
+gallery:"GALLERY",
+myBlog:"MY BLOG",
+advertisement:"ADVERTISEMENT",
+mySkills:"MY SKILLS",
+
+videoProduction:"VIDEO PRODUCTION",
+videoEditing:"VIDEO EDITING",
+branding:"BRANDING & DESIGN",
+computerTraining:"COMPUTER TRAINING",
+mathematics:"MATHEMATICS TEACHING",
+networking:"NETWORKING & HARDWARE",
+computerRepair:"COMPUTER REPAIR",
+stationery:"STATIONERY SERVICES",
+printing:"PRINTING & LAMINATION",
+photocopy:"PHOTOCOPY & INTERNET",
+
+personalMedia:"MEDIA YANGU BINAFSI",
+
+my:"MY",
+
+photos:"PHOTOS",
+videosTab:"VIDEOS",
+audio:"AUDIO",
+
+galleryDescription:
+"Karibu kwenye sehemu yangu ya media. Hapa naweka picha, video na audio kutoka kwenye kazi zangu za creative, video production, photography na music.",
+
+myPhotos:"🖼️ PICHA ZANGU",
+
+photosDescription:
+"Weka picha zako za photography, events, projects na creative moments.",
+
+addPhotos:"ONGEZA PICHA",
+
+all:"ZOTE",
+
+photography:"PHOTOGRAPHY",
+
+creative:"CREATIVE",
+
+lifestyle:"LIFESTYLE",
+
+myVideosTitle:"🎬 VIDEO ZANGU",
+
+videosDescription:
+"Weka video zako za Video Production, Music Videos, Events na Projects.",
+
+addVideos:"ONGEZA VIDEO",
+
+videoInfo:
+"Weka video yako hapa kupitia button ya ADD VIDEOS.",
+
+myAudio:"🎵 AUDIO YANGU",
+
+audioDescription:
+"Weka nyimbo, jingles, voice recordings na audio productions zako.",
+
+addAudio:"ONGEZA AUDIO",
+
+myCreative:"DUNIA YANGU YA UBUNIFU",
+
+creativeDescription:
+"Gallery hii ni sehemu ya kuhifadhi na kuonyesha kazi zangu za photography, video production, video editing, music, audio production na creative projects."
+
+},
+
+en:{
+
+home:"HOME",
+about:"ABOUT",
+services:"SERVICES",
+portfolio:"PORTFOLIO",
+videos:"VIDEOS",
+contact:"CONTACT",
+advertise:"ADVERTISE",
+
+menu:"MENU",
+
+aboutMe:"ABOUT ME",
+myServices:"MY SERVICES",
+myVideos:"MY VIDEOS",
+gallery:"GALLERY",
+myBlog:"MY BLOG",
+advertisement:"ADVERTISEMENT",
+mySkills:"MY SKILLS",
+
+videoProduction:"VIDEO PRODUCTION",
+videoEditing:"VIDEO EDITING",
+branding:"BRANDING & DESIGN",
+computerTraining:"COMPUTER TRAINING",
+mathematics:"MATHEMATICS TEACHING",
+networking:"NETWORKING & HARDWARE",
+computerRepair:"COMPUTER REPAIR",
+stationery:"STATIONERY SERVICES",
+printing:"PRINTING & LAMINATION",
+photocopy:"PHOTOCOPY & INTERNET",
+
+personalMedia:"MY PERSONAL MEDIA",
+
+my:"MY",
+
+photos:"PHOTOS",
+videosTab:"VIDEOS",
+audio:"AUDIO",
+
+galleryDescription:
+"Welcome to my personal media section. Here I showcase photos, videos and audio from my creative work, video production, photography and music.",
+
+myPhotos:"🖼️ MY PHOTOS",
+
+photosDescription:
+"Add your photography, events, projects and creative moments.",
+
+addPhotos:"ADD PHOTOS",
+
+all:"ALL",
+
+photography:"PHOTOGRAPHY",
+
+creative:"CREATIVE",
+
+lifestyle:"LIFESTYLE",
+
+myVideosTitle:"🎬 MY VIDEOS",
+
+videosDescription:
+"Add your Video Production, Music Videos, Events and Projects.",
+
+addVideos:"ADD VIDEOS",
+
+videoInfo:
+"Add your video here using the ADD VIDEOS button.",
+
+myAudio:"🎵 MY AUDIO",
+
+audioDescription:
+"Add songs, jingles, voice recordings and audio productions.",
+
+addAudio:"ADD AUDIO",
+
+myCreative:"MY CREATIVE",
+
+creativeDescription:
+"This gallery is a place to store and showcase my photography, video production, video editing, music, audio production and creative projects."
+
+}
+
+};
+
+
+/* =====================================================
+   CHANGE LANGUAGE
+===================================================== */
+
+function changeLanguage(lang){
+
+const d =
+dictionary[lang];
+
+if(!d){
+
+return;
+
+}
+
+
+document
+.querySelectorAll("[data-lang]")
+.forEach(function(element){
+
+const key =
+element.getAttribute("data-lang");
+
+if(d[key]){
+
+element.textContent =
+d[key];
+
+}
+
+});
+
+
+document.documentElement.lang =
+lang;
+
+
+/* SEARCH PLACEHOLDER */
+
+if(lang === "sw"){
+
+searchInput.placeholder =
+"Tafuta...";
+
+}
+
+else{
+
+searchInput.placeholder =
+"Search...";
+
+}
+
+
+/* LOGIN */
+
+loginButton.textContent =
+"LOGIN";
+
+
+createButton.textContent =
+lang === "sw"
+? "FUNGUA ACCOUNT"
+: "CREATE ACCOUNT";
+
+
+logoutButton.textContent =
+lang === "sw"
+? "TOKA"
+: "LOGOUT";
+
+
+/* SAVE LANGUAGE */
+
+localStorage.setItem(
+"givenKingLanguage",
+lang
+);
+
+
+/* ANIMATION */
+
+document.body.classList.add(
+"language-changing"
+);
+
+setTimeout(function(){
+
+document.body.classList.remove(
+"language-changing"
+);
+
+},300);
+
+}
+
+
+/* =====================================================
+   LOAD SAVED LANGUAGE
+===================================================== */
+
+const savedLanguage =
+localStorage.getItem(
+"givenKingLanguage"
+);
+
+
+if(savedLanguage){
+
+document.getElementById(
+"languageSelect"
+).value =
+savedLanguage;
+
+changeLanguage(
+savedLanguage
+);
+
+}
+
+else{
+
+changeLanguage("sw");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```

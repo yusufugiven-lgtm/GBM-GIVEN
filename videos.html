@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Videos and Audio | Given The King Video Production & ICT Services">
+
+<title>Videos & Audio | Given The King</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#101a3a;
+    border-bottom:2px solid #38bdf8;
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+    z-index:1000;
+}
+
+
+/* BRAND */
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+    min-width:220px;
+}
+
+.brand-crown{
+    font-size:42px;
+    color:#facc15;
+    text-shadow:0 0 15px rgba(250,204,21,.5);
+}
+
+.brand strong{
+    display:block;
+    font-size:16px;
+    letter-spacing:2px;
+}
+
+.brand small{
+    display:block;
+    margin-top:3px;
+    color:#38bdf8;
+    font-size:9px;
+    letter-spacing:3px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.nav-links a{
+    color:#e2e8f0;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    position:relative;
+    transition:.3s;
+    white-space:nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#38bdf8;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-9px;
+    width:0;
+    height:2px;
+    background:#38bdf8;
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+
+/* SOCIAL */
+
+.socials{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.socials a{
+    width:34px;
+    height:34px;
+    border:1px solid #38bdf8;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.socials a:hover{
+    background:#38bdf8;
+    color:#101a3a;
+    transform:translateY(-3px);
+}
+
+
+/* LANGUAGE */
+
+.lang-select{
+    margin-left:8px;
+    background:#172554;
+    color:white;
+    border:1px solid #facc15;
+    padding:7px 10px;
+    border-radius:6px;
+    font-size:11px;
+    font-weight:800;
+    cursor:pointer;
+    outline:none;
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#38bdf8;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero{
+    margin-top:82px;
+    padding:75px 6% 65px;
+    text-align:center;
+    background:#29164f;
+    border-bottom:2px solid #a855f7;
+    position:relative;
+    overflow:hidden;
+}
+
+.page-hero::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#7c3aed;
+    opacity:.12;
+    border-radius:50%;
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.eyebrow{
+    color:#facc15;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:5px;
+    margin-bottom:18px;
+    position:relative;
+}
+
+.page-hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(40px,6vw,68px);
+    color:white;
+    margin-bottom:15px;
+    position:relative;
+}
+
+.page-hero h1 span{
+    color:#facc15;
+}
+
+.page-hero p:last-child{
+    color:#ddd6fe;
+    font-size:15px;
+    position:relative;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main-container{
+    max-width:1350px;
+    width:100%;
+    margin:0 auto;
+    padding:60px 5% 80px;
+    display:grid;
+    grid-template-columns:290px 1fr;
+    gap:40px;
+    background:#050816;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+========================================================= */
+
+.sidebar-left{
+    background:#092c25;
+    border:2px solid #22c55e;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    position:sticky;
+    top:105px;
+    height:max-content;
+}
+
+.sidebar-title{
+    text-align:center;
+    padding:24px 15px;
+    font-size:15px;
+    letter-spacing:2px;
+    color:white;
+    background:#064e3b;
+    border-bottom:1px solid #22c55e;
+    font-weight:800;
+}
+
+.sidebar-left ul{
+    list-style:none;
+}
+
+.sidebar-left li a{
+    display:block;
+    padding:15px 22px;
+    color:#bbf7d0;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    border-bottom:1px solid rgba(34,197,94,.12);
+    transition:.3s;
+}
+
+.sidebar-left li a span{
+    display:inline-block;
+    width:28px;
+    color:#facc15;
+}
+
+.sidebar-left li a:hover,
+.sidebar-left li a.active{
+    background:#166534;
+    color:white;
+    padding-left:30px;
+    border-left:5px solid #facc15;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.video-content{
+    background:#21170d;
+    border:2px solid #f59e0b;
+    border-radius:20px;
+    padding:45px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.video-content .eyebrow{
+    color:#f59e0b;
+    letter-spacing:4px;
+}
+
+.video-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    color:white;
+    margin-bottom:15px;
+}
+
+.video-content h2 span{
+    color:#facc15;
+}
+
+.video-description{
+    color:#d6d3d1;
+    line-height:1.8;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    color:white;
+    margin-bottom:22px;
+    border-left:4px solid #facc15;
+    padding-left:14px;
+}
+
+.section-title span{
+    color:#facc15;
+}
+
+
+/* =========================================================
+   FEATURED VIDEO
+========================================================= */
+
+.featured-video{
+    margin-bottom:40px;
+    background:#172554;
+    border:2px solid #2563eb;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.featured-frame{
+    width:100%;
+    aspect-ratio:16/9;
+    background:#050816;
+}
+
+.featured-frame video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.featured-info{
+    padding:22px;
+}
+
+.featured-info h3{
+    font-family:'Playfair Display',serif;
+    color:#facc15;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.featured-info p{
+    color:#dbeafe;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   VIDEO SEARCH
+========================================================= */
+
+.search-box{
+    width:100%;
+    position:relative;
+    margin-bottom:35px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 18px 15px 45px;
+    background:#2d1f10;
+    border:1px solid rgba(245,158,11,.5);
+    border-radius:10px;
+    color:white;
+    outline:none;
+    font-family:'Montserrat',sans-serif;
+    font-size:13px;
+    transition:.3s;
+}
+
+.search-box input::placeholder{
+    color:#94a3b8;
+}
+
+.search-box input:focus{
+    border-color:#facc15;
+    box-shadow:0 0 15px rgba(250,204,21,.15);
+}
+
+.search-box span{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+    color:#facc15;
+}
+
+
+/* =========================================================
+   VIDEO GRID
+========================================================= */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-bottom:45px;
+}
+
+
+/* VIDEO CARD */
+
+.video-card{
+    background:#2d1f10;
+    border:1px solid rgba(245,158,11,.35);
+    border-radius:15px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.video-card:hover{
+    transform:translateY(-7px);
+    border-color:#facc15;
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+
+.video-frame{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#080808;
+    overflow:hidden;
+}
+
+.video-frame video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.video-info{
+    padding:22px;
+}
+
+.video-info h3{
+    color:#facc15;
+    font-size:16px;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+.video-info p{
+    color:#d6d3d1;
+    font-size:12px;
+    line-height:1.7;
+    margin-bottom:17px;
+}
+
+.video-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.video-category{
+    color:#38bdf8;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.watch-btn{
+    display:inline-block;
+    padding:9px 13px;
+    background:#f59e0b;
+    color:#21170d;
+    border-radius:7px;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:900;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.watch-btn:hover{
+    background:#facc15;
+    transform:translateY(-2px);
+}
+
+
+/* NO VIDEO */
+
+.no-results{
+    display:none;
+    text-align:center;
+    padding:35px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   AUDIO SECTION
+========================================================= */
+
+.audio-section{
+    margin-top:50px;
+    padding-top:40px;
+    border-top:2px solid rgba(245,158,11,.25);
+}
+
+.audio-description{
+    color:#d6d3d1;
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+
+/* AUDIO SEARCH */
+
+.audio-search{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.audio-search span{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#facc15;
+    font-size:18px;
+}
+
+.audio-search input{
+    width:100%;
+    padding:15px 18px 15px 45px;
+    background:#2d1f10;
+    border:1px solid rgba(245,158,11,.5);
+    border-radius:10px;
+    color:white;
+    outline:none;
+    font-family:'Montserrat',sans-serif;
+    font-size:13px;
+    transition:.3s;
+}
+
+.audio-search input::placeholder{
+    color:#94a3b8;
+}
+
+.audio-search input:focus{
+    border-color:#facc15;
+    box-shadow:0 0 18px rgba(250,204,21,.15);
+}
+
+
+/* AUDIO GRID */
+
+.audio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+
+/* AUDIO CARD */
+
+.audio-card{
+    background:#2d1f10;
+    border:1px solid rgba(245,158,11,.35);
+    border-radius:15px;
+    padding:22px;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.audio-card:hover{
+    transform:translateY(-6px);
+    border-color:#facc15;
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+
+
+/* AUDIO ICON */
+
+.audio-icon{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#facc15;
+    color:#21170d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    margin-bottom:15px;
+    box-shadow:0 5px 20px rgba(250,204,21,.2);
+}
+
+
+/* AUDIO INFO */
+
+.audio-info h3{
+    color:#facc15;
+    font-size:16px;
+    margin-bottom:7px;
+    line-height:1.4;
+}
+
+.audio-info p{
+    color:#d6d3d1;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.audio-category{
+    display:inline-block;
+    color:#38bdf8;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+
+
+/* AUDIO PLAYER */
+
+.audio-card audio{
+    width:100%;
+    height:42px;
+    margin-top:8px;
+}
+
+
+/* NO AUDIO */
+
+.no-audio{
+    display:none;
+    text-align:center;
+    padding:35px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#111111;
+    border-top:3px solid #facc15;
+    padding:45px 6%;
+    text-align:center;
+    color:#94a3b8;
+    margin-top:0;
+}
+
+.footer-brand{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    color:#facc15;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.footer-sub{
+    color:#38bdf8;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#facc15;
+}
+
+footer p{
+    font-size:12px;
+    color:#64748b;
+    margin-top:12px;
+}
+
+footer strong{
+    color:#facc15;
+}
+
+
+/* =========================================================
+   RESPONSIVE 1200px
+========================================================= */
+
+@media(max-width:1200px){
+
+    .nav-links{
+        gap:13px;
+    }
+
+    .nav-links a{
+        font-size:10px;
+    }
+
+    .socials{
+        display:none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE 900px
+========================================================= */
+
+@media(max-width:900px){
+
+    .navbar{
+        height:75px;
+        padding:0 5%;
+    }
+
+    .brand strong{
+        font-size:14px;
+    }
+
+    .brand small{
+        font-size:8px;
+    }
+
+    .brand-crown{
+        font-size:35px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#101a3a;
+        flex-direction:column;
+        padding:20px;
+        border-bottom:2px solid #38bdf8;
+        gap:5px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links a{
+        width:100%;
+        padding:12px;
+        text-align:center;
+        font-size:12px;
+    }
+
+    .main-container{
+        grid-template-columns:1fr;
+        padding:40px 5%;
+    }
+
+    .sidebar-left{
+        position:static;
+        width:100%;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .audio-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE 600px
+========================================================= */
+
+@media(max-width:600px){
+
+    .page-hero{
+        padding:55px 5% 45px;
+    }
+
+    .page-hero h1{
+        font-size:42px;
+    }
+
+    .video-content{
+        padding:25px 20px;
+    }
+
+    .video-content h2{
+        font-size:30px;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .audio-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .featured-info h3{
+        font-size:20px;
+    }
+
+    .audio-card{
+        padding:18px;
+    }
+
+    .footer-links{
+        gap:15px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media(max-width:400px){
+
+    .brand strong{
+        font-size:12px;
+    }
+
+    .brand small{
+        font-size:7px;
+        letter-spacing:2px;
+    }
+
+    .brand-crown{
+        font-size:30px;
+    }
+
+    .video-info{
+        padding:18px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+<a href="index.html" class="brand">
+
+<span class="brand-crown">♛</span>
+
+<span>
+
+<strong>GIVEN THE KING</strong>
+
+<small>VIDEO PRODUCTION & ICT</small>
+
+</span>
+
+</a>
+
+
+<button
+class="menu-toggle"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+
+<nav
+class="nav-links"
+id="navLinks">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="services.html">
+SERVICES
+</a>
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+<a href="videos.html"
+class="active">
+VIDEOS
+</a>
+
+<!-- ADVERTISEMENT -->
+<a href="advertising.html">
+ADVERTISEMENT
+</a>
+
+<a href="contact.html">
+CONTACT
+</a>
+
+</nav>
+
+
+<div class="socials">
+
+<a
+href="https://www.facebook.com/"
+target="_blank"
+rel="noopener">
+f
+</a>
+
+<a
+href="https://www.instagram.com/"
+target="_blank"
+rel="noopener">
+◎
+</a>
+
+<a
+href="https://www.youtube.com/"
+target="_blank"
+rel="noopener">
+▶
+</a>
+
+
+<select
+class="lang-select"
+onchange="changeLanguage(this.value)">
+
+<option value="sw">
+SW
+</option>
+
+<option value="en">
+EN
+</option>
+
+</select>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+<p
+class="eyebrow"
+id="hero-eyebrow">
+
+VIDEO ZANGU
+
+</p>
+
+
+<h1 id="hero-title">
+
+VIDEO <span>GALLERY</span>
+
+</h1>
+
+
+<p id="hero-desc">
+
+Tazama video zangu na sikiliza kazi zangu za audio.
+
+</p>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="main-container">
+
+
+<!-- =========================================================
+     LEFT SIDEBAR
+========================================================= -->
+
+<aside class="sidebar-left">
+
+<div class="sidebar-title">
+MENU
+</div>
+
+
+<ul>
+
+<li>
+<a href="index.html">
+<span>⌂</span>
+HOME
+</a>
+</li>
+
+<li>
+<a href="about.html">
+<span>♙</span>
+ABOUT ME
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>✦</span>
+MY SERVICES
+</a>
+</li>
+
+<li>
+<a href="portfolio.html">
+<span>▣</span>
+PORTFOLIO
+</a>
+</li>
+
+<li>
+<a href="videos.html"
+class="active">
+<span>▶</span>
+MY VIDEOS
+</a>
+</li>
+
+<!-- ADVERTISEMENT -->
+<li>
+<a href="advertising.html">
+<span>📢</span>
+ADVERTISEMENT
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+<span>▧</span>
+GALLERY
+</a>
+</li>
+
+<li>
+<a href="blog.html">
+<span>✎</span>
+MY BLOG
+</a>
+</li>
+
+<li>
+<a href="skills.html">
+<span>★</span>
+MY SKILLS
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🎥</span>
+VIDEO PRODUCTION
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>✂</span>
+VIDEO EDITING
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🎨</span>
+BRANDING & DESIGN
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>💻</span>
+COMPUTER TRAINING
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>📐</span>
+MATHEMATICS TEACHING
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🌐</span>
+NETWORKING & HARDWARE
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🔧</span>
+COMPUTER REPAIR
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>📑</span>
+STATIONERY SERVICES
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🖨</span>
+PRINTING & LAMINATION
+</a>
+</li>
+
+<li>
+<a href="services.html">
+<span>🌍</span>
+PHOTOCOPY & INTERNET
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+
+
+<!-- =========================================================
+     VIDEO CONTENT
+========================================================= -->
+
+<section class="video-content">
+
+
+<p
+class="eyebrow"
+id="video-eyebrow">
+
+VIDEO PRODUCTION
+
+</p>
+
+
+<h2 id="video-title">
+
+VIDEO <span>ZANGU</span>
+
+</h2>
+
+
+<p
+class="video-description"
+id="video-description">
+
+Karibu kwenye video gallery yangu. Hapa unaweza
+kutazama video zangu za Music Videos, Events,
+Short Films, Creative Media, Video Editing na
+kazi nyingine nilizozalisha.
+
+</p>
+
+
+
+<!-- =========================================================
+     FEATURED VIDEO
+========================================================= -->
+
+<h2
+class="section-title"
+id="featured-title">
+
+VIDEO <span>MAALUM</span>
+
+</h2>
+
+
+<div class="featured-video">
+
+
+<div class="featured-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video-featured.jpg">
+
+<source
+src="Sequence 01_2.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="featured-info">
+
+<h3>
+♛ GIVEN THE KING — FEATURED VIDEO
+</h3>
+
+<p>
+Video Production • Cinematography • Editing •
+Creative Direction
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
+     VIDEO SEARCH
+========================================================= -->
+
+<div class="search-box">
+
+<span>
+🔍
+</span>
+
+<input
+type="text"
+id="videoSearch"
+placeholder="Search videos..."
+onkeyup="searchVideos()">
+
+</div>
+
+
+
+<!-- =========================================================
+     LATEST VIDEOS
+========================================================= -->
+
+<h2
+class="section-title"
+id="latest-title">
+
+VIDEO <span>ZANGU</span>
+
+</h2>
+
+
+<div
+class="video-grid"
+id="videoGrid">
+
+
+<!-- VIDEO 1 -->
+
+<article
+class="video-card"
+data-title="Music Video Production">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video1.jpg">
+
+<source
+src="mentenance_3.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎵 MUSIC VIDEO PRODUCTION
+</h3>
+
+<p>
+Professional music video production,
+cinematography and creative direction.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+MUSIC VIDEO
+</span>
+
+<a
+href="mentenance_3.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VIDEO 2 -->
+
+<article
+class="video-card"
+data-title="Wedding Event Video">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video2.jpg">
+
+<source
+src="GBM.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+💍 WEDDING & EVENT VIDEO
+</h3>
+
+<p>
+Capturing beautiful moments from weddings,
+events and special occasions.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+EVENTS
+</span>
+
+<a
+href="GBM.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VIDEO 3 -->
+
+<article
+class="video-card"
+data-title="Professional Video Editing">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video3.jpg">
+
+<source
+src="HARUSI_Official vhideo.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎬 PROFESSIONAL VIDEO EDITING
+</h3>
+
+<p>
+Creative editing, transitions, color grading,
+sound design and cinematic effects.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+VIDEO EDITING
+</span>
+
+<a
+href="HARUSI_Official vhideo.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VIDEO 4 -->
+
+<article
+class="video-card"
+data-title="Short Film">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video4.jpg">
+
+<source
+src="KANISANI_offical video.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎥 SHORT FILM
+</h3>
+
+<p>
+Creative storytelling through cinematic
+short films and visual production.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+SHORT FILM
+</span>
+
+<a
+href="KANISANI_offical video.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VIDEO 5 -->
+
+<article
+class="video-card"
+data-title="Creative Media">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video5.jpg">
+
+<source
+src="STUDENTS CONTENT_1.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+✨ CREATIVE MEDIA
+</h3>
+
+<p>
+Creative visual content for social media,
+brands, artists and personal projects.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+CREATIVE
+</span>
+
+<a
+href="STUDENTS CONTENT_1.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- VIDEO 6 -->
+
+<article
+class="video-card"
+data-title="Behind The Scenes">
+
+<div class="video-frame">
+
+<video
+controls
+preload="metadata"
+poster="images/video6.jpg">
+
+<source
+src="lusekero_2.mp4"
+type="video/mp4">
+
+Browser yako haiwezi kucheza video.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎞️ BEHIND THE SCENES
+</h3>
+
+<p>
+Get a look behind the scenes of video production,
+shooting and editing.
+</p>
+
+
+<div class="video-meta">
+
+<span class="video-category">
+BTS
+</span>
+
+<a
+href="lusekero_2.mp4"
+target="_blank"
+class="watch-btn">
+
+OPEN
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+<div
+class="no-results"
+id="noResults">
+
+Hakuna video iliyopatikana.
+
+</div>
+
+
+
+<!-- =========================================================
+     AUDIO GALLERY
+========================================================= -->
+
+<section class="audio-section">
+
+
+<p class="eyebrow">
+MY MUSIC
+</p>
+
+
+<h2 class="section-title">
+
+🎵 AUDIO <span>GALLERY</span>
+
+</h2>
+
+
+<p
+class="audio-description"
+id="audio-description">
+
+Sikiliza baadhi ya nyimbo, audio projects,
+jingles, instrumentals na kazi nyingine
+za sauti za Given The King.
+
+</p>
+
+
+
+<!-- AUDIO SEARCH -->
+
+<div class="audio-search">
+
+<span>
+🔍
+</span>
+
+<input
+type="text"
+id="audioSearch"
+placeholder="Search audio..."
+onkeyup="searchAudio()">
+
+</div>
+
+
+
+<!-- AUDIO GRID -->
+
+<div
+class="audio-grid"
+id="audioGrid">
+
+
+<!-- AUDIO 1 -->
+
+<article
+class="audio-card"
+data-title="Nitakupenda Daima">
+
+<div class="audio-icon">
+🎵
+</div>
+
+<div class="audio-info">
+
+<h3>
+NITAKUPENDA DAIMA
+</h3>
+
+<p>
+GBM The King
+</p>
+
+<span class="audio-category">
+LOVE SONG
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="Roho Shuka.mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+
+<!-- AUDIO 2 -->
+
+<article
+class="audio-card"
+data-title="GBM The King Intro">
+
+<div class="audio-icon">
+🎙️
+</div>
+
+<div class="audio-info">
+
+<h3>
+GBM THE KING INTRO
+</h3>
+
+<p>
+Given The King
+</p>
+
+<span class="audio-category">
+INTRO
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="GBM The King(5).mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+
+<!-- AUDIO 3 -->
+
+<article
+class="audio-card"
+data-title="Love Song">
+
+<div class="audio-icon">
+❤️
+</div>
+
+<div class="audio-info">
+
+<h3>
+LOVE SONG
+</h3>
+
+<p>
+GBM The King
+</p>
+
+<span class="audio-category">
+ROMANTIC
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="GBM The King(4).mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+
+<!-- AUDIO 4 -->
+
+<article
+class="audio-card"
+data-title="Creative Jingle">
+
+<div class="audio-icon">
+🎧
+</div>
+
+<div class="audio-info">
+
+<h3>
+CREATIVE JINGLE
+</h3>
+
+<p>
+Given The King
+</p>
+
+<span class="audio-category">
+JINGLE
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="GBM The King(3).mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+
+<!-- AUDIO 5 -->
+
+<article
+class="audio-card"
+data-title="Bongo Flava Project">
+
+<div class="audio-icon">
+🎶
+</div>
+
+<div class="audio-info">
+
+<h3>
+BONGO FLAVA PROJECT
+</h3>
+
+<p>
+GBM The King
+</p>
+
+<span class="audio-category">
+BONGO FLAVA
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="GBM The King(2).mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+
+<!-- AUDIO 6 -->
+
+<article
+class="audio-card"
+data-title="Piano Instrumental">
+
+<div class="audio-icon">
+🎹
+</div>
+
+<div class="audio-info">
+
+<h3>
+PIANO INSTRUMENTAL
+</h3>
+
+<p>
+Given The King
+</p>
+
+<span class="audio-category">
+INSTRUMENTAL
+</span>
+
+</div>
+
+<audio
+controls
+preload="metadata">
+
+<source
+src="Mungu ni Mkuu(1).mp3"
+type="audio/mpeg">
+
+Browser yako haiwezi kucheza audio.
+
+</audio>
+
+</article>
+
+
+</div>
+
+
+<div
+class="no-audio"
+id="noAudio">
+
+Hakuna audio iliyopatikana.
+
+</div>
+
+
+</section>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="footer-brand">
+♛ GIVEN THE KING
+</div>
+
+<div class="footer-sub">
+VIDEO PRODUCTION & ICT
+</div>
+
+
+<div class="footer-links">
+
+<a href="index.html">
+HOME
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+<a href="services.html">
+SERVICES
+</a>
+
+<a href="portfolio.html">
+PORTFOLIO
+</a>
+
+<a href="videos.html">
+VIDEOS
+</a>
+
+<a href="advertising.html">
+ADVERTISEMENT
+</a>
+
+<a href="contact.html">
+CONTACT
+</a>
+
+</div>
+
+
+<p>
+
+© <span id="year"></span>
+
+<strong>Given The King</strong>.
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu(){
+
+    const nav =
+        document.getElementById("navLinks");
+
+    nav.classList.toggle("show");
+
+}
+
+
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("show");
+
+    });
+
+});
+
+
+
+/* =========================================================
+   VIDEO SEARCH
+========================================================= */
+
+function searchVideos(){
+
+    const input =
+        document
+        .getElementById("videoSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const cards =
+        document.querySelectorAll(".video-card");
+
+
+    let found = 0;
+
+
+    cards.forEach(function(card){
+
+        const title =
+            card.dataset.title.toLowerCase();
+
+        const text =
+            card.innerText.toLowerCase();
+
+
+        if(
+            title.includes(input) ||
+            text.includes(input)
+        ){
+
+            card.style.display = "";
+
+            found++;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const noResults =
+        document.getElementById("noResults");
+
+
+    if(found === 0){
+
+        noResults.style.display = "block";
+
+    }else{
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   AUDIO SEARCH
+========================================================= */
+
+function searchAudio(){
+
+    const input =
+        document
+        .getElementById("audioSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const cards =
+        document.querySelectorAll(".audio-card");
+
+
+    let found = 0;
+
+
+    cards.forEach(function(card){
+
+        const title =
+            card.dataset.title.toLowerCase();
+
+        const text =
+            card.innerText.toLowerCase();
+
+
+        if(
+            title.includes(input) ||
+            text.includes(input)
+        ){
+
+            card.style.display = "";
+
+            found++;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const noAudio =
+        document.getElementById("noAudio");
+
+
+    if(found === 0){
+
+        noAudio.style.display = "block";
+
+    }else{
+
+        noAudio.style.display = "none";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ONLY ONE AUDIO AT A TIME
+========================================================= */
+
+const audioPlayers =
+document.querySelectorAll("audio");
+
+
+audioPlayers.forEach(function(audio){
+
+    audio.addEventListener(
+        "play",
+        function(){
+
+            audioPlayers.forEach(function(other){
+
+                if(other !== audio){
+
+                    other.pause();
+
+                }
+
+            });
+
+        }
+    );
+
+});
+
+
+
+/* =========================================================
+   ONLY ONE VIDEO AT A TIME
+========================================================= */
+
+const videoPlayers =
+document.querySelectorAll("video");
+
+
+videoPlayers.forEach(function(video){
+
+    video.addEventListener(
+        "play",
+        function(){
+
+            videoPlayers.forEach(function(other){
+
+                if(other !== video){
+
+                    other.pause();
+
+                }
+
+            });
+
+        }
+    );
+
+});
+
+
+
+/* =========================================================
+   LANGUAGE SYSTEM
+========================================================= */
+
+const dictionary = {
+
+sw:{
+
+    heroEyebrow:"VIDEO ZANGU",
+
+    heroTitle:
+    'VIDEO <span>GALLERY</span>',
+
+    heroDesc:
+    "Tazama video zangu na sikiliza kazi zangu za audio.",
+
+    videoEyebrow:
+    "VIDEO PRODUCTION",
+
+    videoTitle:
+    'VIDEO <span>ZANGU</span>',
+
+    videoDescription:
+    "Karibu kwenye video gallery yangu. Hapa unaweza kutazama video zangu za Music Videos, Events, Short Films, Creative Media, Video Editing na kazi nyingine nilizozalisha.",
+
+    featuredTitle:
+    'VIDEO <span>MAALUM</span>',
+
+    latestTitle:
+    'VIDEO <span>ZANGU</span>',
+
+    audioDescription:
+    "Sikiliza baadhi ya nyimbo, audio projects, jingles, instrumentals na kazi nyingine za sauti za Given The King."
+
+},
+
+
+en:{
+
+    heroEyebrow:
+    "MY VIDEOS",
+
+    heroTitle:
+    'VIDEO <span>GALLERY</span>',
+
+    heroDesc:
+    "Watch my videos and listen to my audio projects.",
+
+    videoEyebrow:
+    "VIDEO PRODUCTION",
+
+    videoTitle:
+    'MY <span>VIDEOS</span>',
+
+    videoDescription:
+    "Welcome to my video gallery. Here you can watch my Music Videos, Events, Short Films, Creative Media, Video Editing and other production work.",
+
+    featuredTitle:
+    'FEATURED <span>VIDEO</span>',
+
+    latestTitle:
+    'MY <span>VIDEOS</span>',
+
+    audioDescription:
+    "Listen to my songs, audio projects, jingles, instrumentals and other creative audio work."
+
+}
+
+};
+
+
+
+/* =========================================================
+   CHANGE LANGUAGE
+========================================================= */
+
+function changeLanguage(lang){
+
+    const d =
+        dictionary[lang];
+
+
+    document
+    .getElementById("hero-eyebrow")
+    .innerText =
+        d.heroEyebrow;
+
+
+    document
+    .getElementById("hero-title")
+    .innerHTML =
+        d.heroTitle;
+
+
+    document
+    .getElementById("hero-desc")
+    .innerText =
+        d.heroDesc;
+
+
+    document
+    .getElementById("video-eyebrow")
+    .innerText =
+        d.videoEyebrow;
+
+
+    document
+    .getElementById("video-title")
+    .innerHTML =
+        d.videoTitle;
+
+
+    document
+    .getElementById("video-description")
+    .innerText =
+        d.videoDescription;
+
+
+    document
+    .getElementById("featured-title")
+    .innerHTML =
+        d.featuredTitle;
+
+
+    document
+    .getElementById("latest-title")
+    .innerHTML =
+        d.latestTitle;
+
+    
+    document
+    .getElementById("audio-description")
+    .innerText =
+        d.audioDescription;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
