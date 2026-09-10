@@ -68,9 +68,6 @@ body{
     z-index:1000;
 }
 
-
-/* BRAND */
-
 .brand{
     display:flex;
     align-items:center;
@@ -101,7 +98,9 @@ body{
 }
 
 
-/* NAV LINKS */
+/* =========================================================
+   NAV LINKS
+========================================================= */
 
 .nav-links{
     display:flex;
@@ -142,7 +141,9 @@ body{
 }
 
 
-/* SOCIAL */
+/* =========================================================
+   SOCIALS
+========================================================= */
 
 .socials{
     display:flex;
@@ -171,7 +172,9 @@ body{
 }
 
 
-/* LANGUAGE */
+/* =========================================================
+   LANGUAGE
+========================================================= */
 
 .lang-select{
     margin-left:8px;
@@ -187,7 +190,9 @@ body{
 }
 
 
-/* MOBILE BUTTON */
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
 
 .menu-toggle{
     display:none;
@@ -271,7 +276,7 @@ body{
 
 
 /* =========================================================
-   LEFT SIDEBAR
+   SIDEBAR
 ========================================================= */
 
 .sidebar-left{
@@ -425,16 +430,18 @@ body{
 
 
 /* =========================================================
-   VIDEO SEARCH
+   SEARCH
 ========================================================= */
 
-.search-box{
+.search-box,
+.audio-search{
     width:100%;
     position:relative;
     margin-bottom:35px;
 }
 
-.search-box input{
+.search-box input,
+.audio-search input{
     width:100%;
     padding:15px 18px 15px 45px;
     background:#2d1f10;
@@ -447,16 +454,19 @@ body{
     transition:.3s;
 }
 
-.search-box input::placeholder{
+.search-box input::placeholder,
+.audio-search input::placeholder{
     color:#94a3b8;
 }
 
-.search-box input:focus{
+.search-box input:focus,
+.audio-search input:focus{
     border-color:#facc15;
     box-shadow:0 0 15px rgba(250,204,21,.15);
 }
 
-.search-box span{
+.search-box span,
+.audio-search span{
     position:absolute;
     left:16px;
     top:50%;
@@ -476,9 +486,6 @@ body{
     gap:25px;
     margin-bottom:45px;
 }
-
-
-/* VIDEO CARD */
 
 .video-card{
     background:#2d1f10;
@@ -552,7 +559,6 @@ body{
     font-size:10px;
     font-weight:900;
     transition:.3s;
-    cursor:pointer;
 }
 
 .watch-btn:hover{
@@ -560,10 +566,8 @@ body{
     transform:translateY(-2px);
 }
 
-
-/* NO VIDEO */
-
-.no-results{
+.no-results,
+.no-audio{
     display:none;
     text-align:center;
     padding:35px;
@@ -573,7 +577,7 @@ body{
 
 
 /* =========================================================
-   AUDIO SECTION
+   AUDIO
 ========================================================= */
 
 .audio-section{
@@ -589,56 +593,11 @@ body{
     margin-bottom:25px;
 }
 
-
-/* AUDIO SEARCH */
-
-.audio-search{
-    position:relative;
-    margin-bottom:30px;
-}
-
-.audio-search span{
-    position:absolute;
-    left:16px;
-    top:50%;
-    transform:translateY(-50%);
-    color:#facc15;
-    font-size:18px;
-}
-
-.audio-search input{
-    width:100%;
-    padding:15px 18px 15px 45px;
-    background:#2d1f10;
-    border:1px solid rgba(245,158,11,.5);
-    border-radius:10px;
-    color:white;
-    outline:none;
-    font-family:'Montserrat',sans-serif;
-    font-size:13px;
-    transition:.3s;
-}
-
-.audio-search input::placeholder{
-    color:#94a3b8;
-}
-
-.audio-search input:focus{
-    border-color:#facc15;
-    box-shadow:0 0 18px rgba(250,204,21,.15);
-}
-
-
-/* AUDIO GRID */
-
 .audio-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
-
-
-/* AUDIO CARD */
 
 .audio-card{
     background:#2d1f10;
@@ -655,9 +614,6 @@ body{
     box-shadow:0 18px 40px rgba(0,0,0,.45);
 }
 
-
-/* AUDIO ICON */
-
 .audio-icon{
     width:58px;
     height:58px;
@@ -669,11 +625,7 @@ body{
     justify-content:center;
     font-size:27px;
     margin-bottom:15px;
-    box-shadow:0 5px 20px rgba(250,204,21,.2);
 }
-
-
-/* AUDIO INFO */
 
 .audio-info h3{
     color:#facc15;
@@ -697,24 +649,10 @@ body{
     margin-bottom:15px;
 }
 
-
-/* AUDIO PLAYER */
-
 .audio-card audio{
     width:100%;
     height:42px;
     margin-top:8px;
-}
-
-
-/* NO AUDIO */
-
-.no-audio{
-    display:none;
-    text-align:center;
-    padding:35px;
-    color:#94a3b8;
-    font-size:14px;
 }
 
 
@@ -728,7 +666,6 @@ footer{
     padding:45px 6%;
     text-align:center;
     color:#94a3b8;
-    margin-top:0;
 }
 
 .footer-brand{
@@ -778,7 +715,7 @@ footer strong{
 
 
 /* =========================================================
-   RESPONSIVE 1200px
+   RESPONSIVE
 ========================================================= */
 
 @media(max-width:1200px){
@@ -796,10 +733,6 @@ footer strong{
     }
 }
 
-
-/* =========================================================
-   RESPONSIVE 900px
-========================================================= */
 
 @media(max-width:900px){
 
@@ -858,19 +791,12 @@ footer strong{
         width:100%;
     }
 
-    .video-grid{
-        grid-template-columns:1fr;
-    }
-
+    .video-grid,
     .audio-grid{
         grid-template-columns:1fr;
     }
 }
 
-
-/* =========================================================
-   RESPONSIVE 600px
-========================================================= */
 
 @media(max-width:600px){
 
@@ -890,14 +816,10 @@ footer strong{
         font-size:30px;
     }
 
-    .video-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
+    .video-grid,
     .audio-grid{
         grid-template-columns:1fr;
-        gap:18px;
+        gap:20px;
     }
 
     .featured-info h3{
@@ -913,10 +835,6 @@ footer strong{
     }
 }
 
-
-/* =========================================================
-   VERY SMALL SCREENS
-========================================================= */
 
 @media(max-width:400px){
 
@@ -1001,7 +919,6 @@ class="active">
 VIDEOS
 </a>
 
-<!-- ADVERTISEMENT -->
 <a href="advertising.html">
 ADVERTISEMENT
 </a>
@@ -1071,13 +988,11 @@ VIDEO ZANGU
 
 </p>
 
-
 <h1 id="hero-title">
 
 VIDEO <span>GALLERY</span>
 
 </h1>
-
 
 <p id="hero-desc">
 
@@ -1097,7 +1012,7 @@ Tazama video zangu na sikiliza kazi zangu za audio.
 
 
 <!-- =========================================================
-     LEFT SIDEBAR
+     SIDEBAR
 ========================================================= -->
 
 <aside class="sidebar-left">
@@ -1105,7 +1020,6 @@ Tazama video zangu na sikiliza kazi zangu za audio.
 <div class="sidebar-title">
 MENU
 </div>
-
 
 <ul>
 
@@ -1138,14 +1052,12 @@ PORTFOLIO
 </li>
 
 <li>
-<a href="videos.html"
-class="active">
+<a href="videos.html" class="active">
 <span>▶</span>
 MY VIDEOS
 </a>
 </li>
 
-<!-- ADVERTISEMENT -->
 <li>
 <a href="advertising.html">
 <span>📢</span>
@@ -1256,7 +1168,6 @@ PHOTOCOPY & INTERNET
 
 <section class="video-content">
 
-
 <p
 class="eyebrow"
 id="video-eyebrow">
@@ -1265,13 +1176,11 @@ VIDEO PRODUCTION
 
 </p>
 
-
 <h2 id="video-title">
 
 VIDEO <span>ZANGU</span>
 
 </h2>
-
 
 <p
 class="video-description"
@@ -1301,7 +1210,6 @@ VIDEO <span>MAALUM</span>
 
 <div class="featured-video">
 
-
 <div class="featured-frame">
 
 <video
@@ -1309,8 +1217,10 @@ controls
 preload="metadata"
 poster="images/video-featured.jpg">
 
+<!-- FILE IKO NDANI YA videos/ -->
+
 <source
-src="Sequence 01_2.mp4"
+src="videos/Sequence 01_2.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1343,9 +1253,7 @@ Creative Direction
 
 <div class="search-box">
 
-<span>
-🔍
-</span>
+<span>🔍</span>
 
 <input
 type="text"
@@ -1375,7 +1283,9 @@ class="video-grid"
 id="videoGrid">
 
 
-<!-- VIDEO 1 -->
+<!-- =========================================================
+     VIDEO 1
+========================================================= -->
 
 <article
 class="video-card"
@@ -1389,7 +1299,7 @@ preload="metadata"
 poster="images/video1.jpg">
 
 <source
-src="mentenance_3.mp4"
+src="videos/mentenance_3.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1410,7 +1320,6 @@ Professional music video production,
 cinematography and creative direction.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1418,8 +1327,9 @@ MUSIC VIDEO
 </span>
 
 <a
-href="mentenance_3.mp4"
+href="videos/mentenance_3.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1434,7 +1344,9 @@ OPEN
 
 
 
-<!-- VIDEO 2 -->
+<!-- =========================================================
+     VIDEO 2
+========================================================= -->
 
 <article
 class="video-card"
@@ -1448,7 +1360,7 @@ preload="metadata"
 poster="images/video2.jpg">
 
 <source
-src="GBM.mp4"
+src="videos/GBM.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1469,7 +1381,6 @@ Capturing beautiful moments from weddings,
 events and special occasions.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1477,8 +1388,9 @@ EVENTS
 </span>
 
 <a
-href="GBM.mp4"
+href="videos/GBM.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1493,7 +1405,9 @@ OPEN
 
 
 
-<!-- VIDEO 3 -->
+<!-- =========================================================
+     VIDEO 3
+========================================================= -->
 
 <article
 class="video-card"
@@ -1507,7 +1421,7 @@ preload="metadata"
 poster="images/video3.jpg">
 
 <source
-src="HARUSI_Official vhideo.mp4"
+src="videos/HARUSI_Official vhideo.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1528,7 +1442,6 @@ Creative editing, transitions, color grading,
 sound design and cinematic effects.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1536,8 +1449,9 @@ VIDEO EDITING
 </span>
 
 <a
-href="HARUSI_Official vhideo.mp4"
+href="videos/HARUSI_Official vhideo.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1552,7 +1466,9 @@ OPEN
 
 
 
-<!-- VIDEO 4 -->
+<!-- =========================================================
+     VIDEO 4
+========================================================= -->
 
 <article
 class="video-card"
@@ -1566,7 +1482,7 @@ preload="metadata"
 poster="images/video4.jpg">
 
 <source
-src="KANISANI_offical video.mp4"
+src="videos/KANISANI_offical video.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1587,7 +1503,6 @@ Creative storytelling through cinematic
 short films and visual production.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1595,8 +1510,9 @@ SHORT FILM
 </span>
 
 <a
-href="KANISANI_offical video.mp4"
+href="videos/KANISANI_offical video.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1611,7 +1527,9 @@ OPEN
 
 
 
-<!-- VIDEO 5 -->
+<!-- =========================================================
+     VIDEO 5
+========================================================= -->
 
 <article
 class="video-card"
@@ -1625,7 +1543,7 @@ preload="metadata"
 poster="images/video5.jpg">
 
 <source
-src="STUDENTS CONTENT_1.mp4"
+src="videos/STUDENTS CONTENT_1.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1646,7 +1564,6 @@ Creative visual content for social media,
 brands, artists and personal projects.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1654,8 +1571,9 @@ CREATIVE
 </span>
 
 <a
-href="STUDENTS CONTENT_1.mp4"
+href="videos/STUDENTS CONTENT_1.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1670,7 +1588,9 @@ OPEN
 
 
 
-<!-- VIDEO 6 -->
+<!-- =========================================================
+     VIDEO 6
+========================================================= -->
 
 <article
 class="video-card"
@@ -1684,7 +1604,7 @@ preload="metadata"
 poster="images/video6.jpg">
 
 <source
-src="lusekero_2.mp4"
+src="videos/lusekero_2.mp4"
 type="video/mp4">
 
 Browser yako haiwezi kucheza video.
@@ -1705,7 +1625,6 @@ Get a look behind the scenes of video production,
 shooting and editing.
 </p>
 
-
 <div class="video-meta">
 
 <span class="video-category">
@@ -1713,8 +1632,9 @@ BTS
 </span>
 
 <a
-href="lusekero_2.mp4"
+href="videos/lusekero_2.mp4"
 target="_blank"
+rel="noopener"
 class="watch-btn">
 
 OPEN
@@ -1747,18 +1667,15 @@ Hakuna video iliyopatikana.
 
 <section class="audio-section">
 
-
 <p class="eyebrow">
 MY MUSIC
 </p>
-
 
 <h2 class="section-title">
 
 🎵 AUDIO <span>GALLERY</span>
 
 </h2>
-
 
 <p
 class="audio-description"
@@ -1776,9 +1693,7 @@ za sauti za Given The King.
 
 <div class="audio-search">
 
-<span>
-🔍
-</span>
+<span>🔍</span>
 
 <input
 type="text"
@@ -1790,7 +1705,9 @@ onkeyup="searchAudio()">
 
 
 
-<!-- AUDIO GRID -->
+<!-- =========================================================
+     AUDIO GRID
+========================================================= -->
 
 <div
 class="audio-grid"
@@ -1828,7 +1745,7 @@ controls
 preload="metadata">
 
 <source
-src="Roho Shuka.mp3"
+src="audio/Roho Shuka.mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -1870,7 +1787,7 @@ controls
 preload="metadata">
 
 <source
-src="GBM The King(5).mp3"
+src="audio/GBM The King(5).mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -1912,7 +1829,7 @@ controls
 preload="metadata">
 
 <source
-src="GBM The King(4).mp3"
+src="audio/GBM The King(4).mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -1954,7 +1871,7 @@ controls
 preload="metadata">
 
 <source
-src="GBM The King(3).mp3"
+src="audio/GBM The King(3).mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -1996,7 +1913,7 @@ controls
 preload="metadata">
 
 <source
-src="GBM The King(2).mp3"
+src="audio/GBM The King(2).mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -2038,7 +1955,7 @@ controls
 preload="metadata">
 
 <source
-src="Mungu ni Mkuu(1).mp3"
+src="audio/Mungu ni Mkuu(1).mp3"
 type="audio/mpeg">
 
 Browser yako haiwezi kucheza audio.
@@ -2059,9 +1976,7 @@ Hakuna audio iliyopatikana.
 
 </div>
 
-
 </section>
-
 
 </section>
 
@@ -2082,7 +1997,6 @@ Hakuna audio iliyopatikana.
 <div class="footer-sub">
 VIDEO PRODUCTION & ICT
 </div>
-
 
 <div class="footer-links">
 
@@ -2115,7 +2029,6 @@ CONTACT
 </a>
 
 </div>
-
 
 <p>
 
@@ -2161,10 +2074,7 @@ function toggleMenu(){
 }
 
 
-
-/* =========================================================
-   CLOSE MOBILE MENU AFTER CLICK
-========================================================= */
+/* CLOSE MOBILE MENU */
 
 document
 .querySelectorAll(".nav-links a")
@@ -2195,13 +2105,10 @@ function searchVideos(){
         .toLowerCase()
         .trim();
 
-
     const cards =
         document.querySelectorAll(".video-card");
 
-
     let found = 0;
-
 
     cards.forEach(function(card){
 
@@ -2210,7 +2117,6 @@ function searchVideos(){
 
         const text =
             card.innerText.toLowerCase();
-
 
         if(
             title.includes(input) ||
@@ -2229,10 +2135,8 @@ function searchVideos(){
 
     });
 
-
     const noResults =
         document.getElementById("noResults");
-
 
     if(found === 0){
 
@@ -2261,13 +2165,10 @@ function searchAudio(){
         .toLowerCase()
         .trim();
 
-
     const cards =
         document.querySelectorAll(".audio-card");
 
-
     let found = 0;
-
 
     cards.forEach(function(card){
 
@@ -2276,7 +2177,6 @@ function searchAudio(){
 
         const text =
             card.innerText.toLowerCase();
-
 
         if(
             title.includes(input) ||
@@ -2295,10 +2195,8 @@ function searchAudio(){
 
     });
 
-
     const noAudio =
         document.getElementById("noAudio");
-
 
     if(found === 0){
 
@@ -2320,7 +2218,6 @@ function searchAudio(){
 
 const audioPlayers =
 document.querySelectorAll("audio");
-
 
 audioPlayers.forEach(function(audio){
 
@@ -2351,7 +2248,6 @@ audioPlayers.forEach(function(audio){
 
 const videoPlayers =
 document.querySelectorAll("video");
-
 
 videoPlayers.forEach(function(video){
 
@@ -2457,55 +2353,46 @@ function changeLanguage(lang){
     const d =
         dictionary[lang];
 
-
     document
     .getElementById("hero-eyebrow")
     .innerText =
         d.heroEyebrow;
-
 
     document
     .getElementById("hero-title")
     .innerHTML =
         d.heroTitle;
 
-
     document
     .getElementById("hero-desc")
     .innerText =
         d.heroDesc;
-
 
     document
     .getElementById("video-eyebrow")
     .innerText =
         d.videoEyebrow;
 
-
     document
     .getElementById("video-title")
     .innerHTML =
         d.videoTitle;
-
 
     document
     .getElementById("video-description")
     .innerText =
         d.videoDescription;
 
-
     document
     .getElementById("featured-title")
     .innerHTML =
         d.featuredTitle;
-
 
     document
     .getElementById("latest-title")
     .innerHTML =
         d.latestTitle;
 
-    
     document
     .getElementById("audio-description")
     .innerText =
