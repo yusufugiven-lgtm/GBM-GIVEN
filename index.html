@@ -6,16 +6,18 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Given The King - Video Production, ICT, Design, Printing and Creative Services">
+content="Given The King - Personal Creative Website">
 
 <title>Home | Given The King</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
 rel="stylesheet">
@@ -23,9 +25,9 @@ rel="stylesheet">
 
 <style>
 
-/* =========================================
+/* =====================================================
    RESET
-========================================= */
+===================================================== */
 
 *{
     margin:0;
@@ -46,9 +48,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    NAVBAR
-========================================= */
+===================================================== */
 
 .navbar{
     position:fixed;
@@ -56,6 +58,7 @@ body{
     left:0;
     width:100%;
     height:82px;
+
     padding:0 5%;
 
     display:flex;
@@ -72,9 +75,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    BRAND
-========================================= */
+===================================================== */
 
 .brand{
     display:flex;
@@ -106,6 +109,7 @@ body{
 
     to{
         transform:scale(1.12);
+
         text-shadow:
         0 0 15px #facc15,
         0 0 35px rgba(250,204,21,.6);
@@ -115,37 +119,45 @@ body{
 
 .brand strong{
     display:block;
+
     font-size:16px;
+
     letter-spacing:2px;
 }
 
 .brand small{
     display:block;
+
     margin-top:3px;
 
     color:#38bdf8;
 
     font-size:9px;
+
     letter-spacing:3px;
 }
 
 
-/* =========================================
+/* =====================================================
    NAV LINKS
-========================================= */
+===================================================== */
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:22px;
+
+    gap:20px;
 }
 
 .nav-links a{
     color:#e2e8f0;
+
     text-decoration:none;
 
-    font-size:11px;
+    font-size:10px;
+
     font-weight:800;
+
     letter-spacing:1px;
 
     position:relative;
@@ -180,23 +192,26 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    RIGHT NAV
-========================================= */
+===================================================== */
 
 .nav-right{
     display:flex;
+
     align-items:center;
-    gap:10px;
+
+    gap:8px;
 }
 
 
-/* =========================================
+/* =====================================================
    SEARCH
-========================================= */
+===================================================== */
 
 .search-box{
     display:flex;
+
     align-items:center;
 
     background:#172554;
@@ -209,18 +224,19 @@ body{
 }
 
 .search-box input{
-    width:130px;
+    width:120px;
 
     padding:9px 10px;
 
     background:transparent;
 
     border:none;
+
     outline:none;
 
     color:white;
 
-    font-size:11px;
+    font-size:10px;
 }
 
 .search-box input::placeholder{
@@ -236,77 +252,148 @@ body{
 
     cursor:pointer;
 
-    font-size:14px;
+    font-size:13px;
 }
 
 
-/* =========================================
-   LOGIN
-========================================= */
+/* =====================================================
+   LOGIN / LOGOUT
+===================================================== */
 
-.login-btn{
-    padding:9px 13px;
+.login-btn,
+.logout-btn,
+.create-btn,
+.admin-btn{
 
-    background:transparent;
-
-    border:1px solid #facc15;
+    padding:9px 11px;
 
     border-radius:7px;
 
-    color:#facc15;
-
     text-decoration:none;
 
-    font-size:10px;
-
-    font-weight:800;
-
-    transition:.3s;
-}
-
-.login-btn:hover{
-    background:#facc15;
-    color:#101a3a;
-    transform:translateY(-2px);
-}
-
-
-/* =========================================
-   CREATE ACCOUNT
-========================================= */
-
-.create-btn{
-    padding:10px 14px;
-
-    background:#facc15;
-
-    border:1px solid #facc15;
-
-    border-radius:7px;
-
-    color:#101a3a;
-
-    text-decoration:none;
-
-    font-size:10px;
+    font-size:9px;
 
     font-weight:900;
 
     transition:.3s;
+
+    cursor:pointer;
+}
+
+.login-btn{
+
+    color:#facc15;
+
+    border:1px solid #facc15;
+
+    background:transparent;
+}
+
+.login-btn:hover{
+
+    background:#facc15;
+
+    color:#101a3a;
+}
+
+.create-btn{
+
+    background:#facc15;
+
+    color:#101a3a;
+
+    border:1px solid #facc15;
 }
 
 .create-btn:hover{
+
     background:#fde68a;
+
+    transform:translateY(-2px);
+}
+
+.logout-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:1px solid #ef4444;
+}
+
+.logout-btn:hover{
+
+    background:#ef4444;
+
+    transform:translateY(-2px);
+}
+
+.admin-btn{
+
+    background:#22c55e;
+
+    color:#052e16;
+
+    border:1px solid #22c55e;
+}
+
+.admin-btn:hover{
+
+    background:#4ade80;
+
     transform:translateY(-2px);
 }
 
 
-/* =========================================
+/* =====================================================
+   USER DISPLAY
+===================================================== */
+
+.user-display{
+
+    display:none;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 10px;
+
+    background:#172554;
+
+    border:1px solid #38bdf8;
+
+    border-radius:8px;
+
+    color:#dbeafe;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+.user-display.show{
+    display:flex;
+}
+
+.online-dot{
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    box-shadow:0 0 10px #22c55e;
+}
+
+
+/* =====================================================
    LANGUAGE
-========================================= */
+===================================================== */
 
 .lang-select{
-    margin-left:3px;
 
     background:#172554;
 
@@ -318,7 +405,7 @@ body{
 
     border-radius:6px;
 
-    font-size:10px;
+    font-size:9px;
 
     font-weight:800;
 
@@ -328,11 +415,12 @@ body{
 }
 
 
-/* =========================================
-   MOBILE BUTTON
-========================================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 .menu-toggle{
+
     display:none;
 
     background:none;
@@ -347,9 +435,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    HERO
-========================================= */
+===================================================== */
 
 .hero{
 
@@ -405,9 +493,9 @@ body{
 }
 
 
-/* =========================================
-   HERO DECORATION
-========================================= */
+/* =====================================================
+   HERO CIRCLES
+===================================================== */
 
 .hero::before{
 
@@ -462,13 +550,13 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    HERO CONTENT
-========================================= */
+===================================================== */
 
 .hero-content{
 
-    max-width:750px;
+    max-width:760px;
 
     position:relative;
 
@@ -483,7 +571,7 @@ body{
 
     font-weight:900;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
 
     margin-bottom:20px;
 }
@@ -500,6 +588,7 @@ body{
 }
 
 .hero h1 span{
+
     color:#facc15;
 
     text-shadow:
@@ -520,9 +609,50 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
+   LOGIN WELCOME
+===================================================== */
+
+.login-welcome{
+
+    display:none;
+
+    margin-bottom:20px;
+
+    padding:12px 18px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    background:rgba(34,197,94,.12);
+
+    border:1px solid #22c55e;
+
+    border-radius:10px;
+
+    color:#bbf7d0;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    box-shadow:
+    0 0 25px rgba(34,197,94,.1);
+}
+
+.login-welcome.show{
+    display:block;
+}
+
+.login-welcome strong{
+    color:#facc15;
+}
+
+
+/* =====================================================
    HERO BUTTONS
-========================================= */
+===================================================== */
 
 .hero-buttons{
 
@@ -541,11 +671,9 @@ body{
 
     text-decoration:none;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:900;
-
-    letter-spacing:.5px;
 
     transition:.3s;
 }
@@ -576,14 +704,13 @@ body{
     transform:translateY(-4px);
 
     box-shadow:
-    0 10px 30px
-    rgba(56,189,248,.25);
+    0 10px 30px rgba(56,189,248,.25);
 }
 
 
-/* =========================================
+/* =====================================================
    HERO BADGE
-========================================= */
+===================================================== */
 
 .hero-badge{
 
@@ -642,9 +769,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    MAIN
-========================================= */
+===================================================== */
 
 .main-container{
 
@@ -666,9 +793,9 @@ body{
 }
 
 
-/* =========================================
-   LEFT SIDEBAR
-========================================= */
+/* =====================================================
+   SIDEBAR
+===================================================== */
 
 .sidebar-left{
 
@@ -728,22 +855,13 @@ body{
 
     text-decoration:none;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:700;
 
     border-bottom:1px solid rgba(34,197,94,.12);
 
     transition:.3s;
-}
-
-.sidebar-left li a span{
-
-    width:22px;
-
-    font-size:16px;
-
-    text-align:center;
 }
 
 .sidebar-left li a:hover,
@@ -758,12 +876,45 @@ body{
     border-left:5px solid #facc15;
 }
 
+.sidebar-left li a.locked{
 
-/* =========================================
+    color:#94a3b8;
+}
+
+.sidebar-left li a.locked::after{
+
+    content:" 🔒";
+
+    margin-left:auto;
+
+    color:#facc15;
+}
+
+
+/* =====================================================
+   ADMIN LINK
+===================================================== */
+
+.admin-side-link{
+
+    display:none !important;
+
+    background:#14532d !important;
+
+    color:#facc15 !important;
+}
+
+.admin-side-link.show{
+
+    display:flex !important;
+}
+
+
+/* =====================================================
    ADVERTISEMENT
-========================================= */
+===================================================== */
 
-.sidebar-left li a.advertisement-link{
+.advertisement-link{
 
     background:
     linear-gradient(
@@ -772,29 +923,15 @@ body{
         rgba(34,197,94,.05)
     );
 
-    color:#facc15;
+    color:#facc15 !important;
 
     border-top:1px solid rgba(250,204,21,.25);
 }
 
-.sidebar-left li a.advertisement-link span{
 
-    color:#facc15;
-}
-
-.sidebar-left li a.advertisement-link:hover{
-
-    background:#166534;
-
-    color:#facc15;
-
-    border-left:5px solid #facc15;
-}
-
-
-/* =========================================
-   RIGHT HOME CONTENT
-========================================= */
+/* =====================================================
+   HOME CONTENT
+===================================================== */
 
 .home-content{
 
@@ -849,9 +986,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    SERVICES
-========================================= */
+===================================================== */
 
 .services-grid{
 
@@ -913,9 +1050,9 @@ body{
 }
 
 
-/* =========================================
+/* =====================================================
    CTA
-========================================= */
+===================================================== */
 
 .cta{
 
@@ -965,19 +1102,12 @@ body{
     font-size:12px;
 
     font-weight:900;
-
-    transition:.3s;
-}
-
-.cta a:hover{
-
-    transform:translateY(-3px);
 }
 
 
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
 footer{
 
@@ -1062,9 +1192,9 @@ footer strong{
 }
 
 
-/* =========================================================
-   ?? SURPRISE OVERLAY
-========================================================= */
+/* =====================================================
+   SURPRISE OVERLAY
+===================================================== */
 
 .surprise-overlay{
 
@@ -1076,7 +1206,7 @@ footer strong{
     radial-gradient(
         circle at center,
         rgba(30,41,90,.95),
-        rgba(2,6,23,.98)
+        rgba(2,6,23,.99)
     );
 
     display:flex;
@@ -1105,14 +1235,9 @@ footer strong{
     pointer-events:none;
 }
 
-
-/* =========================================
-   SURPRISE BOX
-========================================= */
-
 .surprise-box{
 
-    width:min(90%,520px);
+    width:min(90%,540px);
 
     padding:50px 30px;
 
@@ -1155,13 +1280,7 @@ footer strong{
         transform:scale(1) rotate(0);
         opacity:1;
     }
-
 }
-
-
-/* =========================================
-   SURPRISE CROWN
-========================================= */
 
 .surprise-crown{
 
@@ -1173,26 +1292,23 @@ footer strong{
 
     margin-bottom:10px;
 
-    animation:
-    surpriseCrown 1.5s ease-in-out infinite alternate;
+    animation:surpriseCrown 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes surpriseCrown{
 
     from{
         transform:translateY(0) rotate(-5deg);
-        text-shadow:0 0 10px rgba(250,204,21,.3);
     }
 
     to{
         transform:translateY(-10px) rotate(5deg);
+
         text-shadow:
         0 0 20px #facc15,
         0 0 50px rgba(250,204,21,.6);
     }
-
 }
-
 
 .surprise-small{
 
@@ -1211,8 +1327,7 @@ footer strong{
 
     font-family:'Playfair Display',serif;
 
-    font-size:
-    clamp(32px,7vw,55px);
+    font-size:clamp(32px,7vw,55px);
 
     margin-bottom:12px;
 }
@@ -1233,10 +1348,10 @@ footer strong{
     margin-bottom:25px;
 }
 
+.surprise-box p strong{
 
-/* =========================================
-   ENTER BUTTON
-========================================= */
+    color:#facc15;
+}
 
 .enter-btn{
 
@@ -1256,9 +1371,6 @@ footer strong{
 
     cursor:pointer;
 
-    box-shadow:
-    0 10px 30px rgba(250,204,21,.2);
-
     transition:.3s;
 }
 
@@ -1267,15 +1379,7 @@ footer strong{
     transform:translateY(-4px) scale(1.03);
 
     background:#fde68a;
-
-    box-shadow:
-    0 15px 40px rgba(250,204,21,.35);
 }
-
-
-/* =========================================
-   SURPRISE CLOSE
-========================================= */
 
 .surprise-close{
 
@@ -1300,8 +1404,6 @@ footer strong{
     cursor:pointer;
 
     font-size:18px;
-
-    transition:.3s;
 }
 
 .surprise-close:hover{
@@ -1309,14 +1411,82 @@ footer strong{
     background:#38bdf8;
 
     color:#101a3a;
-
-    transform:rotate(90deg);
 }
 
 
-/* =========================================
+/* =====================================================
+   REWARD BOX
+===================================================== */
+
+.reward-box{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #064e3b,
+        #14532d
+    );
+
+    border:2px solid #22c55e;
+
+    border-radius:14px;
+
+    box-shadow:
+    0 0 30px rgba(34,197,94,.2);
+}
+
+.reward-box.show{
+
+    display:block;
+
+    animation:rewardIn .7s ease;
+}
+
+@keyframes rewardIn{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.reward-title{
+
+    color:#facc15;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:8px;
+}
+
+.reward-text{
+
+    color:#dcfce7;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
    CONFETTI
-========================================= */
+===================================================== */
 
 .confetti-container{
 
@@ -1350,6 +1520,7 @@ footer strong{
         transform:
         translateY(-30px)
         rotate(0deg);
+
         opacity:1;
     }
 
@@ -1357,15 +1528,15 @@ footer strong{
         transform:
         translateY(110vh)
         rotate(720deg);
+
         opacity:0;
     }
-
 }
 
 
-/* =========================================
-   WELCOME TOAST
-========================================= */
+/* =====================================================
+   TOAST
+===================================================== */
 
 .welcome-toast{
 
@@ -1421,9 +1592,9 @@ footer strong{
 }
 
 
-/* =========================================
-   FLOATING SURPRISE BUTTON
-========================================= */
+/* =====================================================
+   FLOATING BUTTON
+===================================================== */
 
 .surprise-float{
 
@@ -1467,7 +1638,6 @@ footer strong{
     50%{
         transform:translateY(-8px);
     }
-
 }
 
 .surprise-float:hover{
@@ -1475,58 +1645,48 @@ footer strong{
     background:#facc15;
 
     color:#101a3a;
-
-    transform:scale(1.1);
 }
 
 
-/* =========================================
-   RESPONSIVE 1200
-========================================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:1200px){
 
     .nav-links{
-        gap:14px;
+        gap:12px;
     }
 
     .nav-links a{
-        font-size:10px;
+        font-size:9px;
     }
 
     .search-box input{
-        width:100px;
+        width:90px;
     }
-
 }
 
 
-/* =========================================
-   RESPONSIVE 1100
-========================================= */
+@media(max-width:1050px){
 
-@media(max-width:1100px){
+    .nav-right{
+        gap:5px;
+    }
 
-    .login-btn,
+    .admin-btn,
     .create-btn{
         display:none;
     }
-
-    .hero-badge{
-        right:4%;
-    }
-
 }
 
-
-/* =========================================
-   RESPONSIVE 900
-========================================= */
 
 @media(max-width:900px){
 
     .navbar{
+
         height:75px;
+
         padding:0 5%;
     }
 
@@ -1536,10 +1696,6 @@ footer strong{
 
     .brand strong{
         font-size:14px;
-    }
-
-    .brand small{
-        font-size:8px;
     }
 
     .brand-crown{
@@ -1580,8 +1736,11 @@ footer strong{
     }
 
     .nav-links a{
+
         padding:12px;
+
         text-align:center;
+
         font-size:12px;
     }
 
@@ -1616,13 +1775,8 @@ footer strong{
 
         grid-template-columns:repeat(2,1fr);
     }
-
 }
 
-
-/* =========================================
-   RESPONSIVE 600
-========================================= */
 
 @media(max-width:600px){
 
@@ -1646,7 +1800,9 @@ footer strong{
     }
 
     .hero-buttons a{
+
         width:100%;
+
         text-align:center;
     }
 
@@ -1662,14 +1818,6 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .cta{
-        padding:25px 18px;
-    }
-
-    .footer-links{
-        gap:15px;
-    }
-
     .surprise-box{
         padding:42px 22px;
     }
@@ -1677,13 +1825,8 @@ footer strong{
     .surprise-crown{
         font-size:58px;
     }
-
 }
 
-
-/* =========================================
-   VERY SMALL DEVICES
-========================================= */
 
 @media(max-width:400px){
 
@@ -1693,6 +1836,7 @@ footer strong{
 
     .brand small{
         font-size:6px;
+
         letter-spacing:2px;
     }
 
@@ -1703,44 +1847,6 @@ footer strong{
     .hero h1{
         font-size:39px;
     }
-
-    .surprise-box h1{
-        font-size:32px;
-    }
-
-}
-
-
-/* =========================================
-   ADVERTISEMENT ANIMATION
-========================================= */
-
-@keyframes advertisementPulse{
-
-    0%{
-        box-shadow:
-        0 0 0 rgba(250,204,21,0);
-    }
-
-    50%{
-        box-shadow:
-        0 0 18px rgba(250,204,21,.25);
-    }
-
-    100%{
-        box-shadow:
-        0 0 0 rgba(250,204,21,0);
-    }
-
-}
-
-.advertisement-link{
-
-    animation:
-    advertisementPulse
-    3s
-    ease-in-out
-    infinite;
 }
 
 </style>
@@ -1752,64 +1858,91 @@ footer strong{
 
 
 <!-- =====================================================
-     ?? SURPRISE WELCOME
+     SURPRISE
 ===================================================== -->
 
 <div
 class="surprise-overlay"
 id="surpriseOverlay">
 
-    <div class="surprise-box">
+<div class="surprise-box">
 
-        <button
-        class="surprise-close"
-        onclick="closeSurprise()">
+<button
+class="surprise-close"
+onclick="closeSurprise()">
 
-        ×
+×
 
-        </button>
+</button>
 
-        <span class="surprise-crown">
+<span
+class="surprise-crown"
+id="surpriseIcon">
 
-        ?
+♛
 
-        </span>
+</span>
 
-        <div class="surprise-small">
+<div
+class="surprise-small"
+id="surpriseSmall">
 
-        WELCOME TO MY WORLD
+WELCOME TO MY WORLD
 
-        </div>
+</div>
 
-        <h1>
+<h1
+id="surpriseTitle">
 
-        GIVEN THE
-        <span>KING</span>
+GIVEN THE
+<span>KING</span>
 
-        </h1>
+</h1>
 
-        <p>
+<p
+id="surpriseMessage">
 
-        ?? Karibu kwenye dunia ya ubunifu,
-        teknolojia, muziki, video na design.
+Karibu kwenye website yangu binafsi.
 
-        <br><br>
+<br><br>
 
-        <strong>
-        Creativity • Technology • Passion
-        </strong>
+<strong>
+Creativity • Technology • Passion
+</strong>
 
-        </p>
+</p>
 
-        <button
-        class="enter-btn"
-        onclick="enterWebsite()">
+<div
+class="reward-box"
+id="rewardBox">
 
-        ? ENTER WEBSITE ?
+<div class="reward-title">
 
-        </button>
+🎁 ZAWADI YAKO
 
-    </div>
+</div>
+
+<div
+class="reward-text"
+id="rewardText">
+
+Karibu!
+
+</div>
+
+</div>
+
+<br>
+
+<button
+class="enter-btn"
+onclick="enterWebsite()">
+
+✨ ENTER WEBSITE ✨
+
+</button>
+
+</div>
 
 </div>
 
@@ -1825,19 +1958,22 @@ id="confettiContainer">
 
 
 <!-- =====================================================
-     WELCOME TOAST
+     TOAST
 ===================================================== -->
 
 <div
 class="welcome-toast"
 id="welcomeToast">
 
-<strong>?? GIVEN THE KING</strong>
+<strong id="toastTitle">
 
-<p>
+👑 GIVEN THE KING
+
+</strong>
+
+<p id="toastMessage">
 
 Karibu! Furahia website yangu binafsi.
-Explore my work, services, videos na creativity.
 
 </p>
 
@@ -1845,7 +1981,7 @@ Explore my work, services, videos na creativity.
 
 
 <!-- =====================================================
-     FLOATING SURPRISE BUTTON
+     FLOATING SURPRISE
 ===================================================== -->
 
 <button
@@ -1853,7 +1989,7 @@ class="surprise-float"
 onclick="openSurprise()"
 title="Open Surprise">
 
-??
+🎁
 
 </button>
 
@@ -1871,7 +2007,7 @@ class="brand">
 
 <span class="brand-crown">
 
-?
+♛
 
 </span>
 
@@ -1885,7 +2021,7 @@ GIVEN THE KING
 
 <small>
 
-VIDEO PRODUCTION & ICT
+PERSONAL CREATIVE
 
 </small>
 
@@ -1909,7 +2045,8 @@ HOME
 
 
 <a
-href="about.html">
+href="about.html"
+data-protected="true">
 
 ABOUT
 
@@ -1917,7 +2054,8 @@ ABOUT
 
 
 <a
-href="services.html">
+href="services.html"
+data-protected="true">
 
 SERVICES
 
@@ -1925,7 +2063,8 @@ SERVICES
 
 
 <a
-href="portfolio.html">
+href="portfolio.html"
+data-protected="true">
 
 PORTFOLIO
 
@@ -1933,7 +2072,8 @@ PORTFOLIO
 
 
 <a
-href="videos.html">
+href="videos.html"
+data-protected="true">
 
 VIDEOS
 
@@ -1949,7 +2089,8 @@ CONTACT
 
 
 <a
-href="advertise.html">
+href="advertise.html"
+data-protected="true">
 
 ADVERTISEMENT
 
@@ -1969,21 +2110,36 @@ onsubmit="searchSite(event)">
 <input
 type="search"
 id="searchInput"
-placeholder="Search..."
-aria-label="Search">
+placeholder="Search...">
 
 <button type="submit">
 
-??
+🔍
 
 </button>
 
 </form>
 
 
+<div
+class="user-display"
+id="userDisplay">
+
+<span class="online-dot"></span>
+
+<span id="navUsername">
+
+USER
+
+</span>
+
+</div>
+
+
 <a
 href="login.html"
-class="login-btn">
+class="login-btn"
+id="loginButton">
 
 LOGIN
 
@@ -1992,16 +2148,40 @@ LOGIN
 
 <a
 href="register.html"
-class="create-btn">
+class="create-btn"
+id="registerButton">
 
 CREATE ACCOUNT
 
 </a>
 
 
+<a
+href="admin.html"
+class="admin-btn"
+id="adminButton"
+style="display:none;">
+
+ADMIN
+
+</a>
+
+
+<button
+class="logout-btn"
+id="logoutButton"
+onclick="logoutUser()"
+style="display:none;">
+
+LOGOUT
+
+</button>
+
+
 <select
 class="lang-select"
-onchange="changeLanguage(this.value)">
+onchange="changeLanguage(this.value)"
+id="languageSelect">
 
 <option value="sw">
 
@@ -2025,7 +2205,7 @@ EN
 class="menu-toggle"
 onclick="toggleMenu()">
 
-?
+☰
 
 </button>
 
@@ -2045,15 +2225,31 @@ onclick="toggleMenu()">
 
 <p
 class="hero-eyebrow"
-id="hero-eyebrow">
+id="heroEyebrow">
 
 WELCOME KWENYE DUNIA YANGU
 
 </p>
 
 
+<div
+class="login-welcome"
+id="loginWelcome">
+
+🟢 Karibu
+<strong id="welcomeUsername">
+
+Guest
+
+</strong>
+
+! Umeingia kwenye website.
+
+</div>
+
+
 <h1
-id="hero-title">
+id="heroTitle">
 
 GIVEN THE
 <span>KING</span>
@@ -2063,10 +2259,10 @@ GIVEN THE
 
 <p
 class="hero-description"
-id="hero-description">
+id="heroDescription">
 
 Karibu kwenye website yangu binafsi.
-Mimi ni Given Bupe Mwakimonga, mbunifu na mtaalamu
+Mimi ni Given The King, mbunifu na mtaalamu
 wa Video Production, Video Editing,
 Photography, ICT, Branding, Design, Printing
 na huduma mbalimbali za kiteknolojia.
@@ -2079,8 +2275,8 @@ na huduma mbalimbali za kiteknolojia.
 
 <a
 href="portfolio.html"
-class="btn-primary"
-id="work-button">
+data-protected="true"
+class="btn-primary">
 
 VIEW MY WORK
 
@@ -2089,8 +2285,8 @@ VIEW MY WORK
 
 <a
 href="services.html"
-class="btn-secondary"
-id="services-button">
+data-protected="true"
+class="btn-secondary">
 
 MY SERVICES
 
@@ -2099,8 +2295,7 @@ MY SERVICES
 
 <a
 href="contact.html"
-class="btn-outline"
-id="contact-button">
+class="btn-outline">
 
 CONTACT ME
 
@@ -2116,7 +2311,7 @@ CONTACT ME
 
 <h3>
 
-? GBM THE KING
+👑 GBM THE KING
 
 </h3>
 
@@ -2139,18 +2334,18 @@ Creativity, Technology & Passion.
 
 
 <!-- =====================================================
-     MAIN CONTENT
+     MAIN
 ===================================================== -->
 
 <main class="main-container">
 
 
+<!-- SIDEBAR -->
+
 <aside class="sidebar-left">
 
 
-<div
-class="sidebar-title"
-id="sidebar-title">
+<div class="sidebar-title">
 
 MENU
 
@@ -2162,144 +2357,249 @@ MENU
 
 <li>
 <a href="index.html" class="active">
-<span>¦</span>
+
+🏠
+
 <span>HOME</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="about.html">
-<span>?</span>
+<a
+href="about.html"
+data-protected="true"
+class="locked">
+
+👤
+
 <span>ABOUT ME</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>?</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🛠️
+
 <span>MY SERVICES</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="portfolio.html">
-<span>?</span>
+<a
+href="portfolio.html"
+data-protected="true"
+class="locked">
+
+💼
+
 <span>PORTFOLIO</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="videos.html">
-<span>?</span>
+<a
+href="videos.html"
+data-protected="true"
+class="locked">
+
+🎬
+
 <span>MY VIDEOS</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="gallery.html">
-<span>?</span>
+<a
+href="gallery.html"
+data-protected="true"
+class="locked">
+
+🖼️
+
 <span>GALLERY</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="blog.html">
-<span>?</span>
+<a
+href="blog.html"
+data-protected="true"
+class="locked">
+
+📝
+
 <span>MY BLOG</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="skills.html">
-<span>?</span>
+<a
+href="skills.html"
+data-protected="true"
+class="locked">
+
+⭐
+
 <span>MY SKILLS</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🎥
+
 <span>VIDEO PRODUCTION</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>?</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+✂️
+
 <span>VIDEO EDITING</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🎨
+
 <span>BRANDING & DESIGN</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+💻
+
 <span>COMPUTER TRAINING</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+📐
+
 <span>MATHEMATICS TEACHING</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🌐
+
 <span>NETWORKING & HARDWARE</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🔧
+
 <span>COMPUTER REPAIR</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+📚
+
 <span>STATIONERY SERVICES</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+🖨️
+
 <span>PRINTING & LAMINATION</span>
+
 </a>
 </li>
 
 
 <li>
-<a href="services.html">
-<span>??</span>
+<a
+href="services.html"
+data-protected="true"
+class="locked">
+
+📄
+
 <span>PHOTOCOPY & INTERNET</span>
+
 </a>
 </li>
 
@@ -2308,13 +2608,34 @@ MENU
 
 <a
 href="advertise.html"
-class="advertisement-link">
+data-protected="true"
+class="advertisement-link locked">
 
-<span>??</span>
+📢
 
-<span id="advertisement-text">
+<span>
 
 ADVERTISEMENT
+
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a
+href="admin.html"
+id="adminSideLink"
+class="admin-side-link">
+
+👑
+
+<span>
+
+ADMIN PANEL
 
 </span>
 
@@ -2328,20 +2649,19 @@ ADVERTISEMENT
 </aside>
 
 
+<!-- HOME -->
+
 <section class="home-content">
 
 
-<p
-class="section-eyebrow"
-id="section-eyebrow">
+<p class="section-eyebrow">
 
 NINACHOFANYA
 
 </p>
 
 
-<h2
-id="section-title">
+<h2>
 
 UBUNIFU UNAKUTANA NA
 <span>TEKNOLOJIA.</span>
@@ -2349,9 +2669,7 @@ UBUNIFU UNAKUTANA NA
 </h2>
 
 
-<p
-class="home-description"
-id="home-description">
+<p class="home-description">
 
 Ninatoa huduma mbalimbali zinazochanganya
 ubunifu, teknolojia na uzoefu ili kusaidia watu,
@@ -2366,9 +2684,17 @@ suluhisho bora.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>VIDEO PRODUCTION</h3>
+🎥
+
+</div>
+
+<h3>
+
+VIDEO PRODUCTION
+
+</h3>
 
 <p>
 
@@ -2383,9 +2709,17 @@ video nyingine za ubora.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>VIDEO EDITING</h3>
+🎬
+
+</div>
+
+<h3>
+
+VIDEO EDITING
+
+</h3>
 
 <p>
 
@@ -2400,9 +2734,17 @@ na post-production.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>PHOTOGRAPHY</h3>
+📸
+
+</div>
+
+<h3>
+
+PHOTOGRAPHY
+
+</h3>
 
 <p>
 
@@ -2416,9 +2758,17 @@ products, social media na matumizi mbalimbali.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>BRANDING & DESIGN</h3>
+🎨
+
+</div>
+
+<h3>
+
+BRANDING & DESIGN
+
+</h3>
 
 <p>
 
@@ -2432,9 +2782,17 @@ social media graphics na creative designs.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>ICT SERVICES</h3>
+💻
+
+</div>
+
+<h3>
+
+ICT SERVICES
+
+</h3>
 
 <p>
 
@@ -2448,9 +2806,17 @@ computer repair, networking na technical support.
 
 <div class="service-card">
 
-<div class="service-icon">??</div>
+<div class="service-icon">
 
-<h3>PRINTING SERVICES</h3>
+🖨️
+
+</div>
+
+<h3>
+
+PRINTING SERVICES
+
+</h3>
 
 <p>
 
@@ -2467,36 +2833,29 @@ stationery na huduma nyingine za printing.
 
 <div class="cta">
 
-
-<h2 id="cta-title">
+<h2>
 
 TUFANYE KITU KIKUBWA PAMOJA.
 
 </h2>
 
-
-<p id="cta-description">
+<p>
 
 Una project, event, video, design au unahitaji
 huduma ya ICT? Wasiliana nami leo.
 
 </p>
 
-
-<a
-href="contact.html"
-id="cta-button">
+<a href="contact.html">
 
 WASILIANA NAMI
 
 </a>
 
-
 </div>
 
 
 </section>
-
 
 </main>
 
@@ -2510,14 +2869,14 @@ WASILIANA NAMI
 
 <div class="footer-brand">
 
-? GIVEN THE KING
+♛ GIVEN THE KING
 
 </div>
 
 
 <div class="footer-sub">
 
-VIDEO PRODUCTION & ICT
+PERSONAL CREATIVE
 
 </div>
 
@@ -2526,37 +2885,61 @@ VIDEO PRODUCTION & ICT
 
 
 <a href="index.html">
+
 HOME
+
 </a>
 
 
-<a href="about.html">
+<a
+href="about.html"
+data-protected="true">
+
 ABOUT
+
 </a>
 
 
-<a href="services.html">
+<a
+href="services.html"
+data-protected="true">
+
 SERVICES
+
 </a>
 
 
-<a href="portfolio.html">
+<a
+href="portfolio.html"
+data-protected="true">
+
 PORTFOLIO
+
 </a>
 
 
-<a href="videos.html">
+<a
+href="videos.html"
+data-protected="true">
+
 VIDEOS
+
 </a>
 
 
 <a href="contact.html">
+
 CONTACT
+
 </a>
 
 
-<a href="advertise.html">
+<a
+href="advertise.html"
+data-protected="true">
+
 ADVERTISEMENT
+
 </a>
 
 
@@ -2583,726 +2966,1145 @@ Given The King
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
-
-/* =========================================
+/* =====================================================
    YEAR
-========================================= */
+===================================================== */
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+/* =====================================================
+   CHECK LOGIN
+===================================================== */
 
-function toggleMenu(){
+function getCurrentUser(){
 
-const nav =
-document.getElementById("navLinks");
+    const currentUser =
+    localStorage.getItem("givenKingCurrentUser");
 
-nav.classList.toggle("show");
+    if(!currentUser){
+        return null;
+    }
+
+    try{
+
+        return JSON.parse(currentUser);
+
+    }
+    catch(error){
+
+        return null;
+
+    }
+}
+
+
+/* =====================================================
+   UPDATE WEBSITE AFTER LOGIN
+===================================================== */
+
+function updateLoginState(){
+
+    const user =
+    getCurrentUser();
+
+    const loginButton =
+    document.getElementById("loginButton");
+
+    const registerButton =
+    document.getElementById("registerButton");
+
+    const logoutButton =
+    document.getElementById("logoutButton");
+
+    const adminButton =
+    document.getElementById("adminButton");
+
+    const userDisplay =
+    document.getElementById("userDisplay");
+
+    const navUsername =
+    document.getElementById("navUsername");
+
+    const loginWelcome =
+    document.getElementById("loginWelcome");
+
+    const welcomeUsername =
+    document.getElementById("welcomeUsername");
+
+    const adminSideLink =
+    document.getElementById("adminSideLink");
+
+
+    if(user){
+
+        loginButton.style.display="none";
+
+        registerButton.style.display="none";
+
+        logoutButton.style.display="block";
+
+        userDisplay.classList.add("show");
+
+        navUsername.textContent =
+        user.name || user.username || "USER";
+
+        loginWelcome.classList.add("show");
+
+        welcomeUsername.textContent =
+        user.name || user.username || "USER";
+
+
+        /*
+           Kama user ni admin
+        */
+
+        if(
+            user.role === "admin" ||
+            user.isAdmin === true
+        ){
+
+            adminButton.style.display="block";
+
+            adminSideLink.classList.add("show");
+
+        }
+
+    }
+    else{
+
+        loginButton.style.display="block";
+
+        registerButton.style.display="block";
+
+        logoutButton.style.display="none";
+
+        adminButton.style.display="none";
+
+        userDisplay.classList.remove("show");
+
+        loginWelcome.classList.remove("show");
+
+        adminSideLink.classList.remove("show");
+
+    }
 
 }
 
 
-/* =========================================
-   SEARCH
-========================================= */
-
-function searchSite(event){
-
-event.preventDefault();
-
-const query =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
-
-
-if(query === ""){
-
-alert("Andika unachotafuta.");
-
-return;
-
-}
-
-
-const pages = {
-
-"home":"index.html",
-
-"about":"about.html",
-
-"about me":"about.html",
-
-"services":"services.html",
-
-"service":"services.html",
-
-"portfolio":"portfolio.html",
-
-"videos":"videos.html",
-
-"video":"videos.html",
-
-"gallery":"gallery.html",
-
-"blog":"blog.html",
-
-"skills":"skills.html",
-
-"contact":"contact.html",
-
-"advertise":"advertise.html",
-
-"advertisement":"advertise.html",
-
-"ads":"advertise.html",
-
-"video production":"services.html",
-
-"video editing":"services.html",
-
-"branding":"services.html",
-
-"design":"services.html",
-
-"computer":"services.html",
-
-"printing":"services.html",
-
-"photocopy":"services.html",
-
-"networking":"services.html",
-
-"repair":"services.html"
-
-};
-
-
-if(pages[query]){
-
-window.location.href =
-pages[query];
-
-}
-
-else{
-
-alert(
-"Hakuna ukurasa uliopatikana kwa: "
-+ query
-);
-
-}
-
-}
-
-
-/* =========================================
-   LANGUAGE SYSTEM
-========================================= */
-
-const dictionary = {
-
-sw:{
-
-heroEyebrow:
-"WELCOME KWENYE DUNIA YANGU",
-
-heroTitle:
-'GIVEN THE <span>KING</span>',
-
-heroDescription:
-"Karibu kwenye website yangu binafsi. Mimi ni Given The King, mbunifu na mtaalamu wa Video Production, Video Editing, Photography, ICT, Branding, Design, Printing na huduma mbalimbali za kiteknolojia.",
-
-workButton:
-"ANGALIA KAZI ZANGU",
-
-servicesButton:
-"HUDUMA ZANGU",
-
-contactButton:
-"WASILIANA NAMI",
-
-sectionEyebrow:
-"NINACHOFANYA",
-
-sectionTitle:
-'UBUNIFU UNAKUTANA NA <span>TEKNOLOJIA.</span>',
-
-homeDescription:
-"Ninatoa huduma mbalimbali zinazochanganya ubunifu, teknolojia na uzoefu ili kusaidia watu, wanafunzi, wasanii, biashara na taasisi kupata suluhisho bora.",
-
-ctaTitle:
-"TUFANYE KITU KIKUBWA PAMOJA.",
-
-ctaDescription:
-"Una project, event, video, design au unahitaji huduma ya ICT? Wasiliana nami leo.",
-
-ctaButton:
-"WASILIANA NAMI",
-
-advertisement:
-"MATANGAZO"
-
-},
-
-en:{
-
-heroEyebrow:
-"WELCOME TO MY WORLD",
-
-heroTitle:
-'GIVEN THE <span>KING</span>',
-
-heroDescription:
-"Welcome to my personal website. I am Given The King, a creative professional specializing in Video Production, Video Editing, Photography, ICT, Branding, Design, Printing and various technology services.",
-
-workButton:
-"VIEW MY WORK",
-
-servicesButton:
-"MY SERVICES",
-
-contactButton:
-"CONTACT ME",
-
-sectionEyebrow:
-"WHAT I DO",
-
-sectionTitle:
-'CREATIVITY MEETS <span>TECHNOLOGY.</span>',
-
-homeDescription:
-"I provide different services combining creativity, technology and experience to help individuals, students, artists, businesses and organizations find better solutions.",
-
-ctaTitle:
-"LET'S CREATE SOMETHING GREAT TOGETHER.",
-
-ctaDescription:
-"Have a project, event, video, design or need ICT support? Get in touch with me today.",
-
-ctaButton:
-"CONTACT ME",
-
-advertisement:
-"ADVERTISEMENT"
-
-}
-
-};
-
-
-/* =========================================
-   CHANGE LANGUAGE
-========================================= */
-
-function changeLanguage(lang){
-
-const d =
-dictionary[lang];
-
-
-document.getElementById(
-"hero-eyebrow"
-).innerText =
-d.heroEyebrow;
-
-
-document.getElementById(
-"hero-title"
-).innerHTML =
-d.heroTitle;
-
-
-document.getElementById(
-"hero-description"
-).innerText =
-d.heroDescription;
-
-
-document.getElementById(
-"work-button"
-).innerText =
-d.workButton;
-
-
-document.getElementById(
-"services-button"
-).innerText =
-d.servicesButton;
-
-
-document.getElementById(
-"contact-button"
-).innerText =
-d.contactButton;
-
-
-document.getElementById(
-"section-eyebrow"
-).innerText =
-d.sectionEyebrow;
-
-
-document.getElementById(
-"section-title"
-).innerHTML =
-d.sectionTitle;
-
-
-document.getElementById(
-"home-description"
-).innerText =
-d.homeDescription;
-
-
-document.getElementById(
-"cta-title"
-).innerText =
-d.ctaTitle;
-
-
-document.getElementById(
-"cta-description"
-).innerText =
-d.ctaDescription;
-
-
-document.getElementById(
-"cta-button"
-).innerText =
-d.ctaButton;
-
-
-document.getElementById(
-"advertisement-text"
-).innerText =
-d.advertisement;
-
-
-localStorage.setItem(
-"givenKingLanguage",
-lang
-);
-
-}
-
-
-/* =========================================
-   LOAD LANGUAGE
-========================================= */
-
-const savedLanguage =
-localStorage.getItem(
-"givenKingLanguage"
-);
-
-
-if(savedLanguage){
-
-const languageSelect =
-document.querySelector(
-".lang-select"
-);
-
-languageSelect.value =
-savedLanguage;
-
-changeLanguage(
-savedLanguage
-);
-
-}
-
-
-/* =========================================
-   CLOSE MOBILE MENU
-========================================= */
+/* =====================================================
+   PROTECT OTHER PAGES
+===================================================== */
 
 document
-.querySelectorAll(
-".nav-links a"
-)
+.querySelectorAll('[data-protected="true"]')
 .forEach(function(link){
 
-link.addEventListener(
-"click",
-function(){
+    link.addEventListener(
+        "click",
+        function(event){
 
-document
-.getElementById("navLinks")
-.classList.remove("show");
+            const user =
+            getCurrentUser();
 
-});
+            if(!user){
+
+                event.preventDefault();
+
+                alert(
+                    "🔐 Tafadhali LOGIN kwanza ili kuona ukurasa huu."
+                );
+
+                window.location.href =
+                "login.html";
+
+            }
+
+        }
+    );
 
 });
 
 
 /* =====================================================
-   ?? SURPRISE SYSTEM
+   LOGOUT
 ===================================================== */
 
+function logoutUser(){
 
-/* =========================================
+    const user =
+    getCurrentUser();
+
+    if(!user){
+
+        return;
+
+    }
+
+
+    /*
+       Ondoa current session
+    */
+
+    localStorage.removeItem(
+        "givenKingCurrentUser"
+    );
+
+
+    /*
+       Toast
+    */
+
+    document.getElementById(
+        "toastTitle"
+    ).textContent =
+    "👋 UMELOGOUT";
+
+
+    document.getElementById(
+        "toastMessage"
+    ).textContent =
+    "Umetoka kwenye account yako. Karibu tena!";
+
+
+    document
+    .getElementById("welcomeToast")
+    .classList.add("show");
+
+
+    updateLoginState();
+
+
+    setTimeout(function(){
+
+        window.location.href =
+        "index.html";
+
+    },1800);
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu(){
+
+    const nav =
+    document.getElementById("navLinks");
+
+    nav.classList.toggle("show");
+
+}
+
+
+/* =====================================================
+   CLOSE MOBILE MENU
+===================================================== */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("navLinks")
+            .classList.remove("show");
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchSite(event){
+
+    event.preventDefault();
+
+    const query =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+
+    if(query === ""){
+
+        alert(
+            "Andika unachotafuta."
+        );
+
+        return;
+
+    }
+
+
+    const pages = {
+
+        "home":"index.html",
+
+        "about":"about.html",
+
+        "about me":"about.html",
+
+        "services":"services.html",
+
+        "service":"services.html",
+
+        "portfolio":"portfolio.html",
+
+        "videos":"videos.html",
+
+        "video":"videos.html",
+
+        "gallery":"gallery.html",
+
+        "blog":"blog.html",
+
+        "skills":"skills.html",
+
+        "contact":"contact.html",
+
+        "advertise":"advertise.html",
+
+        "advertisement":"advertise.html",
+
+        "ads":"advertise.html",
+
+        "admin":"admin.html",
+
+        "video production":"services.html",
+
+        "video editing":"services.html",
+
+        "branding":"services.html",
+
+        "design":"services.html",
+
+        "computer":"services.html",
+
+        "printing":"services.html",
+
+        "photocopy":"services.html",
+
+        "networking":"services.html",
+
+        "repair":"services.html"
+
+    };
+
+
+    if(pages[query]){
+
+        const protectedPages = [
+            "about.html",
+            "services.html",
+            "portfolio.html",
+            "videos.html",
+            "gallery.html",
+            "blog.html",
+            "skills.html",
+            "advertise.html",
+            "admin.html"
+        ];
+
+
+        if(
+            protectedPages.includes(
+                pages[query]
+            )
+            &&
+            !getCurrentUser()
+        ){
+
+            alert(
+                "🔐 LOGIN kwanza ili kufungua ukurasa huu."
+            );
+
+            window.location.href =
+            "login.html";
+
+            return;
+
+        }
+
+
+        window.location.href =
+        pages[query];
+
+    }
+    else{
+
+        alert(
+            "Hakuna ukurasa uliopatikana kwa: "
+            + query
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   DIFFERENT REWARDS
+===================================================== */
+
+const rewards = [
+
+    {
+        icon:"🎁",
+        title:"ZAWADI YA KARIBU",
+        text:
+        "Umepewa BONUS ya kwanza! Endelea kufurahia creativity ya Given The King."
+    },
+
+    {
+        icon:"👑",
+        title:"KING MEMBER",
+        text:
+        "Hongera! Umepewa zawadi maalum ya KING MEMBER kwa kujiunga."
+    },
+
+    {
+        icon:"⭐",
+        title:"SPECIAL MEMBER",
+        text:
+        "Hongera! Umefungua SPECIAL MEMBER surprise."
+    },
+
+    {
+        icon:"🎬",
+        title:"CREATIVE GIFT",
+        text:
+        "Umepewa Creative Gift! Endelea kuangalia kazi na projects zangu."
+    },
+
+    {
+        icon:"💎",
+        title:"VIP SURPRISE",
+        text:
+        "Hongera! Leo umeangukia VIP SURPRISE."
+    },
+
+    {
+        icon:"🔥",
+        title:"HOT MEMBER",
+        text:
+        "Umepewa Hot Member reward. Karibu sana kwenye dunia ya Given The King."
+    },
+
+    {
+        icon:"💻",
+        title:"TECH GIFT",
+        text:
+        "Umepewa Tech Gift kwa kuwa member wa website."
+    },
+
+    {
+        icon:"❤️",
+        title:"SPECIAL THANK YOU",
+        text:
+        "Asante kwa kutembelea website yangu. Hii ni zawadi yako ya appreciation."
+    }
+
+];
+
+
+/* =====================================================
+   CREATE DIFFERENT REWARD FOR USER
+===================================================== */
+
+function getUserReward(user){
+
+    if(!user){
+
+        return null;
+
+    }
+
+
+    /*
+       Tunatumia jina/email kutengeneza
+       namba tofauti ya reward.
+    */
+
+    const identity =
+    (
+        user.email ||
+        user.username ||
+        user.name ||
+        "guest"
+    ).toString();
+
+
+    let total = 0;
+
+
+    for(
+        let i=0;
+        i<identity.length;
+        i++
+    ){
+
+        total +=
+        identity.charCodeAt(i);
+
+    }
+
+
+    const index =
+    total % rewards.length;
+
+
+    return rewards[index];
+
+}
+
+
+/* =====================================================
+   SHOW SURPRISE
+===================================================== */
+
+function prepareSurprise(){
+
+    const user =
+    getCurrentUser();
+
+
+    const icon =
+    document.getElementById(
+        "surpriseIcon"
+    );
+
+    const small =
+    document.getElementById(
+        "surpriseSmall"
+    );
+
+    const title =
+    document.getElementById(
+        "surpriseTitle"
+    );
+
+    const message =
+    document.getElementById(
+        "surpriseMessage"
+    );
+
+    const rewardBox =
+    document.getElementById(
+        "rewardBox"
+    );
+
+    const rewardText =
+    document.getElementById(
+        "rewardText"
+    );
+
+
+    if(user){
+
+        const reward =
+        getUserReward(user);
+
+
+        icon.textContent =
+        reward.icon;
+
+
+        small.textContent =
+        "WELCOME BACK";
+
+
+        title.innerHTML =
+        "HELLO <span>" +
+        escapeHTML(
+            user.name ||
+            user.username ||
+            "KING"
+        ) +
+        "</span>";
+
+
+        message.innerHTML =
+        "Karibu tena kwenye website ya GIVEN THE KING." +
+        "<br><br>" +
+        "<strong>Creativity • Technology • Passion</strong>";
+
+
+        rewardBox.classList.add("show");
+
+
+        document.getElementById(
+            "rewardText"
+        ).textContent =
+        reward.title +
+        " — " +
+        reward.text;
+
+    }
+    else{
+
+        icon.textContent =
+        "♛";
+
+
+        small.textContent =
+        "WELCOME TO MY WORLD";
+
+
+        title.innerHTML =
+        "GIVEN THE <span>KING</span>";
+
+
+        message.innerHTML =
+        "Karibu kwenye website yangu binafsi." +
+        "<br><br>" +
+        "<strong>Creativity • Technology • Passion</strong>";
+
+
+        rewardBox.classList.remove(
+            "show"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =====================================================
    OPEN SURPRISE
-========================================= */
+===================================================== */
 
 function openSurprise(){
 
-const overlay =
-document.getElementById(
-"surpriseOverlay"
-);
+    prepareSurprise();
 
-overlay.classList.remove("hide");
 
-createConfetti();
+    const overlay =
+    document.getElementById(
+        "surpriseOverlay"
+    );
 
-playSurpriseSound();
+
+    overlay.classList.remove(
+        "hide"
+    );
+
+
+    createConfetti();
+
+
+    playSurpriseSound();
 
 }
 
 
-/* =========================================
+/* =====================================================
    CLOSE SURPRISE
-========================================= */
+===================================================== */
 
 function closeSurprise(){
 
-const overlay =
-document.getElementById(
-"surpriseOverlay"
-);
+    const overlay =
+    document.getElementById(
+        "surpriseOverlay"
+    );
 
-overlay.classList.add("hide");
 
-showWelcomeToast();
+    overlay.classList.add(
+        "hide"
+    );
+
+
+    showWelcomeToast();
 
 }
 
 
-/* =========================================
+/* =====================================================
    ENTER WEBSITE
-========================================= */
+===================================================== */
 
 function enterWebsite(){
 
-createConfetti();
+    createConfetti();
 
-playSurpriseSound();
+    playSurpriseSound();
 
-setTimeout(function(){
 
-closeSurprise();
+    setTimeout(
+        function(){
 
-},300);
+            closeSurprise();
+
+        },
+        300
+    );
 
 }
 
 
-/* =========================================
+/* =====================================================
    CONFETTI
-========================================= */
+===================================================== */
 
 function createConfetti(){
 
-const container =
-document.getElementById(
-"confettiContainer"
-);
+    const container =
+    document.getElementById(
+        "confettiContainer"
+    );
 
-container.innerHTML="";
 
-const symbols=[
-"?",
-"?",
-"?",
-"?",
-"?"
-];
+    container.innerHTML = "";
 
-for(
-let i=0;
-i<70;
-i++
-){
 
-const piece =
-document.createElement(
-"span"
-);
+    const symbols = [
+        "★",
+        "◆",
+        "●",
+        "✦",
+        "♛"
+    ];
 
-piece.className =
-"confetti";
 
-piece.innerText =
-symbols[
-Math.floor(
-Math.random() *
-symbols.length
-)
-];
+    for(
+        let i=0;
+        i<70;
+        i++
+    ){
 
-piece.style.left =
-Math.random()*100+"%";
+        const piece =
+        document.createElement(
+            "span"
+        );
 
-piece.style.fontSize =
-(8+Math.random()*14)+"px";
 
-piece.style.animationDuration =
-(2+Math.random()*4)+"s";
+        piece.className =
+        "confetti";
 
-piece.style.animationDelay =
-(Math.random()*1)+"s";
 
-piece.style.color =
-[
-"#facc15",
-"#38bdf8",
-"#22c55e",
-"#a855f7",
-"#ffffff"
-][
-Math.floor(
-Math.random()*5
-)
-];
+        piece.innerText =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
 
-container.appendChild(
-piece
-);
+
+        piece.style.left =
+        Math.random()*100+"%";
+
+
+        piece.style.fontSize =
+        (8+Math.random()*14)+"px";
+
+
+        piece.style.animationDuration =
+        (2+Math.random()*4)+"s";
+
+
+        piece.style.animationDelay =
+        (Math.random()*1)+"s";
+
+
+        piece.style.color =
+        [
+            "#facc15",
+            "#38bdf8",
+            "#22c55e",
+            "#a855f7",
+            "#ffffff"
+        ][
+            Math.floor(
+                Math.random()*5
+            )
+        ];
+
+
+        container.appendChild(
+            piece
+        );
+
+    }
+
+
+    setTimeout(
+        function(){
+
+            container.innerHTML="";
+
+        },
+        6000
+    );
 
 }
 
-setTimeout(function(){
 
-container.innerHTML="";
-
-},6000);
-
-}
-
-
-/* =========================================
-   WELCOME TOAST
-========================================= */
+/* =====================================================
+   TOAST
+===================================================== */
 
 function showWelcomeToast(){
 
-const toast =
-document.getElementById(
-"welcomeToast"
-);
+    const user =
+    getCurrentUser();
 
-toast.classList.add("show");
 
-setTimeout(function(){
+    const toast =
+    document.getElementById(
+        "welcomeToast"
+    );
 
-toast.classList.remove("show");
 
-},6000);
+    if(user){
+
+        document.getElementById(
+            "toastTitle"
+        ).textContent =
+        "👑 KARIBU " +
+        (
+            user.name ||
+            user.username ||
+            "MEMBER"
+        );
+
+
+        document.getElementById(
+            "toastMessage"
+        ).textContent =
+        "Furahia website ya Given The King na surprise yako.";
+
+    }
+    else{
+
+        document.getElementById(
+            "toastTitle"
+        ).textContent =
+        "👑 GIVEN THE KING";
+
+
+        document.getElementById(
+            "toastMessage"
+        ).textContent =
+        "Karibu! Furahia website yangu binafsi.";
+
+    }
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        function(){
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        6000
+    );
 
 }
 
 
-/* =========================================
+/* =====================================================
    SURPRISE SOUND
-   Web Audio API
-========================================= */
+===================================================== */
 
 function playSurpriseSound(){
 
-try{
+    try{
 
-const AudioContext =
-window.AudioContext ||
-window.webkitAudioContext;
+        const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
 
-const audio =
-new AudioContext();
 
-const notes=[
-523.25,
-659.25,
-783.99,
-1046.50
-];
+        const audio =
+        new AudioContext();
 
-notes.forEach(
-function(freq,index){
 
-const oscillator =
-audio.createOscillator();
+        const notes = [
 
-const gain =
-audio.createGain();
+            523.25,
+            659.25,
+            783.99,
+            1046.50
 
-oscillator.type =
-"sine";
+        ];
 
-oscillator.frequency.value =
-freq;
 
-gain.gain.setValueAtTime(
-0,
-audio.currentTime +
-index*.12
-);
+        notes.forEach(
+            function(freq,index){
 
-gain.gain.linearRampToValueAtTime(
-0.08,
-audio.currentTime +
-index*.12 +
-0.03
-);
+                const oscillator =
+                audio.createOscillator();
 
-gain.gain.exponentialRampToValueAtTime(
-0.001,
-audio.currentTime +
-index*.12 +
-0.35
-);
 
-oscillator.connect(gain);
+                const gain =
+                audio.createGain();
 
-gain.connect(
-audio.destination
-);
 
-oscillator.start(
-audio.currentTime +
-index*.12
-);
+                oscillator.type =
+                "sine";
 
-oscillator.stop(
-audio.currentTime +
-index*.12 +
-0.4
-);
 
-});
+                oscillator.frequency.value =
+                freq;
+
+
+                gain.gain.setValueAtTime(
+                    0,
+                    audio.currentTime +
+                    index*.12
+                );
+
+
+                gain.gain.linearRampToValueAtTime(
+                    .08,
+                    audio.currentTime +
+                    index*.12 +
+                    .03
+                );
+
+
+                gain.gain.exponentialRampToValueAtTime(
+                    .001,
+                    audio.currentTime +
+                    index*.12 +
+                    .35
+                );
+
+
+                oscillator.connect(
+                    gain
+                );
+
+
+                gain.connect(
+                    audio.destination
+                );
+
+
+                oscillator.start(
+                    audio.currentTime +
+                    index*.12
+                );
+
+
+                oscillator.stop(
+                    audio.currentTime +
+                    index*.12 +
+                    .4
+                );
+
+            }
+        );
+
+    }
+    catch(error){
+
+        console.log(
+            "Audio not available."
+        );
+
+    }
 
 }
-catch(error){
-
-console.log(
-"Audio not available."
-);
-
-}
-
-}
 
 
-/* =========================================
-   INITIAL SURPRISE
-========================================= */
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
 
 window.addEventListener(
-"load",
-function(){
+    "load",
+    function(){
 
-/*
-   Surprise itaonekana
-   mtu anapoingia kwenye page.
-*/
+        /*
+           Update login information
+        */
 
-setTimeout(
-function(){
-
-createConfetti();
-
-},
-700);
+        updateLoginState();
 
 
-/*
-   Welcome toast baada
-   ya kufunga popup.
-*/
+        /*
+           Prepare different surprise
+        */
 
-setTimeout(
-function(){
-
-if(
-!document
-.getElementById(
-"surpriseOverlay"
-)
-.classList.contains("hide")
-){
-
-return;
-
-}
-
-showWelcomeToast();
-
-},
-4000);
+        prepareSurprise();
 
 
-/*
-   Surprise nyingine baada
-   ya sekunde 8.
-*/
+        /*
+           First welcome confetti
+        */
 
-setTimeout(
-function(){
+        setTimeout(
+            function(){
 
-if(
-document
-.getElementById(
-"surpriseOverlay"
-)
-.classList.contains("hide")
-){
+                createConfetti();
 
-/*
-   Toast ndogo ya surprise.
-*/
-
-showWelcomeToast();
-
-}
-
-},
-8000);
-
-});
+            },
+            700
+        );
 
 
-/* =========================================
-   ESC KEY TO CLOSE SURPRISE
-========================================= */
+        /*
+           Show popup
+        */
+
+        setTimeout(
+            function(){
+
+                openSurprise();
+
+            },
+            500
+        );
+
+    }
+);
+
+
+/* =====================================================
+   ESC KEY
+===================================================== */
 
 document.addEventListener(
-"keydown",
-function(event){
+    "keydown",
+    function(event){
 
-if(event.key === "Escape"){
+        if(event.key === "Escape"){
 
-closeSurprise();
+            closeSurprise();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+const dictionary = {
+
+    sw:{
+
+        heroEyebrow:
+        "WELCOME KWENYE DUNIA YANGU",
+
+        heroDescription:
+        "Karibu kwenye website yangu binafsi. Mimi ni Given The King, mbunifu na mtaalamu wa Video Production, Video Editing, Photography, ICT, Branding, Design, Printing na huduma mbalimbali za kiteknolojia."
+
+    },
+
+    en:{
+
+        heroEyebrow:
+        "WELCOME TO MY WORLD",
+
+        heroDescription:
+        "Welcome to my personal website. I am Given The King, a creative professional specializing in Video Production, Video Editing, Photography, ICT, Branding, Design, Printing and various technology services."
+
+    }
+
+};
+
+
+function changeLanguage(lang){
+
+    const d =
+    dictionary[lang];
+
+
+    if(!d){
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "heroEyebrow"
+    ).textContent =
+    d.heroEyebrow;
+
+
+    document.getElementById(
+        "heroDescription"
+    ).textContent =
+    d.heroDescription;
+
+
+    localStorage.setItem(
+        "givenKingLanguage",
+        lang
+    );
 
 }
 
-});
 
+/* =====================================================
+   LOAD SAVED LANGUAGE
+===================================================== */
+
+const savedLanguage =
+localStorage.getItem(
+    "givenKingLanguage"
+);
+
+
+if(savedLanguage){
+
+    document.getElementById(
+        "languageSelect"
+    ).value =
+    savedLanguage;
+
+
+    changeLanguage(
+        savedLanguage
+    );
+
+}
 
 </script>
-
 
 </body>
 
