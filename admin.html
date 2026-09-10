@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Given The King - Admin Dashboard">
+
+<title>Admin Dashboard | Given The King</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#050816;
+    color:white;
+    min-height:100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+
+    background:#101a3a;
+
+    border-bottom:2px solid #38bdf8;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    z-index:1000;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.5);
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    text-decoration:none;
+    color:white;
+}
+
+.crown{
+    font-size:38px;
+    color:#facc15;
+
+    text-shadow:
+    0 0 20px rgba(250,204,21,.5);
+}
+
+.brand-text strong{
+    display:block;
+
+    font-size:15px;
+    letter-spacing:2px;
+}
+
+.brand-text small{
+    display:block;
+
+    color:#38bdf8;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    margin-top:3px;
+}
+
+
+/* =====================================================
+   ADMIN BADGE
+===================================================== */
+
+.admin-badge{
+
+    padding:9px 15px;
+
+    background:#064e3b;
+
+    border:1px solid #22c55e;
+
+    border-radius:8px;
+
+    color:#86efac;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+
+    padding:
+    115px 5%
+    60px;
+
+    max-width:1500px;
+
+    margin:auto;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.page-title{
+
+    margin-bottom:35px;
+}
+
+.page-title small{
+
+    display:block;
+
+    color:#38bdf8;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+}
+
+.page-title h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+}
+
+.page-title h1 span{
+
+    color:#facc15;
+}
+
+.page-title p{
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+    margin-top:10px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+
+    margin-bottom:35px;
+}
+
+.stat-card{
+
+    background:#101a3a;
+
+    border:1px solid #334155;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
+}
+
+.stat-icon{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+.stat-card h3{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+    letter-spacing:1px;
+}
+
+.stat-number{
+
+    font-size:30px;
+
+    font-weight:900;
+
+    color:#facc15;
+
+    margin-top:6px;
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    background:#111827;
+
+    border:1px solid #334155;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin-bottom:20px;
+}
+
+.search{
+
+    flex:1;
+
+    min-width:230px;
+
+    padding:12px 15px;
+
+    background:#020617;
+
+    border:1px solid #475569;
+
+    border-radius:8px;
+
+    color:white;
+
+    outline:none;
+}
+
+.search:focus{
+
+    border-color:#38bdf8;
+}
+
+.toolbar-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:11px 15px;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+}
+
+.refresh{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+}
+
+.logout{
+
+    background:#dc2626;
+
+    color:white;
+}
+
+.clear{
+
+    background:#7f1d1d;
+
+    color:#fecaca;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.table-container{
+
+    background:#101a3a;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    overflow:auto;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+}
+
+table{
+
+    width:100%;
+
+    min-width:1050px;
+
+    border-collapse:collapse;
+}
+
+thead{
+
+    background:#172554;
+}
+
+th{
+
+    padding:17px 15px;
+
+    text-align:left;
+
+    color:#38bdf8;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+}
+
+td{
+
+    padding:16px 15px;
+
+    border-top:1px solid #1e293b;
+
+    color:#cbd5e1;
+
+    font-size:11px;
+}
+
+tbody tr{
+
+    transition:.3s;
+}
+
+tbody tr:hover{
+
+    background:#172033;
+}
+
+
+/* =====================================================
+   USER NAME
+===================================================== */
+
+.user-name{
+
+    color:white;
+
+    font-weight:800;
+}
+
+.user-email{
+
+    color:#64748b;
+
+    font-size:9px;
+
+    margin-top:4px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 9px;
+
+    border-radius:20px;
+
+    font-size:9px;
+
+    font-weight:900;
+}
+
+.online{
+
+    background:#064e3b;
+
+    color:#86efac;
+
+    border:1px solid #22c55e;
+}
+
+.offline{
+
+    background:#3f3f46;
+
+    color:#d4d4d8;
+
+    border:1px solid #71717a;
+}
+
+.dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    box-shadow:
+    0 0 10px #22c55e;
+}
+
+
+/* =====================================================
+   GIFT
+===================================================== */
+
+.gift{
+
+    display:inline-block;
+
+    padding:7px 10px;
+
+    border-radius:7px;
+
+    background:#422006;
+
+    border:1px solid #f59e0b;
+
+    color:#facc15;
+
+    font-size:9px;
+
+    font-weight:800;
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.delete-btn{
+
+    border:1px solid #ef4444;
+
+    background:#450a0a;
+
+    color:#fca5a5;
+
+    padding:7px 10px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+    color:white;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.empty{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#64748b;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   ADMIN NOTICE
+===================================================== */
+
+.notice{
+
+    margin-top:25px;
+
+    background:#172554;
+
+    border:1px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    color:#bfdbfe;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+.notice strong{
+
+    color:#facc15;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    margin-top:50px;
+
+    padding:35px 5%;
+
+    text-align:center;
+
+    background:#111111;
+
+    border-top:2px solid #facc15;
+
+    color:#64748b;
+
+    font-size:11px;
+}
+
+footer strong{
+
+    color:#facc15;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1000px){
+
+    .stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:0 4%;
+    }
+
+    .admin-badge{
+
+        display:none;
+    }
+
+    .brand-text strong{
+
+        font-size:12px;
+    }
+
+    .brand-text small{
+
+        font-size:6px;
+    }
+
+    .crown{
+
+        font-size:30px;
+    }
+
+    .main{
+
+        padding:
+        105px 4%
+        40px;
+    }
+
+    .page-title h1{
+
+        font-size:34px;
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+    }
+
+    .toolbar{
+
+        align-items:stretch;
+    }
+
+    .search{
+
+        width:100%;
+    }
+
+    .toolbar-buttons{
+
+        width:100%;
+    }
+
+    .btn{
+
+        flex:1;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+<a
+href="index.html"
+class="brand">
+
+<span class="crown">
+♛
+</span>
+
+<span class="brand-text">
+
+<strong>
+GIVEN THE KING
+</strong>
+
+<small>
+ADMIN DASHBOARD
+</small>
+
+</span>
+
+</a>
+
+
+<div class="admin-badge">
+
+🔐 ADMINISTRATOR
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main">
+
+
+<!-- TITLE -->
+
+<section class="page-title">
+
+<small>
+GIVEN THE KING • ADMIN PANEL
+</small>
+
+<h1>
+USER <span>ACTIVITY</span>
+</h1>
+
+<p>
+Hapa Admin anaweza kuona watumiaji walio-register,
+waliopo online, muda wa kuingia, logout na zawadi zao.
+</p>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
+
+<section class="stats">
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+👥
+</div>
+
+<h3>
+TOTAL USERS
+</h3>
+
+<div
+class="stat-number"
+id="totalUsers">
+0
+</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+🟢
+</div>
+
+<h3>
+ONLINE NOW
+</h3>
+
+<div
+class="stat-number"
+id="onlineUsers">
+0
+</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+🎁
+</div>
+
+<h3>
+GIFTS GIVEN
+</h3>
+
+<div
+class="stat-number"
+id="totalGifts">
+0
+</div>
+
+</div>
+
+
+<div class="stat-card">
+
+<div class="stat-icon">
+🔐
+</div>
+
+<h3>
+TOTAL LOGINS
+</h3>
+
+<div
+class="stat-number"
+id="totalLogins">
+0
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     TOOLBAR
+===================================================== -->
+
+<section class="toolbar">
+
+
+<input
+type="search"
+class="search"
+id="userSearch"
+placeholder="🔎 Tafuta jina au email...">
+
+
+<div class="toolbar-buttons">
+
+<button
+class="btn refresh"
+onclick="loadUsers()">
+
+🔄 REFRESH
+
+</button>
+
+
+<button
+class="btn clear"
+onclick="clearUsers()">
+
+🗑 CLEAR USERS
+
+</button>
+
+
+<button
+class="btn logout"
+onclick="adminLogout()">
+
+🚪 LOGOUT
+
+</button>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     USERS TABLE
+===================================================== -->
+
+<section class="table-container">
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+#
+</th>
+
+<th>
+USER
+</th>
+
+<th>
+PHONE
+</th>
+
+<th>
+STATUS
+</th>
+
+<th>
+LOGIN TIME
+</th>
+
+<th>
+LAST LOGOUT
+</th>
+
+<th>
+LOGINS
+</th>
+
+<th>
+🎁 GIFT
+</th>
+
+<th>
+ACTION
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody
+id="usersTable">
+
+</tbody>
+
+
+</table>
+
+
+<div
+class="empty"
+id="emptyMessage"
+style="display:none;">
+
+👥 Hakuna user aliyesajili bado.
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     NOTICE
+===================================================== -->
+
+<div class="notice">
+
+<strong>⚠️ KUMBUKA:</strong>
+
+&nbsp;
+
+Hii Admin Dashboard inatumia
+<code>localStorage</code>. Kwa hiyo records zinaonekana
+kwenye browser/device hiyo hiyo. Kwa mfumo ambao Admin
+ataona users wanaoingia kutoka simu na computer tofauti,
+tunahitaji kuunganisha website na database kama
+Firebase au Supabase.
+
+</div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+♛ <strong>GIVEN THE KING</strong>
+
+<br><br>
+
+Admin Dashboard • User Management
+
+<br><br>
+
+© <span id="year"></span>
+Given The King. All Rights Reserved.
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   ADMIN SETTINGS
+===================================================== */
+
+/*
+   BADILISHA HII PASSWORD
+   kabla ya kutumia.
+*/
+
+const ADMIN_PASSWORD = "KING2026";
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* =====================================================
+   ADMIN SECURITY
+===================================================== */
+
+function checkAdmin(){
+
+const logged =
+sessionStorage.getItem("givenKingAdmin");
+
+if(logged !== "true"){
+
+const password =
+prompt("🔐 Ingiza Admin Password:");
+
+if(password === ADMIN_PASSWORD){
+
+sessionStorage.setItem(
+"givenKingAdmin",
+"true"
+);
+
+}else{
+
+alert(
+"❌ Password ya Admin si sahihi."
+);
+
+window.location.href =
+"index.html";
+
+}
+
+}
+
+}
+
+
+
+/* =====================================================
+   GET USERS
+===================================================== */
+
+function getUsers(){
+
+let users =
+localStorage.getItem(
+"givenKingUsers"
+);
+
+if(!users){
+
+return [];
+
+}
+
+try{
+
+return JSON.parse(users);
+
+}
+
+catch(error){
+
+return [];
+
+}
+
+}
+
+
+
+/* =====================================================
+   SAVE USERS
+===================================================== */
+
+function saveUsers(users){
+
+localStorage.setItem(
+"givenKingUsers",
+JSON.stringify(users)
+);
+
+}
+
+
+
+/* =====================================================
+   LOAD USERS
+===================================================== */
+
+function loadUsers(){
+
+const users =
+getUsers();
+
+const table =
+document.getElementById(
+"usersTable"
+);
+
+const empty =
+document.getElementById(
+"emptyMessage"
+);
+
+table.innerHTML = "";
+
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+document.getElementById(
+"totalUsers"
+).textContent =
+users.length;
+
+
+const online =
+users.filter(
+user => user.online === true
+).length;
+
+
+document.getElementById(
+"onlineUsers"
+).textContent =
+online;
+
+
+const gifts =
+users.filter(
+user => user.gift
+).length;
+
+
+document.getElementById(
+"totalGifts"
+).textContent =
+gifts;
+
+
+let loginCount = 0;
+
+
+users.forEach(
+user => {
+
+loginCount +=
+Number(user.loginCount || 0);
+
+});
+
+
+document.getElementById(
+"totalLogins"
+).textContent =
+loginCount;
+
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+if(users.length === 0){
+
+empty.style.display =
+"block";
+
+return;
+
+}
+
+empty.style.display =
+"none";
+
+
+
+/* =====================================================
+   DISPLAY USERS
+===================================================== */
+
+users.forEach(
+(user,index) => {
+
+
+const row =
+document.createElement("tr");
+
+
+/* NAME */
+
+const name =
+escapeHTML(
+user.name ||
+"Unknown"
+);
+
+
+/* EMAIL */
+
+const email =
+escapeHTML(
+user.email ||
+"-"
+);
+
+
+/* PHONE */
+
+const phone =
+escapeHTML(
+user.phone ||
+"-"
+);
+
+
+/* LOGIN */
+
+const loginTime =
+user.loginTime
+?
+formatDate(user.loginTime)
+:
+"-";
+
+
+/* LOGOUT */
+
+const logoutTime =
+user.logoutTime
+?
+formatDate(user.logoutTime)
+:
+"-";
+
+
+/* GIFT */
+
+const gift =
+escapeHTML(
+user.gift ||
+"Haijapewa"
+);
+
+
+/* STATUS */
+
+let statusHTML = "";
+
+if(user.online === true){
+
+statusHTML = `
+<span class="status online">
+<span class="dot"></span>
+ONLINE
+</span>
+`;
+
+}else{
+
+statusHTML = `
+<span class="status offline">
+⚫ OFFLINE
+</span>
+`;
+
+}
+
+
+/* ROW */
+
+row.innerHTML = `
+
+<td>
+${index + 1}
+</td>
+
+
+<td>
+
+<div class="user-name">
+${name}
+</div>
+
+<div class="user-email">
+${email}
+</div>
+
+</td>
+
+
+<td>
+${phone}
+</td>
+
+
+<td>
+${statusHTML}
+</td>
+
+
+<td>
+${loginTime}
+</td>
+
+
+<td>
+${logoutTime}
+</td>
+
+
+<td>
+<strong>
+${user.loginCount || 0}
+</strong>
+</td>
+
+
+<td>
+
+<span class="gift">
+🎁 ${gift}
+</span>
+
+</td>
+
+
+<td>
+
+<button
+class="delete-btn"
+onclick="deleteUser(${index})">
+
+DELETE
+
+</button>
+
+</td>
+
+`;
+
+
+table.appendChild(row);
+
+});
+
+}
+
+
+
+/* =====================================================
+   FORMAT DATE
+===================================================== */
+
+function formatDate(date){
+
+try{
+
+return new Date(date)
+.toLocaleString(
+"sw-TZ",
+{
+dateStyle:"short",
+timeStyle:"medium"
+}
+);
+
+}
+
+catch(error){
+
+return date;
+
+}
+
+}
+
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(text){
+
+return String(text)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+
+/* =====================================================
+   DELETE USER
+===================================================== */
+
+function deleteUser(index){
+
+const users =
+getUsers();
+
+if(!users[index]){
+
+return;
+
+}
+
+
+const name =
+users[index].name ||
+"User";
+
+
+const confirmDelete =
+confirm(
+"Unataka kumfuta " +
+name +
+"?"
+);
+
+
+if(!confirmDelete){
+
+return;
+
+}
+
+
+users.splice(index,1);
+
+saveUsers(users);
+
+loadUsers();
+
+}
+
+
+
+/* =====================================================
+   CLEAR USERS
+===================================================== */
+
+function clearUsers(){
+
+const users =
+getUsers();
+
+if(users.length === 0){
+
+alert(
+"Hakuna users wa kufuta."
+);
+
+return;
+
+}
+
+
+const confirmClear =
+confirm(
+"⚠️ Unataka kufuta USERS WOTE?"
+);
+
+
+if(!confirmClear){
+
+return;
+
+}
+
+
+localStorage.removeItem(
+"givenKingUsers"
+);
+
+loadUsers();
+
+alert(
+"✅ Users wote wamefutwa."
+);
+
+}
+
+
+
+/* =====================================================
+   ADMIN LOGOUT
+===================================================== */
+
+function adminLogout(){
+
+sessionStorage.removeItem(
+"givenKingAdmin"
+);
+
+window.location.href =
+"index.html";
+
+}
+
+
+
+/* =====================================================
+   SEARCH USERS
+===================================================== */
+
+document
+.getElementById("userSearch")
+.addEventListener(
+"input",
+function(){
+
+const query =
+this.value
+.toLowerCase()
+.trim();
+
+
+const rows =
+document
+.querySelectorAll(
+"#usersTable tr"
+);
+
+
+rows.forEach(
+row => {
+
+const text =
+row.innerText
+.toLowerCase();
+
+
+if(
+text.includes(query)
+){
+
+row.style.display = "";
+
+}else{
+
+row.style.display =
+"none";
+
+}
+
+});
+
+});
+
+
+
+/* =====================================================
+   AUTO REFRESH
+===================================================== */
+
+setInterval(
+function(){
+
+loadUsers();
+
+},
+3000
+);
+
+
+
+/* =====================================================
+   START
+===================================================== */
+
+checkAdmin();
+
+loadUsers();
+
+</script>
+
+
+</body>
+
+</html>
