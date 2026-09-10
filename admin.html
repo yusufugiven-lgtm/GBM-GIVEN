@@ -118,6 +118,54 @@ body{
 
 
 /* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.home-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 15px;
+
+    background:#172554;
+
+    border:1px solid #38bdf8;
+
+    border-radius:8px;
+
+    color:#bae6fd;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.home-btn:hover{
+
+    background:#38bdf8;
+
+    color:#101a3a;
+
+    transform:translateY(-2px);
+}
+
+
+/* =====================================================
    ADMIN BADGE
 ===================================================== */
 
@@ -316,11 +364,16 @@ body{
     color:white;
 
     outline:none;
+
+    font-family:'Montserrat',sans-serif;
 }
 
 .search:focus{
 
     border-color:#38bdf8;
+
+    box-shadow:
+    0 0 12px rgba(56,189,248,.15);
 }
 
 .toolbar-buttons{
@@ -347,6 +400,8 @@ body{
     font-weight:900;
 
     transition:.3s;
+
+    font-family:'Montserrat',sans-serif;
 }
 
 .btn:hover{
@@ -545,7 +600,7 @@ tbody tr:hover{
 
 
 /* =====================================================
-   DELETE BUTTON
+   DELETE
 ===================================================== */
 
 .delete-btn{
@@ -594,7 +649,7 @@ tbody tr:hover{
 
 
 /* =====================================================
-   ADMIN NOTICE
+   NOTICE
 ===================================================== */
 
 .notice{
@@ -619,6 +674,60 @@ tbody tr:hover{
 .notice strong{
 
     color:#facc15;
+}
+
+.notice code{
+
+    color:#facc15;
+}
+
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.quick-links{
+
+    margin-top:25px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+}
+
+.quick-link{
+
+    display:block;
+
+    padding:18px;
+
+    background:#101a3a;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.quick-link:hover{
+
+    border-color:#38bdf8;
+
+    color:#38bdf8;
+
+    transform:translateY(-3px);
 }
 
 
@@ -648,9 +757,27 @@ footer strong{
     color:#facc15;
 }
 
+.footer-home{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:800;
+}
+
+.footer-home:hover{
+
+    color:#facc15;
+}
+
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE 1000
 ===================================================== */
 
 @media(max-width:1000px){
@@ -661,33 +788,24 @@ footer strong{
         repeat(2,1fr);
     }
 
+    .quick-links{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
 }
 
-@media(max-width:600px){
 
-    .navbar{
+/* =====================================================
+   RESPONSIVE 700
+===================================================== */
 
-        padding:0 4%;
-    }
+@media(max-width:700px){
 
     .admin-badge{
 
         display:none;
-    }
-
-    .brand-text strong{
-
-        font-size:12px;
-    }
-
-    .brand-text small{
-
-        font-size:6px;
-    }
-
-    .crown{
-
-        font-size:30px;
     }
 
     .main{
@@ -699,7 +817,64 @@ footer strong{
 
     .page-title h1{
 
-        font-size:34px;
+        font-size:36px;
+    }
+
+    .quick-links{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE 600
+===================================================== */
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:0 4%;
+
+        height:72px;
+    }
+
+    .brand-text strong{
+
+        font-size:12px;
+    }
+
+    .brand-text small{
+
+        font-size:6px;
+
+        letter-spacing:2px;
+    }
+
+    .crown{
+
+        font-size:30px;
+    }
+
+    .home-btn{
+
+        padding:8px 10px;
+
+        font-size:8px;
+    }
+
+    .main{
+
+        padding:
+        100px 4%
+        35px;
+    }
+
+    .page-title h1{
+
+        font-size:32px;
     }
 
     .stats{
@@ -715,6 +890,8 @@ footer strong{
     .search{
 
         width:100%;
+
+        min-width:100%;
     }
 
     .toolbar-buttons{
@@ -725,6 +902,39 @@ footer strong{
     .btn{
 
         flex:1;
+
+        min-width:0;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL
+===================================================== */
+
+@media(max-width:400px){
+
+    .brand-text strong{
+
+        font-size:10px;
+    }
+
+    .brand-text small{
+
+        font-size:5px;
+    }
+
+    .crown{
+
+        font-size:26px;
+    }
+
+    .home-btn{
+
+        padding:7px 8px;
+
+        font-size:7px;
     }
 
 }
@@ -742,6 +952,7 @@ footer strong{
 ===================================================== -->
 
 <header class="navbar">
+
 
 <a
 href="index.html"
@@ -766,9 +977,24 @@ ADMIN DASHBOARD
 </a>
 
 
+<div class="nav-actions">
+
+
+<a
+href="index.html"
+class="home-btn">
+
+⌂ HOME
+
+</a>
+
+
 <div class="admin-badge">
 
 🔐 ADMINISTRATOR
+
+</div>
+
 
 </div>
 
@@ -783,7 +1009,9 @@ ADMIN DASHBOARD
 <main class="main">
 
 
-<!-- TITLE -->
+<!-- =====================================================
+     TITLE
+===================================================== -->
 
 <section class="page-title">
 
@@ -792,12 +1020,17 @@ GIVEN THE KING • ADMIN PANEL
 </small>
 
 <h1>
+
 USER <span>ACTIVITY</span>
+
 </h1>
 
 <p>
-Hapa Admin anaweza kuona watumiaji walio-register,
-waliopo online, muda wa kuingia, logout na zawadi zao.
+
+Hapa Admin anaweza kuona watumiaji
+walio-register, waliopo online, muda wa
+kuingia, logout, login count na zawadi zao.
+
 </p>
 
 </section>
@@ -824,10 +1057,13 @@ TOTAL USERS
 <div
 class="stat-number"
 id="totalUsers">
+
 0
+
 </div>
 
 </div>
+
 
 
 <div class="stat-card">
@@ -843,10 +1079,13 @@ ONLINE NOW
 <div
 class="stat-number"
 id="onlineUsers">
+
 0
+
 </div>
 
 </div>
+
 
 
 <div class="stat-card">
@@ -862,10 +1101,13 @@ GIFTS GIVEN
 <div
 class="stat-number"
 id="totalGifts">
+
 0
+
 </div>
 
 </div>
+
 
 
 <div class="stat-card">
@@ -881,7 +1123,9 @@ TOTAL LOGINS
 <div
 class="stat-number"
 id="totalLogins">
+
 0
+
 </div>
 
 </div>
@@ -905,7 +1149,9 @@ id="userSearch"
 placeholder="🔎 Tafuta jina au email...">
 
 
+
 <div class="toolbar-buttons">
+
 
 <button
 class="btn refresh"
@@ -914,6 +1160,7 @@ onclick="loadUsers()">
 🔄 REFRESH
 
 </button>
+
 
 
 <button
@@ -925,6 +1172,7 @@ onclick="clearUsers()">
 </button>
 
 
+
 <button
 class="btn logout"
 onclick="adminLogout()">
@@ -933,8 +1181,8 @@ onclick="adminLogout()">
 
 </button>
 
-</div>
 
+</div>
 
 </section>
 
@@ -948,6 +1196,7 @@ onclick="adminLogout()">
 
 
 <table>
+
 
 <thead>
 
@@ -994,6 +1243,7 @@ ACTION
 </thead>
 
 
+
 <tbody
 id="usersTable">
 
@@ -1001,6 +1251,7 @@ id="usersTable">
 
 
 </table>
+
 
 
 <div
@@ -1018,21 +1269,77 @@ style="display:none;">
 
 
 <!-- =====================================================
+     QUICK LINKS
+===================================================== -->
+
+<section class="quick-links">
+
+
+<a
+href="index.html"
+class="quick-link">
+
+⌂ BACK TO HOME
+
+</a>
+
+
+<a
+href="videos.html"
+class="quick-link">
+
+▶ VIEW VIDEOS
+
+</a>
+
+
+<a
+href="contact.html"
+class="quick-link">
+
+☎ CONTACT PAGE
+
+</a>
+
+
+</section>
+
+
+
+<!-- =====================================================
      NOTICE
 ===================================================== -->
 
 <div class="notice">
 
-<strong>⚠️ KUMBUKA:</strong>
 
-&nbsp;
+<strong>
+⚠️ KUMBUKA:
+</strong>
+
+<br><br>
 
 Hii Admin Dashboard inatumia
-<code>localStorage</code>. Kwa hiyo records zinaonekana
-kwenye browser/device hiyo hiyo. Kwa mfumo ambao Admin
-ataona users wanaoingia kutoka simu na computer tofauti,
-tunahitaji kuunganisha website na database kama
-Firebase au Supabase.
+<code>localStorage</code>.
+
+Kwa hiyo records zinaonekana kwenye
+browser/device hiyo hiyo.
+
+Kama unataka Admin aweze kuona users
+wanaojiunga kutoka simu, computer na
+browser tofauti, website itahitaji database
+kama Firebase au Supabase.
+
+<br><br>
+
+<strong>
+SECURITY:
+</strong>
+
+Password ya Admin iliyopo kwenye code hii
+ni ya mfano tu. Kwa website ya production,
+usihifadhi password ya Admin moja kwa moja
+kwenye JavaScript.
 
 </div>
 
@@ -1047,16 +1354,36 @@ Firebase au Supabase.
 
 <footer>
 
+
 ♛ <strong>GIVEN THE KING</strong>
 
+
 <br><br>
+
 
 Admin Dashboard • User Management
 
+
 <br><br>
 
+
 © <span id="year"></span>
-Given The King. All Rights Reserved.
+
+Given The King.
+All Rights Reserved.
+
+
+<br>
+
+
+<a
+href="index.html"
+class="footer-home">
+
+← Back to Home
+
+</a>
+
 
 </footer>
 
@@ -1065,13 +1392,8 @@ Given The King. All Rights Reserved.
 <script>
 
 /* =====================================================
-   ADMIN SETTINGS
+   ADMIN PASSWORD
 ===================================================== */
-
-/*
-   BADILISHA HII PASSWORD
-   kabla ya kutumia.
-*/
 
 const ADMIN_PASSWORD = "KING2026";
 
@@ -1080,44 +1402,58 @@ const ADMIN_PASSWORD = "KING2026";
    YEAR
 ===================================================== */
 
-document.getElementById("year").textContent =
+document
+.getElementById("year")
+.textContent =
 new Date().getFullYear();
 
 
 
 /* =====================================================
-   ADMIN SECURITY
+   CHECK ADMIN
 ===================================================== */
 
 function checkAdmin(){
 
-const logged =
-sessionStorage.getItem("givenKingAdmin");
+    const logged =
+        sessionStorage.getItem(
+            "givenKingAdmin"
+        );
 
-if(logged !== "true"){
 
-const password =
-prompt("🔐 Ingiza Admin Password:");
+    if(logged === "true"){
 
-if(password === ADMIN_PASSWORD){
+        return;
 
-sessionStorage.setItem(
-"givenKingAdmin",
-"true"
-);
+    }
 
-}else{
 
-alert(
-"❌ Password ya Admin si sahihi."
-);
+    const password =
+        prompt(
+            "🔐 Ingiza Admin Password:"
+        );
 
-window.location.href =
-"index.html";
 
-}
+    if(password === ADMIN_PASSWORD){
 
-}
+        sessionStorage.setItem(
+            "givenKingAdmin",
+            "true"
+        );
+
+    }
+
+    else{
+
+        alert(
+            "❌ Password ya Admin si sahihi."
+        );
+
+
+        window.location.href =
+            "index.html";
+
+    }
 
 }
 
@@ -1129,28 +1465,32 @@ window.location.href =
 
 function getUsers(){
 
-let users =
-localStorage.getItem(
-"givenKingUsers"
-);
+    const users =
+        localStorage.getItem(
+            "givenKingUsers"
+        );
 
-if(!users){
 
-return [];
+    if(!users){
 
-}
+        return [];
 
-try{
+    }
 
-return JSON.parse(users);
 
-}
+    try{
 
-catch(error){
+        return JSON.parse(users);
 
-return [];
+    }
 
-}
+    catch(error){
+
+        console.error(error);
+
+        return [];
+
+    }
 
 }
 
@@ -1162,10 +1502,10 @@ return [];
 
 function saveUsers(users){
 
-localStorage.setItem(
-"givenKingUsers",
-JSON.stringify(users)
-);
+    localStorage.setItem(
+        "givenKingUsers",
+        JSON.stringify(users)
+    );
 
 }
 
@@ -1177,262 +1517,302 @@ JSON.stringify(users)
 
 function loadUsers(){
 
-const users =
-getUsers();
+    const users =
+        getUsers();
 
-const table =
-document.getElementById(
-"usersTable"
-);
 
-const empty =
-document.getElementById(
-"emptyMessage"
-);
+    const table =
+        document.getElementById(
+            "usersTable"
+        );
 
-table.innerHTML = "";
 
+    const empty =
+        document.getElementById(
+            "emptyMessage"
+        );
 
 
-/* =====================================================
-   STATISTICS
-===================================================== */
+    table.innerHTML = "";
 
-document.getElementById(
-"totalUsers"
-).textContent =
-users.length;
 
 
-const online =
-users.filter(
-user => user.online === true
-).length;
+    /* TOTAL USERS */
 
+    document
+    .getElementById("totalUsers")
+    .textContent =
+        users.length;
 
-document.getElementById(
-"onlineUsers"
-).textContent =
-online;
 
 
-const gifts =
-users.filter(
-user => user.gift
-).length;
+    /* ONLINE */
 
+    const online =
+        users.filter(
+            user =>
+            user.online === true
+        ).length;
 
-document.getElementById(
-"totalGifts"
-).textContent =
-gifts;
 
+    document
+    .getElementById("onlineUsers")
+    .textContent =
+        online;
 
-let loginCount = 0;
 
 
-users.forEach(
-user => {
+    /* GIFTS */
 
-loginCount +=
-Number(user.loginCount || 0);
+    const gifts =
+        users.filter(
+            user =>
+            user.gift &&
+            String(user.gift).trim() !== ""
+        ).length;
 
-});
 
+    document
+    .getElementById("totalGifts")
+    .textContent =
+        gifts;
 
-document.getElementById(
-"totalLogins"
-).textContent =
-loginCount;
 
 
+    /* LOGINS */
 
-/* =====================================================
-   EMPTY
-===================================================== */
+    let loginCount = 0;
 
-if(users.length === 0){
 
-empty.style.display =
-"block";
+    users.forEach(
+        user => {
 
-return;
+            loginCount +=
+                Number(
+                    user.loginCount || 0
+                );
 
-}
+        }
+    );
 
-empty.style.display =
-"none";
 
+    document
+    .getElementById("totalLogins")
+    .textContent =
+        loginCount;
 
 
-/* =====================================================
-   DISPLAY USERS
-===================================================== */
 
-users.forEach(
-(user,index) => {
+    /* EMPTY */
 
+    if(users.length === 0){
 
-const row =
-document.createElement("tr");
+        empty.style.display =
+            "block";
 
+        return;
 
-/* NAME */
+    }
 
-const name =
-escapeHTML(
-user.name ||
-"Unknown"
-);
 
+    empty.style.display =
+        "none";
 
-/* EMAIL */
 
-const email =
-escapeHTML(
-user.email ||
-"-"
-);
 
+    /* DISPLAY */
 
-/* PHONE */
+    users.forEach(
+        (user,index) => {
 
-const phone =
-escapeHTML(
-user.phone ||
-"-"
-);
 
+            const row =
+                document.createElement(
+                    "tr"
+                );
 
-/* LOGIN */
 
-const loginTime =
-user.loginTime
-?
-formatDate(user.loginTime)
-:
-"-";
+            const name =
+                escapeHTML(
+                    user.name ||
+                    "Unknown"
+                );
 
 
-/* LOGOUT */
+            const email =
+                escapeHTML(
+                    user.email ||
+                    "-"
+                );
 
-const logoutTime =
-user.logoutTime
-?
-formatDate(user.logoutTime)
-:
-"-";
 
+            const phone =
+                escapeHTML(
+                    user.phone ||
+                    "-"
+                );
 
-/* GIFT */
 
-const gift =
-escapeHTML(
-user.gift ||
-"Haijapewa"
-);
+            const loginTime =
+                user.loginTime
+                ?
+                formatDate(
+                    user.loginTime
+                )
+                :
+                "-";
 
 
-/* STATUS */
+            const logoutTime =
+                user.logoutTime
+                ?
+                formatDate(
+                    user.logoutTime
+                )
+                :
+                "-";
 
-let statusHTML = "";
 
-if(user.online === true){
+            const gift =
+                escapeHTML(
+                    user.gift ||
+                    "Haijapewa"
+                );
 
-statusHTML = `
-<span class="status online">
-<span class="dot"></span>
-ONLINE
-</span>
-`;
 
-}else{
 
-statusHTML = `
-<span class="status offline">
-⚫ OFFLINE
-</span>
-`;
+            let statusHTML;
 
-}
 
 
-/* ROW */
+            if(
+                user.online === true
+            ){
 
-row.innerHTML = `
+                statusHTML = `
 
-<td>
-${index + 1}
-</td>
+                <span class="status online">
 
+                    <span class="dot"></span>
 
-<td>
+                    ONLINE
 
-<div class="user-name">
-${name}
-</div>
+                </span>
 
-<div class="user-email">
-${email}
-</div>
+                `;
 
-</td>
+            }
 
+            else{
 
-<td>
-${phone}
-</td>
+                statusHTML = `
 
+                <span class="status offline">
 
-<td>
-${statusHTML}
-</td>
+                    ⚫ OFFLINE
 
+                </span>
 
-<td>
-${loginTime}
-</td>
+                `;
 
+            }
 
-<td>
-${logoutTime}
-</td>
 
 
-<td>
-<strong>
-${user.loginCount || 0}
-</strong>
-</td>
+            row.innerHTML = `
 
+            <td>
+                ${index + 1}
+            </td>
 
-<td>
 
-<span class="gift">
-🎁 ${gift}
-</span>
+            <td>
 
-</td>
+                <div class="user-name">
 
+                    ${name}
 
-<td>
+                </div>
 
-<button
-class="delete-btn"
-onclick="deleteUser(${index})">
 
-DELETE
+                <div class="user-email">
 
-</button>
+                    ${email}
 
-</td>
+                </div>
 
-`;
+            </td>
 
 
-table.appendChild(row);
+            <td>
 
-});
+                ${phone}
+
+            </td>
+
+
+            <td>
+
+                ${statusHTML}
+
+            </td>
+
+
+            <td>
+
+                ${loginTime}
+
+            </td>
+
+
+            <td>
+
+                ${logoutTime}
+
+            </td>
+
+
+            <td>
+
+                <strong>
+
+                    ${user.loginCount || 0}
+
+                </strong>
+
+            </td>
+
+
+            <td>
+
+                <span class="gift">
+
+                    🎁 ${gift}
+
+                </span>
+
+            </td>
+
+
+            <td>
+
+                <button
+                class="delete-btn"
+                onclick="deleteUser(${index})">
+
+                    DELETE
+
+                </button>
+
+            </td>
+
+            `;
+
+
+            table.appendChild(row);
+
+        }
+    );
 
 }
 
@@ -1444,24 +1824,24 @@ table.appendChild(row);
 
 function formatDate(date){
 
-try{
+    try{
 
-return new Date(date)
-.toLocaleString(
-"sw-TZ",
-{
-dateStyle:"short",
-timeStyle:"medium"
-}
-);
+        return new Date(date)
+        .toLocaleString(
+            "sw-TZ",
+            {
+                dateStyle:"short",
+                timeStyle:"medium"
+            }
+        );
 
-}
+    }
 
-catch(error){
+    catch(error){
 
-return date;
+        return date;
 
-}
+    }
 
 }
 
@@ -1473,12 +1853,32 @@ return date;
 
 function escapeHTML(text){
 
-return String(text)
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+    return String(text)
+
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+
+    .replace(
+        /</g,
+        "&lt;"
+    )
+
+    .replace(
+        />/g,
+        "&gt;"
+    )
+
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
 
@@ -1490,41 +1890,46 @@ return String(text)
 
 function deleteUser(index){
 
-const users =
-getUsers();
-
-if(!users[index]){
-
-return;
-
-}
+    const users =
+        getUsers();
 
 
-const name =
-users[index].name ||
-"User";
+    if(!users[index]){
+
+        return;
+
+    }
 
 
-const confirmDelete =
-confirm(
-"Unataka kumfuta " +
-name +
-"?"
-);
+    const name =
+        users[index].name ||
+        "User";
 
 
-if(!confirmDelete){
+    const confirmDelete =
+        confirm(
+            "Unataka kumfuta " +
+            name +
+            "?"
+        );
 
-return;
 
-}
+    if(!confirmDelete){
+
+        return;
+
+    }
 
 
-users.splice(index,1);
+    users.splice(
+        index,
+        1
+    );
 
-saveUsers(users);
 
-loadUsers();
+    saveUsers(users);
+
+    loadUsers();
 
 }
 
@@ -1536,42 +1941,45 @@ loadUsers();
 
 function clearUsers(){
 
-const users =
-getUsers();
-
-if(users.length === 0){
-
-alert(
-"Hakuna users wa kufuta."
-);
-
-return;
-
-}
+    const users =
+        getUsers();
 
 
-const confirmClear =
-confirm(
-"⚠️ Unataka kufuta USERS WOTE?"
-);
+    if(users.length === 0){
+
+        alert(
+            "Hakuna users wa kufuta."
+        );
+
+        return;
+
+    }
 
 
-if(!confirmClear){
+    const confirmClear =
+        confirm(
+            "⚠️ Unataka kufuta USERS WOTE?"
+        );
 
-return;
 
-}
+    if(!confirmClear){
+
+        return;
+
+    }
 
 
-localStorage.removeItem(
-"givenKingUsers"
-);
+    localStorage.removeItem(
+        "givenKingUsers"
+    );
 
-loadUsers();
 
-alert(
-"✅ Users wote wamefutwa."
-);
+    loadUsers();
+
+
+    alert(
+        "✅ Users wote wamefutwa."
+    );
 
 }
 
@@ -1583,12 +1991,13 @@ alert(
 
 function adminLogout(){
 
-sessionStorage.removeItem(
-"givenKingAdmin"
-);
+    sessionStorage.removeItem(
+        "givenKingAdmin"
+    );
 
-window.location.href =
-"index.html";
+
+    window.location.href =
+        "index.html";
 
 }
 
@@ -1601,46 +2010,50 @@ window.location.href =
 document
 .getElementById("userSearch")
 .addEventListener(
-"input",
-function(){
+    "input",
+    function(){
 
-const query =
-this.value
-.toLowerCase()
-.trim();
+        const query =
+            this.value
+            .toLowerCase()
+            .trim();
 
 
-const rows =
-document
-.querySelectorAll(
-"#usersTable tr"
+        const rows =
+            document.querySelectorAll(
+                "#usersTable tr"
+            );
+
+
+        rows.forEach(
+            row => {
+
+                const text =
+                    row.innerText
+                    .toLowerCase();
+
+
+                if(
+                    text.includes(query)
+                ){
+
+                    row.style.display =
+                        "";
+
+                }
+
+                else{
+
+                    row.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    }
 );
-
-
-rows.forEach(
-row => {
-
-const text =
-row.innerText
-.toLowerCase();
-
-
-if(
-text.includes(query)
-){
-
-row.style.display = "";
-
-}else{
-
-row.style.display =
-"none";
-
-}
-
-});
-
-});
 
 
 
@@ -1649,12 +2062,12 @@ row.style.display =
 ===================================================== */
 
 setInterval(
-function(){
+    function(){
 
-loadUsers();
+        loadUsers();
 
-},
-3000
+    },
+    3000
 );
 
 
